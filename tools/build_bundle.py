@@ -150,6 +150,8 @@ if os.path.exists(gpath):
     with open(gpath) as f:
         g = json.load(f)
     for e in (g if isinstance(g, list) else g.get("images", [])):
+        if e.get("family") != "in-generation":
+            continue  # post-hoc entries left out: their C2/C4 attacked images are not available
         e = {k: v for k, v in e.items() if k not in ("source_paths",)}
         for c in e.get("conditions", []):
             c.pop("source", None); c.pop("source_path", None); c.pop("image_source", None); c.pop("image_origin", None)

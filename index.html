@@ -37,7 +37,6 @@
       <a href="#attacks">Attacks</a>
       <a href="#metrics">Metrics</a>
       <a href="#submit">Submit</a>
-      <a href="#cite">Cite</a>
     </nav>
     <button class="theme-btn" id="theme-btn" type="button" aria-label="Colour theme: system">Theme: system</button>
   </div>
@@ -69,7 +68,6 @@
             <a href="#" data-todo="paper">Paper</a>
             <a href="#" data-todo="code">Code</a>
             <a href="#" data-todo="dataset">Dataset</a>
-            <a href="#cite">BibTeX</a>
           </div>
         </div>
       </div>
@@ -187,7 +185,7 @@
   <div class="sec-head t-attack">
     <p class="label">Attack explorer</p>
     <h2 id="ex-h">One image, sixteen attacks</h2>
-    <p class="intro">Two FLUX.1-dev prompts from the matched synthetic cohort, each watermarked once by an in-generation method and once by VideoSeal, with a different sentence in each image. For every attack, the values are the benchmark's per-image records: the image's ASI, the detection decision at the calibrated threshold, bit accuracy, the decoded sentence, and the reader's answer to each stored question.</p>
+    <p class="intro">Two FLUX.1-dev images from the matched synthetic cohort, watermarked during generation by Gaussian Shading and by T2SMark, each carrying a different sentence. For every attack, the values are the benchmark's per-image records: the image's ASI, the detection decision at the calibrated threshold, bit accuracy, the decoded sentence, and the reader's answer to each stored question.</p>
   </div>
   <div class="ctrl-row">
     <div class="ctrl"><span class="seg-label">Image</span><div class="seg" id="ex-entry"></div></div>
@@ -373,25 +371,6 @@ def decode(image: Image) -&gt; np.ndarray: ...
       <p>Re-running watermark embedding and decoding also requires the method keys and identity codebooks. These are not part of the public release and are provided to researchers on request for benchmark use.</p>
       <p>Images derived from MultiFakeVerse are released only as far as its licence permits. The synthetic images, embedded messages, attack specifications, evaluation records and code are independent of that licence.</p>
     </div>
-  </div>
-</section>
-
-<!-- ================= CITE ================= -->
-<section class="block wrap" id="cite" aria-labelledby="ct-h">
-  <div class="sec-head t-plain">
-    <p class="label">Citation</p>
-    <h2 id="ct-h">BibTeX</h2>
-  </div>
-  <div class="cite-box">
-    <!-- TODO: replace author and venue after the review period -->
-    <pre class="code" id="bibtex">@misc{sealbench2026,
-  title  = {{SEALBench}: A Comprehensive Benchmark for Image Watermark
-            Detection, Robustness, and Recovery},
-  author = {Anonymous},
-  year   = {2026},
-  note   = {Under review at ICLR 2027}
-}</pre>
-    <button class="btn" type="button" id="copy-bib">Copy</button>
   </div>
 </section>
 
