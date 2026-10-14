@@ -152,7 +152,7 @@
   <div class="sec-head t-eval">
     <p class="label">Results</p>
     <h2 id="res-h">Detection under each attack condition</h2>
-    <p class="intro">The heat map shows TPR@1%FPR for every method and all 52 attack conditions. The curves place each condition at its mean ASI, so attacks can be compared at similar image distortion. Hover over a cell or line for exact values.</p>
+    <p class="intro">The heat map shows TPR@1%FPR for every method and all 52 attack conditions; the scatter plot compares bit accuracy with QSR. Hover over a cell or point for exact values.</p>
   </div>
 
   <div class="ctrl-row">
@@ -161,14 +161,6 @@
   </div>
   <div class="chart hm-scroll" id="heatmap"></div>
   <p class="prov" id="hm-prov"></p>
-
-  <div class="subhead"><h3>TPR@1%FPR against ASI, per attack type</h3><span class="src" id="cv-src"></span></div>
-  <div class="ctrl-row">
-    <div class="ctrl"><span class="seg-label">Set</span><div class="seg" id="cv-set"></div></div>
-  </div>
-  <div class="chart" id="curves"></div>
-  <div class="legend" id="cv-legend"></div>
-  <p class="prov">The shaded band marks the AURSC window, ASI &le; 0.2; AURSC is the normalized area under each curve inside it, averaged over all attack types. Each curve starts at the unattacked TPR at ASI&nbsp;0. Line style follows payload class: dotted for identity-only methods, dashed for short sentences, solid for long sentences, and thick with square markers for in-generation methods.</p>
 
   <div class="subhead"><h3>Bit accuracy against QSR</h3><span class="src" id="sc-src"></span></div>
   <div class="chart" id="scatter"></div>
