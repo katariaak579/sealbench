@@ -492,3 +492,4 @@ footer.foot p + p { margin-top: 8px; }
 @media print { .topbar, .theme-btn, .ctrl-row, .tabs { display: none; } }
 
 .caption.tcap { margin: 0 0 12px; }
+.soon { color: var(--gold-text); font-weight: 500; white-space: nowrap; }
