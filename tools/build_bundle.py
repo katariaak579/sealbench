@@ -64,6 +64,19 @@ for m in methods["methods"]:
 # ---- tables: keep text cells, numeric values, bold flags ----
 KEEP = ["tab_crossfamily", "tab_tier3_main", "tab_tier3_rest", "tab_main3", "tab_ingen", "tab_levels",
         "tab_comparison", "tab_attackgrid", "tab_chains", "tab_readers_method", "tab_generator"]
+def fix_caption(tid, cap):
+    for old, new in CAPTION_FIX.get(tid, []):
+        cap = cap.replace(old, new)
+    assert "sentence-carrying" not in cap and "tier3rest" not in cap, tid
+    return cap
+
+
+# caption corrections shown on the site (the paper text is unchanged)
+CAPTION_FIX = {
+    "tab_levels": [("TPR@1%FPR is reported for both watermark families, post-hoc methods in identity mode and in-generation methods on their sentence-carrying images; ",
+                    "TPR@1%FPR is reported for both watermark families, post-hoc methods in identity mode and all four in-generation methods; ")],
+    "tab_tier3_main": [(" Table~\\ref{tab:tier3rest}.", ""), (" Table~\\ref{tab:tier3rest}", "")],
+}
 tables = {}
 for t in lb["tables"]:
     if t["id"] not in KEEP:
@@ -79,7 +92,7 @@ for t in lb["tables"]:
         })
     tables[t["id"]] = {
         "num": t.get("paper_table_number"), "part": t.get("part"),
-        "caption": t.get("caption_site") or t.get("caption"),
+        "caption": fix_caption(t["id"], t.get("caption_site") or t.get("caption")),
         "columns": [{"label": c.get("label"), "kind": c.get("kind"), "unit": c.get("unit")} for c in t["columns"]],
         "colgroups": t.get("column_groups", []),
         "groups": [g.get("label") for g in t["row_groups"]],
