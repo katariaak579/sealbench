@@ -1,0 +1,1043 @@
+{
+ "generated_utc": "2026-10-14T12:10:40Z",
+ "paper": {
+  "commit": "a0d8e315a7ad62a2279e3f3896e7255d83aa370e",
+  "date": "2026-10-14T11:14:48Z"
+ },
+ "n_checks": 172,
+ "n_failed": 0,
+ "checks": [
+  {
+   "group": "leaderboards",
+   "check": "tab_comparison: every row has the tabular's 5 columns",
+   "ok": true,
+   "detail": "tabular spec declares 6 columns but no row uses more than 5; trailing empty column(s) dropped"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_methods: every row has the tabular's 8 columns",
+   "ok": true,
+   "detail": "11 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_crossfamily: caption_site differs from the paper caption only by the documented fix",
+   "ok": true,
+   "detail": "The paper's caption says the identity attribution block reports open-set attribution accur"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_crossfamily: rows of tables/tab_crossfamily.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "22 rows parsed, 22 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_crossfamily: every row has the tabular's 8 columns",
+   "ok": true,
+   "detail": "22 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_tier3_main: caption_site differs from the paper caption only by the documented fix",
+   "ok": true,
+   "detail": "The paper's caption ends with a stray cross-reference ('Table~\\ref{tab:tier3rest}.') after"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_tier3_main: rows of tables/tab_tier3_main.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "10 rows parsed, 10 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_tier3_main: every row has the tabular's 12 columns",
+   "ok": true,
+   "detail": "10 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_attackgrid: rows of tables/tab_attackgrid.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "14 rows parsed, 14 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_attackgrid: every row has the tabular's 5 columns",
+   "ok": true,
+   "detail": "14 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_chains: rows of tables/tab_chains.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "14 rows parsed, 14 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_chains: every row has the tabular's 5 columns",
+   "ok": true,
+   "detail": "14 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_qsrcases: every row has the tabular's 5 columns",
+   "ok": true,
+   "detail": "8 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_budget_sensitivity: every row has the tabular's 4 columns",
+   "ok": true,
+   "detail": "3 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_main3: rows of tables/tab_main3.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "11 rows parsed, 11 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_main3: every row has the tabular's 17 columns",
+   "ok": true,
+   "detail": "11 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_modes: caption_site differs from the paper caption only by the documented fix",
+   "ok": true,
+   "detail": "The paper's caption lacks the definition of message mode (it reads '..., the basis of the "
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_modes: rows of tables/tab_modes.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "16 rows parsed, 16 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_modes: every row has the tabular's 11 columns",
+   "ok": true,
+   "detail": "16 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_levels: rows of tables/tab_levels.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "19 rows parsed, 19 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_levels: every row has the tabular's 7 columns",
+   "ok": true,
+   "detail": "19 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_family: rows of tables/tab_family.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "28 rows parsed, 28 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_family: every row has the tabular's 5 columns",
+   "ok": true,
+   "detail": "28 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_synergy: rows of tables/tab_synergy.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "14 rows parsed, 14 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_synergy: every row has the tabular's 7 columns",
+   "ok": true,
+   "detail": "14 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_ingen: rows of tables/tab_ingen.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "4 rows parsed, 4 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_ingen: every row has the tabular's 6 columns",
+   "ok": true,
+   "detail": "4 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_generator: rows of tables/tab_generator.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "12 rows parsed, 12 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_generator: every row has the tabular's 8 columns",
+   "ok": true,
+   "detail": "12 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_subclass: rows of tables/tab_subclass.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "16 rows parsed, 16 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_subclass: every row has the tabular's 10 columns",
+   "ok": true,
+   "detail": "16 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_subclass_spread: rows of tables/tab_subclass_spread.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "15 rows parsed, 15 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_subclass_spread: every row has the tabular's 4 columns",
+   "ok": true,
+   "detail": "15 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_tier3_rest: rows of tables/tab_tier3_rest.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "21 rows parsed, 21 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_tier3_rest: every row has the tabular's 12 columns",
+   "ok": true,
+   "detail": "21 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_message_agg: rows of tables/tab_message_agg.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "15 rows parsed, 15 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_message_agg: every row has the tabular's 7 columns",
+   "ok": true,
+   "detail": "15 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_partial: rows of tables/tab_partial.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "5 rows parsed, 5 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_partial: every row has the tabular's 6 columns",
+   "ok": true,
+   "detail": "5 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_readers_main: rows of tables/tab_readers_main.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "6 rows parsed, 6 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_readers_main: every row has the tabular's 6 columns",
+   "ok": true,
+   "detail": "6 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_readers_agree: rows of tables/tab_readers_agree.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "4 rows parsed, 4 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_readers_agree: every row has the tabular's 7 columns",
+   "ok": true,
+   "detail": "4 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_readers_levels: rows of tables/tab_readers_levels.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "25 rows parsed, 25 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_readers_levels: every row has the tabular's 6 columns",
+   "ok": true,
+   "detail": "25 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_readers_method: rows of tables/tab_readers_method.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "31 rows parsed, 31 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_readers_method: every row has the tabular's 6 columns",
+   "ok": true,
+   "detail": "31 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_calib: rows of tables/tab_calib.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "11 rows parsed, 11 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_calib: every row has the tabular's 10 columns",
+   "ok": true,
+   "detail": "11 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_arms: rows of tables/tab_arms.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "22 rows parsed, 22 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_arms: every row has the tabular's 11 columns",
+   "ok": true,
+   "detail": "22 rows"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_unmarker: rows of tables/tab_unmarker.tex parsed one-to-one and numbers round-trip",
+   "ok": true,
+   "detail": "15 rows parsed, 15 data lines in file"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_unmarker: every row has the tabular's 7 columns",
+   "ok": true,
+   "detail": "15 rows"
+  },
+  {
+   "group": "heatmap",
+   "check": "52 conditions in the make_figs.py order",
+   "ok": true,
+   "detail": "52 conditions"
+  },
+  {
+   "group": "heatmap",
+   "check": "missing cells are exactly real-category UnMarker and unmarkshare for the 7 capacity methods",
+   "ok": true,
+   "detail": "null cells: {'manipulated': 0, 'real': 14, 'synthetic': 0, 'synthetic_in_generation': 0}"
+  },
+  {
+   "group": "curves",
+   "check": "paper figure: 11 methods x 14 attack types, each curve has the anchor plus its measured points",
+   "ok": true,
+   "detail": "154 of 154 method-type curves have points beyond the anchor"
+  },
+  {
+   "group": "curves",
+   "check": "AURSC (28 attack types) and Obs. Min@0.2 recomputed from the manipulated, real and pooled synthetic curves equal tab_main3 (33 methods x categories)",
+   "ok": true,
+   "detail": "all 66 values equal at 3 decimals; unattacked TPR equal for manipulated and real"
+  },
+  {
+   "group": "curves",
+   "check": "AURSC and Obs. Min@0.2 of each synthetic arm equal tab_arms (22 rows)",
+   "ok": true,
+   "detail": "22 rows equal"
+  },
+  {
+   "group": "curves",
+   "check": "in-generation AURSC and Obs. Min@0.2 equal tab_ingen",
+   "ok": true,
+   "detail": "4 methods equal"
+  },
+  {
+   "group": "curves",
+   "check": "per-attack-type AURSC averaged over methods equals tab_family (28 types x 4 columns)",
+   "ok": true,
+   "detail": "112 values equal"
+  },
+  {
+   "group": "scatter",
+   "check": "post-hoc points: 364, dissociated (bit acc >= 0.9 and QSR <= 0.5): 42 (paper text: 42 of 364)",
+   "ok": true,
+   "detail": "42 of 364"
+  },
+  {
+   "group": "scatter",
+   "check": "in-generation points: 156, dissociated: 1 (paper text: 1 of 156)",
+   "ok": true,
+   "detail": "1 of 156"
+  },
+  {
+   "group": "scatter",
+   "check": "QSR (Unattacked, C1-C4, All), sem-AURSC, bit-AURSC and Bit Acc. recomputed from the scatter source rows equal tab_tier3_main (10 methods)",
+   "ok": true,
+   "detail": "90 values equal at 3 decimals"
+  },
+  {
+   "group": "attacks",
+   "check": "52 conditions: 30 C1, 8 C2, 8 C3, 6 C4",
+   "ok": true,
+   "detail": "{'C1': 30, 'C2': 8, 'C3': 8, 'C4': 6}"
+  },
+  {
+   "group": "attacks",
+   "check": "every heat-map condition maps to a row of tab_attackgrid or tab_chains",
+   "ok": true,
+   "detail": "52 conditions parsed from the two tables"
+  },
+  {
+   "group": "attacks",
+   "check": "mean ASI recomputed from robust_curves.csv (matched post-hoc identity arm, in-gen eval_v2; manipulated for chains) equals tab_attackgrid / tab_chains / tab_synergy",
+   "ok": true,
+   "detail": "52 x 2 matched-cohort values + 14 manipulated chain values equal at 3 decimals"
+  },
+  {
+   "group": "methods",
+   "check": "CIN: payload bits in tab:methods = 30",
+   "ok": true,
+   "detail": "30"
+  },
+  {
+   "group": "methods",
+   "check": "PIMoG: payload bits in tab:methods = 30",
+   "ok": true,
+   "detail": "30"
+  },
+  {
+   "group": "methods",
+   "check": "WAM: payload bits in tab:methods = 32",
+   "ok": true,
+   "detail": "32"
+  },
+  {
+   "group": "methods",
+   "check": "TrustMark: payload bits in tab:methods = 48",
+   "ok": true,
+   "detail": "48"
+  },
+  {
+   "group": "methods",
+   "check": "EditGuard: payload bits in tab:methods = 64",
+   "ok": true,
+   "detail": "64"
+  },
+  {
+   "group": "methods",
+   "check": "VINE: payload bits in tab:methods = 100",
+   "ok": true,
+   "detail": "100"
+  },
+  {
+   "group": "methods",
+   "check": "InvisMark: payload bits in tab:methods = 100",
+   "ok": true,
+   "detail": "100"
+  },
+  {
+   "group": "methods",
+   "check": "OmniGuard: payload bits in tab:methods = 100",
+   "ok": true,
+   "detail": "100"
+  },
+  {
+   "group": "methods",
+   "check": "MBRS: payload bits in tab:methods = 256",
+   "ok": true,
+   "detail": "256"
+  },
+  {
+   "group": "methods",
+   "check": "VideoSeal: payload bits in tab:methods = 256",
+   "ok": true,
+   "detail": "256"
+  },
+  {
+   "group": "methods",
+   "check": "PixelSeal: payload bits in tab:methods = 256",
+   "ok": true,
+   "detail": "256"
+  },
+  {
+   "group": "methods",
+   "check": "RingID: available on SD2.1, SDXL and FLUX.1 in tab:methods",
+   "ok": true,
+   "detail": "[True, True, True]"
+  },
+  {
+   "group": "methods",
+   "check": "Gauss. Shading: available on SD2.1, SDXL and FLUX.1 in tab:methods",
+   "ok": true,
+   "detail": "[True, True, True]"
+  },
+  {
+   "group": "methods",
+   "check": "T2SMark: available on SD2.1, SDXL and FLUX.1 in tab:methods",
+   "ok": true,
+   "detail": "[True, True, True]"
+  },
+  {
+   "group": "methods",
+   "check": "PRC: available on SD2.1, SDXL and FLUX.1 in tab:methods",
+   "ok": true,
+   "detail": "[True, True, True]"
+  },
+  {
+   "group": "methods",
+   "check": "sentence classes: short for EditGuard/VINE/InvisMark/OmniGuard, long for MBRS/VideoSeal/PixelSeal/GS/T2SMark/PRC",
+   "ok": true,
+   "detail": "{'cin': None, 'pimog': None, 'wam': None, 'trustmark': None, 'editguard': 'short', 'vine': 'short', 'invismark': 'short', 'omniguard': 'short', 'mbrs': 'long', 'videoseal': 'long', 'pixelseal': 'long', 'ring_id': None, 'gaussian_shading': 'long', 't2smark': 'long', 'prc': 'long'}"
+  },
+  {
+   "group": "stats",
+   "check": "images.real = 25864 stated in the paper",
+   "ok": true,
+   "detail": "lines [56, 197, 201]"
+  },
+  {
+   "group": "stats",
+   "check": "images.manipulated = 15000 stated in the paper",
+   "ok": true,
+   "detail": "lines [56, 197, 201]"
+  },
+  {
+   "group": "stats",
+   "check": "images.synthetic = 12665 stated in the paper",
+   "ok": true,
+   "detail": "lines [56, 199, 201]"
+  },
+  {
+   "group": "stats",
+   "check": "images.unwatermarked_total = 53529 stated in the paper",
+   "ok": true,
+   "detail": "lines [230]"
+  },
+  {
+   "group": "stats",
+   "check": "images.watermarked_total = 739818 stated in the paper",
+   "ok": true,
+   "detail": "lines [230]"
+  },
+  {
+   "group": "stats",
+   "check": "evaluation.real = 1600 stated in the paper",
+   "ok": true,
+   "detail": "lines [230, 355, 793]"
+  },
+  {
+   "group": "stats",
+   "check": "evaluation.manipulated = 1600 stated in the paper",
+   "ok": true,
+   "detail": "lines [230, 355, 794]"
+  },
+  {
+   "group": "stats",
+   "check": "evaluation.synthetic = 1593 stated in the paper",
+   "ok": true,
+   "detail": "lines [230, 355, 794, 2289]"
+  },
+  {
+   "group": "stats",
+   "check": "evaluation.unwatermarked = 4793 stated in the paper",
+   "ok": true,
+   "detail": "lines [230]"
+  },
+  {
+   "group": "stats",
+   "check": "evaluation.watermarked = 91046 stated in the paper",
+   "ok": true,
+   "detail": "lines [230]"
+  },
+  {
+   "group": "stats",
+   "check": "evaluation.attacked_watermarked = 4555449 stated in the paper",
+   "ok": true,
+   "detail": "lines [230]"
+  },
+  {
+   "group": "stats",
+   "check": "evaluation.attacked_unwatermarked = 241826 stated in the paper",
+   "ok": true,
+   "detail": "lines [230]"
+  },
+  {
+   "group": "stats",
+   "check": "evaluation.matched_cohort = 1193 stated in the paper",
+   "ok": true,
+   "detail": "lines [354, 581, 1688, 1693, 1695, 2312]"
+  },
+  {
+   "group": "stats",
+   "check": "evaluation.unmarker_per_subclass = 50 stated in the paper",
+   "ok": true,
+   "detail": "lines [1690]"
+  },
+  {
+   "group": "stats",
+   "check": "evaluation.images_per_subclass = 200 stated in the paper",
+   "ok": true,
+   "detail": "lines [1687]"
+  },
+  {
+   "group": "stats",
+   "check": "methods.post_hoc = 11 stated in the paper",
+   "ok": true,
+   "detail": "lines [56, 96, 128, 205, 581, 603]"
+  },
+  {
+   "group": "stats",
+   "check": "methods.in_generation = 4 stated in the paper",
+   "ok": true,
+   "detail": "lines [56, 96, 128, 205, 776, 2123]"
+  },
+  {
+   "group": "stats",
+   "check": "methods.generator_method_pairs = 12 stated in the paper",
+   "ok": true,
+   "detail": "lines [253]"
+  },
+  {
+   "group": "stats",
+   "check": "attacks.conditions = 52 stated in the paper",
+   "ok": true,
+   "detail": "lines [104, 212, 777]"
+  },
+  {
+   "group": "stats",
+   "check": "attacks.categories = 4 stated in the paper",
+   "ok": true,
+   "detail": "lines [56, 134, 212, 2089, 2107, 2236]"
+  },
+  {
+   "group": "stats",
+   "check": "attacks.c1_perturbations = 10 stated in the paper",
+   "ok": true,
+   "detail": "lines [215]"
+  },
+  {
+   "group": "stats",
+   "check": "attacks.c3_sequences = 8 stated in the paper",
+   "ok": true,
+   "detail": "lines [221]"
+  },
+  {
+   "group": "stats",
+   "check": "attacks.c4_sequences = 6 stated in the paper",
+   "ok": true,
+   "detail": "lines [223]"
+  },
+  {
+   "group": "stats",
+   "check": "metrics.fpr_target = 0.01 stated in the paper",
+   "ok": true,
+   "detail": "lines [107, 112, 117, 134, 330, 337]"
+  },
+  {
+   "group": "stats",
+   "check": "metrics.asi_budget = 0.2 stated in the paper",
+   "ok": true,
+   "detail": "lines [350, 713, 1281, 1446, 2024, 2152]"
+  },
+  {
+   "group": "stats",
+   "check": "metrics.identity_codebook = 100 stated in the paper",
+   "ok": true,
+   "detail": "lines [328, 581, 1761]"
+  },
+  {
+   "group": "stats",
+   "check": "metrics.ringid_keys = 1024 stated in the paper",
+   "ok": true,
+   "detail": "lines [581, 591, 2233]"
+  },
+  {
+   "group": "stats",
+   "check": "metrics.readers = 5 stated in the paper",
+   "ok": true,
+   "detail": "lines [749, 1295, 2357, 2372, 2424]"
+  },
+  {
+   "group": "stats",
+   "check": "metrics.primary_reader = Qwen2.5-7B-Instruct stated in the paper",
+   "ok": true,
+   "detail": "lines [343, 2375]"
+  },
+  {
+   "group": "stats",
+   "check": "metrics.question_instances = 7.24 million stated in the paper",
+   "ok": true,
+   "detail": "lines [2354, 2375]"
+  },
+  {
+   "group": "stats",
+   "check": "metrics.reader_method_attack_pairs = 2385 stated in the paper",
+   "ok": true,
+   "detail": "lines [2347, 2375]"
+  },
+  {
+   "group": "stats",
+   "check": "corpus.messages = 240 stated in the paper",
+   "ok": true,
+   "detail": "lines [1602]"
+  },
+  {
+   "group": "stats",
+   "check": "corpus.calibration_negatives_matched = 61077 stated in the paper",
+   "ok": true,
+   "detail": "lines [1695]"
+  },
+  {
+   "group": "stats",
+   "check": "generation.resolution = SD2.1 512 px, others 1024 px stated in the paper",
+   "ok": true,
+   "detail": "lines [1675]"
+  },
+  {
+   "group": "stats",
+   "check": "1,600 + 1,600 + 1,593 = 4,793 unwatermarked evaluation images",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "group": "paper text",
+   "check": "Intro/5.2: manipulated, Gaussian noise sigma=10, mean post-hoc TPR@1%FPR 99.8%",
+   "ok": true,
+   "detail": "computed 99.8127, paper 99.8"
+  },
+  {
+   "group": "paper text",
+   "check": "Intro/5.2: manipulated, diffusion regeneration 0.2, mean post-hoc TPR@1%FPR 24.7%",
+   "ok": true,
+   "detail": "computed 24.7418, paper 24.7"
+  },
+  {
+   "group": "paper text",
+   "check": "5.2: manipulated mean ASI of Gaussian noise sigma=10 is 0.233",
+   "ok": true,
+   "detail": "computed 0.2334, paper 0.233"
+  },
+  {
+   "group": "paper text",
+   "check": "5.2: manipulated mean ASI of diffusion regeneration 0.2 is 0.243",
+   "ok": true,
+   "detail": "computed 0.2428, paper 0.243"
+  },
+  {
+   "group": "paper text",
+   "check": "5.2: in-generation, Gaussian noise sigma=5, mean TPR@1%FPR 98.5%",
+   "ok": true,
+   "detail": "computed 98.4700, paper 98.5"
+  },
+  {
+   "group": "paper text",
+   "check": "5.2: in-generation, diffusion regeneration 0.2, mean TPR@1%FPR 74.7%",
+   "ok": true,
+   "detail": "computed 74.7075, paper 74.7"
+  },
+  {
+   "group": "paper text",
+   "check": "5.2: in-generation mean ASI of Gaussian noise sigma=5 is 0.161",
+   "ok": true,
+   "detail": "computed 0.1610, paper 0.161"
+  },
+  {
+   "group": "paper text",
+   "check": "5.2: in-generation mean ASI of diffusion regeneration 0.2 is 0.154",
+   "ok": true,
+   "detail": "computed 0.1540, paper 0.154"
+  },
+  {
+   "group": "paper text",
+   "check": "App: manipulated, Gaussian noise sigma=20, mean ASI 0.459",
+   "ok": true,
+   "detail": "computed 0.4591, paper 0.459"
+  },
+  {
+   "group": "paper text",
+   "check": "App: manipulated, Gaussian noise sigma=20, TPR@1%FPR 91.1%",
+   "ok": true,
+   "detail": "computed 91.0636, paper 91.1"
+  },
+  {
+   "group": "paper text",
+   "check": "App: manipulated, diffusion regeneration 0.3, mean ASI 0.317",
+   "ok": true,
+   "detail": "computed 0.3171, paper 0.317"
+  },
+  {
+   "group": "paper text",
+   "check": "App: manipulated, diffusion regeneration 0.3, TPR@1%FPR 18.7%",
+   "ok": true,
+   "detail": "computed 18.7309, paper 18.7"
+  },
+  {
+   "group": "paper text",
+   "check": "App: in-generation, Gaussian noise sigma=20, mean ASI 0.630",
+   "ok": true,
+   "detail": "computed 0.6300, paper 0.63"
+  },
+  {
+   "group": "paper text",
+   "check": "App: in-generation, Gaussian noise sigma=20, TPR@1%FPR 89.6%",
+   "ok": true,
+   "detail": "computed 89.5950, paper 89.6"
+  },
+  {
+   "group": "paper text",
+   "check": "App: at the stronger VAE setting (q1), 6-7 of the 11 post-hoc methods fall below 10% in each category",
+   "ok": true,
+   "detail": "{'manipulated': 7, 'real': 6, 'synthetic': 7}"
+  },
+  {
+   "group": "paper text",
+   "check": "App: VAE q1 in-generation mean 63%",
+   "ok": true,
+   "detail": "computed 63.3475, paper 63"
+  },
+  {
+   "group": "paper text",
+   "check": "App: VAE q1 Gaussian Shading 93%",
+   "ok": true,
+   "detail": "computed 92.8600, paper 93"
+  },
+  {
+   "group": "paper text",
+   "check": "App: VAE q1 PRC 22%",
+   "ok": true,
+   "detail": "computed 22.4600, paper 22"
+  },
+  {
+   "group": "paper text",
+   "check": "App: at diffusion 0.3 only WAM and VINE stay above 20% in every category",
+   "ok": true,
+   "detail": "{'manipulated': ['vine', 'wam'], 'real': ['vine', 'wam'], 'synthetic': ['vine', 'wam']}"
+  },
+  {
+   "group": "paper text",
+   "check": "App: diffusion 0.3 post-hoc mean 12-19% per category",
+   "ok": true,
+   "detail": "{'manipulated': 18.73, 'real': 11.9, 'synthetic': 17.72}"
+  },
+  {
+   "group": "paper text",
+   "check": "App: diffusion 0.3 Gaussian Shading, RingID, T2SMark retain 73-100%",
+   "ok": true,
+   "detail": "[100.0, 75.27, 72.59]"
+  },
+  {
+   "group": "paper text",
+   "check": "App: diffusion 0.3 in-generation mean 68%",
+   "ok": true,
+   "detail": "computed 67.8125, paper 68"
+  },
+  {
+   "group": "paper text",
+   "check": "App: UnMarker: 7 of 11 post-hoc methods below 10%, WAM and InvisMark at 100% (manipulated and synthetic grids)",
+   "ok": true,
+   "detail": "below 10%: {'manipulated': 7, 'synthetic': 7}; at 100%: {'manipulated': ['wam', 'invismark'], 'synthetic': ['wam', 'invismark']}"
+  },
+  {
+   "group": "paper text",
+   "check": "App: UnMarker: Gaussian Shading, T2SMark, PRC fall to 1-5%",
+   "ok": true,
+   "detail": "[5.15, 1.0, 2.0]"
+  },
+  {
+   "group": "heatmap",
+   "check": "tab_unmarker (rows file) equals the heat-map cells for UnMarker and unmarkshare (all categories, both families)",
+   "ok": true,
+   "detail": "66 + 8 cells equal (nulls where the table prints --)"
+  },
+  {
+   "group": "heatmap",
+   "check": "post-hoc TPR rows of tab_levels (C1-C4, All) recomputed from the heat-map grids and n (n-weighted per method, then mean over methods)",
+   "ok": true,
+   "detail": "15 values equal at 1 decimal"
+  },
+  {
+   "group": "heatmap",
+   "check": "in-generation C1-C4/All of tab_crossfamily recomputed from the heat-map grid (n-weighted)",
+   "ok": true,
+   "detail": "20 values equal at 1 decimal"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_crossfamily identity block (C1-C4, All) equals TPR@1%FPR recomputed from detection.csv (matched identity arm; RingID eval_v2)",
+   "ok": true,
+   "detail": "60 values equal at 1 decimal"
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_crossfamily caption: identity block is described as open-set attribution accuracy, but the numbers are TPR@1%FPR (caption_site corrected; flagged for the authors)",
+   "ok": true,
+   "detail": "11 of 12 'All' values differ from the attribution accuracy; (method, attribution All, table All): [('cin', 46.8, 46.9), ('pimog', 59.3, 59.5), ('wam', 88.9, 90.2), ('trustmark', 65.4, 65.5), ('editguard', 42.2, 42.4), ('vine', 80.7, 81.0), ('invismark', 73.8, 74.2), ('omniguard', 81.2, 81.3), ('mbrs', 70.3, 70.5), ('videoseal', 86.4, 86.4), ('pixelseal', 87.4, 87.5), ('ring_id', 54.1, 80.1)]"
+  },
+  {
+   "group": "paper text",
+   "check": "5.3: mean attacked TPR@1%FPR, post-hoc (message block) 75.8%",
+   "ok": true,
+   "detail": "computed 75.7857, paper 75.8"
+  },
+  {
+   "group": "paper text",
+   "check": "5.3: mean attacked TPR@1%FPR, in-generation 73.6%",
+   "ok": true,
+   "detail": "computed 73.6333, paper 73.6"
+  },
+  {
+   "group": "paper text",
+   "check": "5.3: method-level ranges 47.7-89.7 (post-hoc) and 63.6-80.7 (in-generation)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "group": "paper text",
+   "check": "Intro/5.3: C2 mean TPR@1%FPR in-generation 68.4%",
+   "ok": true,
+   "detail": "computed 68.4000, paper 68.4"
+  },
+  {
+   "group": "paper text",
+   "check": "Intro/5.3: C2 mean TPR@1%FPR post-hoc 53.3%",
+   "ok": true,
+   "detail": "computed 53.3143, paper 53.3"
+  },
+  {
+   "group": "paper text",
+   "check": "5.3: mean QSR post-hoc 0.454",
+   "ok": true,
+   "detail": "computed 0.4537, paper 0.454"
+  },
+  {
+   "group": "paper text",
+   "check": "5.3: mean QSR in-generation 0.635",
+   "ok": true,
+   "detail": "computed 0.6350, paper 0.635"
+  },
+  {
+   "group": "paper text",
+   "check": "5.3: QSR ranges 0.104-0.629 (post-hoc) and 0.527-0.693 (in-generation)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "group": "paper text",
+   "check": "5.3: C2 mean QSR in-generation 0.354",
+   "ok": true,
+   "detail": "computed 0.3537, paper 0.354"
+  },
+  {
+   "group": "paper text",
+   "check": "5.3: C2 mean QSR post-hoc 0.154",
+   "ok": true,
+   "detail": "computed 0.1539, paper 0.154"
+  },
+  {
+   "group": "paper text",
+   "check": "5.3: C3 QSR VideoSeal 0.822, PixelSeal 0.811, highest in-generation 0.727",
+   "ok": true,
+   "detail": "(0.822, 0.811, 0.727)"
+  },
+  {
+   "group": "paper text",
+   "check": "5.5: PixelSeal bit-AURSC 0.958, sem-AURSC 0.821",
+   "ok": true,
+   "detail": "(0.958, 0.821)"
+  },
+  {
+   "group": "paper text",
+   "check": "5.3: in-generation methods fall to 0-3% TPR@1%FPR under strong cropping (0.5) or rotation (15)",
+   "ok": true,
+   "detail": "[0.81, 1.27, 1.35, 1.96, 0.75, 1.01, 1.09, 0.84]"
+  },
+  {
+   "group": "paper text",
+   "check": "5.1: all 11 post-hoc methods >= 99.9% TPR@1%FPR before attack in all three categories",
+   "ok": true,
+   "detail": "min 99.9"
+  },
+  {
+   "group": "paper text",
+   "check": "5.1: the same eight post-hoc methods fall below 7% (Obs. Min@0.2) in each image category",
+   "ok": true,
+   "detail": "[['cin', 'editguard', 'invismark', 'mbrs', 'pimog', 'pixelseal', 'trustmark', 'videoseal'], ['cin', 'editguard', 'invismark', 'mbrs', 'pimog', 'pixelseal', 'trustmark', 'videoseal'], ['cin', 'editguard', 'invismark', 'mbrs', 'pimog', 'pixelseal', 'trustmark', 'videoseal']]"
+  },
+  {
+   "group": "paper text",
+   "check": "5.5: matched post-hoc mean bit accuracy 0.835",
+   "ok": true,
+   "detail": "computed 0.8350, paper 0.835"
+  },
+  {
+   "group": "paper text",
+   "check": "5.5: matched post-hoc complete-message recovery 0.396",
+   "ok": true,
+   "detail": "computed 0.3960, paper 0.396"
+  },
+  {
+   "group": "paper text",
+   "check": "5.5: in-generation bit accuracy 0.883",
+   "ok": true,
+   "detail": "computed 0.8830, paper 0.883"
+  },
+  {
+   "group": "paper text",
+   "check": "5.5: in-generation complete-message recovery 0.610",
+   "ok": true,
+   "detail": "computed 0.6100, paper 0.61"
+  },
+  {
+   "group": "paper text",
+   "check": "Intro: manipulated post-hoc bit accuracy 0.83",
+   "ok": true,
+   "detail": "computed 0.8260, paper 0.83"
+  },
+  {
+   "group": "paper text",
+   "check": "Intro: manipulated post-hoc complete-message recovery 0.39",
+   "ok": true,
+   "detail": "computed 0.3870, paper 0.39"
+  },
+  {
+   "group": "paper text",
+   "check": "Intro: manipulated post-hoc QSR 0.44",
+   "ok": true,
+   "detail": "computed 0.4420, paper 0.44"
+  },
+  {
+   "group": "paper text",
+   "check": "5.5: 27.3% (post-hoc, matched) and 5.1% (in-generation) of correct answers from inexact messages",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "group": "paper text",
+   "check": "5.5: reader range of mean attacked QSR 0.427-0.507 (post-hoc matched) and 0.623-0.647 (in-generation)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "group": "leaderboards",
+   "check": "tab_levels in-generation TPR row is the mean over all 4 in-generation methods of tab_crossfamily (RingID included), although the caption says 'in-generation methods on their sentence-carrying images'",
+   "ok": true,
+   "detail": "All: mean of 4 = 75.25, mean of the 3 sentence carriers = 73.63, table 75.3"
+  },
+  {
+   "group": "paper text",
+   "check": "5.4: Gaussian Shading 82.2/80.3/79.6 and PRC 76.8/66.6/47.6 by generator",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

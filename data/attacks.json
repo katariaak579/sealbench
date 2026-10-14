@@ -1,0 +1,1881 @@
+{
+ "_meta": {
+  "generated_utc": "2026-10-14T12:10:40Z",
+  "generator": "tools/build_data.py",
+  "paper": {
+   "commit": "a0d8e315a7ad62a2279e3f3896e7255d83aa370e",
+   "date": "2026-10-14T11:14:48Z"
+  },
+  "research_repo": {
+   "commit": "9620e81f33952225cb997b60dfedadab7ca58dfd",
+   "date": "2026-09-26T20:51:33+10:00",
+   "note": "metric CSVs are untracked run outputs; the commit identifies the scripts"
+  },
+  "sources": [
+   "paper:tables/tab_attackgrid.tex",
+   "paper:tables/tab_chains.tex",
+   "paper:tables/tab_synergy.tex",
+   "repo:runs/2026-09-18_matched-cohort/metrics_syn_matched_identity/robust_curves.csv",
+   "repo:runs/2026-08-17_ingen-l14/metrics/eval_v2/robust_curves.csv",
+   "repo:runs/2026-08-02_leveled-eval/metrics_fake_identity/robust_curves.csv",
+   "repo:runs/2026-08-14_posthoc-real/metrics_real_identity/robust_curves.csv",
+   "repo:runs/2026-08-02_leveled-eval/metrics_syn_identity/robust_curves.csv",
+   "repo:runs/2026-08-02_leveled-eval/metrics_syn_newgen_identity/robust_curves.csv"
+  ]
+ },
+ "categories": [
+  {
+   "id": "C1",
+   "name": "Single perturbation",
+   "paper_heading": "1. Single Perturbation",
+   "description": "10 image perturbations, each at three parameter settings (30 conditions).",
+   "n_conditions": 30
+  },
+  {
+   "id": "C2",
+   "name": "Off-the-shelf model-based editing and removal",
+   "paper_heading": "2. 'Off-the-shelf' Model based Attacks",
+   "description": "Prompt-based editing (Qwen-Image-Edit, FLUX.2-klein), VAE regeneration (2 settings), diffusion regeneration (3 settings) and UnMarker (8 conditions).",
+   "n_conditions": 8
+  },
+  {
+   "id": "C3",
+   "name": "Multiple perturbations",
+   "paper_heading": "3. Multiple Perturbation",
+   "description": "8 fixed sequences of image perturbations; the output of each step is the input to the next.",
+   "n_conditions": 8
+  },
+  {
+   "id": "C4",
+   "name": "Model-based attack followed by multiple perturbations",
+   "paper_heading": "4. Combining 'Off-the-shelf' Model-based Attacks and Multiple Perturbations",
+   "description": "6 fixed sequences that start with a model-based attack followed by further perturbations.",
+   "n_conditions": 6
+  }
+ ],
+ "attack_types": [
+  {
+   "key": "brightness",
+   "name": "brightness",
+   "category": "C1",
+   "is_chain": false
+  },
+  {
+   "key": "contrast",
+   "name": "contrast",
+   "category": "C1",
+   "is_chain": false
+  },
+  {
+   "key": "crop",
+   "name": "crop",
+   "category": "C1",
+   "is_chain": false
+  },
+  {
+   "key": "gblur",
+   "name": "Gaussian blur",
+   "category": "C1",
+   "is_chain": false
+  },
+  {
+   "key": "gnoise",
+   "name": "Gaussian noise",
+   "category": "C1",
+   "is_chain": false
+  },
+  {
+   "key": "hue",
+   "name": "hue",
+   "category": "C1",
+   "is_chain": false
+  },
+  {
+   "key": "jpeg",
+   "name": "JPEG",
+   "category": "C1",
+   "is_chain": false
+  },
+  {
+   "key": "overlay",
+   "name": "overlay",
+   "category": "C1",
+   "is_chain": false
+  },
+  {
+   "key": "resize",
+   "name": "resize",
+   "category": "C1",
+   "is_chain": false
+  },
+  {
+   "key": "rotation",
+   "name": "rotation",
+   "category": "C1",
+   "is_chain": false
+  },
+  {
+   "key": "vae",
+   "name": "VAE regeneration",
+   "category": "C2",
+   "is_chain": false
+  },
+  {
+   "key": "diffusion_modern",
+   "name": "diffusion regeneration",
+   "category": "C2",
+   "is_chain": false
+  },
+  {
+   "key": "edit",
+   "name": "prompt-based edit",
+   "category": "C2",
+   "is_chain": false
+  },
+  {
+   "key": "unmarker",
+   "name": "UnMarker",
+   "category": "C2",
+   "is_chain": false
+  },
+  {
+   "key": "resize_jpeg_messenger",
+   "name": "messenger",
+   "category": "C3",
+   "is_chain": true
+  },
+  {
+   "key": "brightness_contrast_filter",
+   "name": "filter",
+   "category": "C3",
+   "is_chain": true
+  },
+  {
+   "key": "crop_resize_jpeg_social",
+   "name": "social",
+   "category": "C3",
+   "is_chain": true
+  },
+  {
+   "key": "resize_jpeg_resize_jpeg_reshare",
+   "name": "reshare",
+   "category": "C3",
+   "is_chain": true
+  },
+  {
+   "key": "rotation_crop_resize_jpeg_straighten",
+   "name": "straighten",
+   "category": "C3",
+   "is_chain": true
+  },
+  {
+   "key": "brightness_saturation_sharpen_jpeg_filterpost",
+   "name": "filterpost",
+   "category": "C3",
+   "is_chain": true
+  },
+  {
+   "key": "gnoise_gblur_jpeg_noisedenoise",
+   "name": "noisedenoise",
+   "category": "C3",
+   "is_chain": true
+  },
+  {
+   "key": "overlay_resize_jpeg_meme",
+   "name": "meme",
+   "category": "C3",
+   "is_chain": true
+  },
+  {
+   "key": "edit_resize_jpeg_editshare_flux2",
+   "name": "editshare-flux2",
+   "category": "C4",
+   "is_chain": true
+  },
+  {
+   "key": "edit_resize_jpeg_editshare_qwen",
+   "name": "editshare-qwen",
+   "category": "C4",
+   "is_chain": true
+  },
+  {
+   "key": "vae_jpeg_vaeregen",
+   "name": "vaeregen",
+   "category": "C4",
+   "is_chain": true
+  },
+  {
+   "key": "diffusion_crop_jpeg_regenshare",
+   "name": "regenshare",
+   "category": "C4",
+   "is_chain": true
+  },
+  {
+   "key": "diffusion_gnoise_gblur_sharpen_jpeg_scrub",
+   "name": "scrub",
+   "category": "C4",
+   "is_chain": true
+  },
+  {
+   "key": "unmarker_resize_jpeg_unmarkshare",
+   "name": "unmarkshare",
+   "category": "C4",
+   "is_chain": true
+  }
+ ],
+ "mean_asi_columns": {
+  "post_hoc_synthetic_matched": "Paper: 'Mean ASI, post-hoc (synthetic)' -- averaged over images and the 11 post-hoc methods on the matched synthetic cohort (tab_attackgrid / tab_chains caption).",
+  "in_generation_synthetic_matched": "Paper: 'Mean ASI, in-generation (synthetic)' -- averaged over images and the 4 in-generation methods on the same cohort.",
+  "post_hoc_manipulated": "Paper (chains only): 'Mean ASI' column of tab_synergy, measured on the manipulated category.",
+  "mean_asi_computed": "Computed by build_data.py from robust_curves.csv as the mean over methods of the condition-level mean ASI; synthetic_post_hoc pools the two synthetic identity arms (1,593 images) per method by n_pos. The two synthetic_matched values reproduce the paper columns."
+ },
+ "asi_definition": "ASI (attack-strength index) = LPIPS distance between the attacked image and its pre-attack image, per image. Cropped images are scaled back to the reference size; rotated images keep their transformed canvas.",
+ "conditions": [
+  {
+   "id": "brightness:0.7",
+   "attack_type": "brightness",
+   "severity": "0.7",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "brightness",
+   "name": "brightness 0.7",
+   "short_label": "bright 0.7",
+   "parameter": "factor",
+   "value": "0.7",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.052,
+    "in_generation_synthetic_matched": 0.06,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.05229,
+    "synthetic_matched_in_generation": 0.05986,
+    "manipulated_post_hoc": 0.0542,
+    "real_post_hoc": 0.04919,
+    "synthetic_post_hoc": 0.05498
+   },
+   "heatmap_order": 0,
+   "paper_table_order": 0
+  },
+  {
+   "id": "brightness:1.2",
+   "attack_type": "brightness",
+   "severity": "1.2",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "brightness",
+   "name": "brightness 1.2",
+   "short_label": "bright 1.2",
+   "parameter": "factor",
+   "value": "1.2",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.027,
+    "in_generation_synthetic_matched": 0.031,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.0269,
+    "synthetic_matched_in_generation": 0.03091,
+    "manipulated_post_hoc": 0.03101,
+    "real_post_hoc": 0.02707,
+    "synthetic_post_hoc": 0.02941
+   },
+   "heatmap_order": 1,
+   "paper_table_order": 1
+  },
+  {
+   "id": "brightness:1.5",
+   "attack_type": "brightness",
+   "severity": "1.5",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "brightness",
+   "name": "brightness 1.5",
+   "short_label": "bright 1.5",
+   "parameter": "factor",
+   "value": "1.5",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.11,
+    "in_generation_synthetic_matched": 0.124,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.11008,
+    "synthetic_matched_in_generation": 0.12372,
+    "manipulated_post_hoc": 0.11952,
+    "real_post_hoc": 0.11015,
+    "synthetic_post_hoc": 0.11566
+   },
+   "heatmap_order": 2,
+   "paper_table_order": 2
+  },
+  {
+   "id": "contrast:0.7",
+   "attack_type": "contrast",
+   "severity": "0.7",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "contrast",
+   "name": "contrast 0.7",
+   "short_label": "contrast 0.7",
+   "parameter": "factor",
+   "value": "0.7",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.04,
+    "in_generation_synthetic_matched": 0.046,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.04049,
+    "synthetic_matched_in_generation": 0.0458,
+    "manipulated_post_hoc": 0.04101,
+    "real_post_hoc": 0.03841,
+    "synthetic_post_hoc": 0.04098
+   },
+   "heatmap_order": 3,
+   "paper_table_order": 3
+  },
+  {
+   "id": "contrast:1.2",
+   "attack_type": "contrast",
+   "severity": "1.2",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "contrast",
+   "name": "contrast 1.2",
+   "short_label": "contrast 1.2",
+   "parameter": "factor",
+   "value": "1.2",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.018,
+    "in_generation_synthetic_matched": 0.021,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.01795,
+    "synthetic_matched_in_generation": 0.02067,
+    "manipulated_post_hoc": 0.02033,
+    "real_post_hoc": 0.01774,
+    "synthetic_post_hoc": 0.01884
+   },
+   "heatmap_order": 4,
+   "paper_table_order": 4
+  },
+  {
+   "id": "contrast:1.5",
+   "attack_type": "contrast",
+   "severity": "1.5",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "contrast",
+   "name": "contrast 1.5",
+   "short_label": "contrast 1.5",
+   "parameter": "factor",
+   "value": "1.5",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.074,
+    "in_generation_synthetic_matched": 0.084,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.07409,
+    "synthetic_matched_in_generation": 0.0841,
+    "manipulated_post_hoc": 0.07781,
+    "real_post_hoc": 0.07025,
+    "synthetic_post_hoc": 0.07657
+   },
+   "heatmap_order": 5,
+   "paper_table_order": 5
+  },
+  {
+   "id": "hue:10",
+   "attack_type": "hue",
+   "severity": "10",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "hue",
+   "name": "hue 10",
+   "short_label": "hue 10",
+   "parameter": "shift (degrees)",
+   "value": "10",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.023,
+    "in_generation_synthetic_matched": 0.024,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.02304,
+    "synthetic_matched_in_generation": 0.02387,
+    "manipulated_post_hoc": 0.01966,
+    "real_post_hoc": 0.02008,
+    "synthetic_post_hoc": 0.02334
+   },
+   "heatmap_order": 6,
+   "paper_table_order": 6
+  },
+  {
+   "id": "hue:20",
+   "attack_type": "hue",
+   "severity": "20",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "hue",
+   "name": "hue 20",
+   "short_label": "hue 20",
+   "parameter": "shift (degrees)",
+   "value": "20",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.065,
+    "in_generation_synthetic_matched": 0.066,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.06521,
+    "synthetic_matched_in_generation": 0.06626,
+    "manipulated_post_hoc": 0.05772,
+    "real_post_hoc": 0.06015,
+    "synthetic_post_hoc": 0.06567
+   },
+   "heatmap_order": 7,
+   "paper_table_order": 7
+  },
+  {
+   "id": "hue:30",
+   "attack_type": "hue",
+   "severity": "30",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "hue",
+   "name": "hue 30",
+   "short_label": "hue 30",
+   "parameter": "shift (degrees)",
+   "value": "30",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.11,
+    "in_generation_synthetic_matched": 0.111,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.10997,
+    "synthetic_matched_in_generation": 0.11149,
+    "manipulated_post_hoc": 0.0978,
+    "real_post_hoc": 0.10247,
+    "synthetic_post_hoc": 0.11059
+   },
+   "heatmap_order": 8,
+   "paper_table_order": 8
+  },
+  {
+   "id": "overlay:0.1",
+   "attack_type": "overlay",
+   "severity": "0.1",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "overlay",
+   "name": "overlay 0.1",
+   "short_label": "overlay 0.1",
+   "parameter": "opacity",
+   "value": "0.1",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.159,
+    "in_generation_synthetic_matched": 0.143,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.15858,
+    "synthetic_matched_in_generation": 0.14322,
+    "manipulated_post_hoc": 0.15098,
+    "real_post_hoc": 0.15422,
+    "synthetic_post_hoc": 0.15459
+   },
+   "heatmap_order": 9,
+   "paper_table_order": 9
+  },
+  {
+   "id": "overlay:0.2",
+   "attack_type": "overlay",
+   "severity": "0.2",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "overlay",
+   "name": "overlay 0.2",
+   "short_label": "overlay 0.2",
+   "parameter": "opacity",
+   "value": "0.2",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.264,
+    "in_generation_synthetic_matched": 0.244,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.2643,
+    "synthetic_matched_in_generation": 0.24356,
+    "manipulated_post_hoc": 0.251,
+    "real_post_hoc": 0.25564,
+    "synthetic_post_hoc": 0.25799
+   },
+   "heatmap_order": 10,
+   "paper_table_order": 10
+  },
+  {
+   "id": "overlay:0.3",
+   "attack_type": "overlay",
+   "severity": "0.3",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "overlay",
+   "name": "overlay 0.3",
+   "short_label": "overlay 0.3",
+   "parameter": "opacity",
+   "value": "0.3",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.349,
+    "in_generation_synthetic_matched": 0.324,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.34923,
+    "synthetic_matched_in_generation": 0.32402,
+    "manipulated_post_hoc": 0.33253,
+    "real_post_hoc": 0.33791,
+    "synthetic_post_hoc": 0.34196
+   },
+   "heatmap_order": 11,
+   "paper_table_order": 11
+  },
+  {
+   "id": "gnoise:5",
+   "attack_type": "gnoise",
+   "severity": "5",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "Gaussian noise",
+   "name": "Gaussian noise 5",
+   "short_label": "noise 5",
+   "parameter": "σ (8-bit levels)",
+   "value": "5",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.115,
+    "in_generation_synthetic_matched": 0.161,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.11516,
+    "synthetic_matched_in_generation": 0.1614,
+    "manipulated_post_hoc": 0.09412,
+    "real_post_hoc": 0.06373,
+    "synthetic_post_hoc": 0.11931
+   },
+   "heatmap_order": 12,
+   "paper_table_order": 12
+  },
+  {
+   "id": "gnoise:10",
+   "attack_type": "gnoise",
+   "severity": "10",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "Gaussian noise",
+   "name": "Gaussian noise 10",
+   "short_label": "noise 10",
+   "parameter": "σ (8-bit levels)",
+   "value": "10",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.268,
+    "in_generation_synthetic_matched": 0.353,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.26834,
+    "synthetic_matched_in_generation": 0.3534,
+    "manipulated_post_hoc": 0.2334,
+    "real_post_hoc": 0.17546,
+    "synthetic_post_hoc": 0.2759
+   },
+   "heatmap_order": 13,
+   "paper_table_order": 13
+  },
+  {
+   "id": "gnoise:20",
+   "attack_type": "gnoise",
+   "severity": "20",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "Gaussian noise",
+   "name": "Gaussian noise 20",
+   "short_label": "noise 20",
+   "parameter": "σ (8-bit levels)",
+   "value": "20",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.508,
+    "in_generation_synthetic_matched": 0.63,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.50794,
+    "synthetic_matched_in_generation": 0.63041,
+    "manipulated_post_hoc": 0.4591,
+    "real_post_hoc": 0.38566,
+    "synthetic_post_hoc": 0.51306
+   },
+   "heatmap_order": 14,
+   "paper_table_order": 14
+  },
+  {
+   "id": "gblur:5",
+   "attack_type": "gblur",
+   "severity": "5",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "Gaussian blur",
+   "name": "Gaussian blur 5",
+   "short_label": "blur 5",
+   "parameter": "kernel size",
+   "value": "5",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.2,
+    "in_generation_synthetic_matched": 0.165,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.20023,
+    "synthetic_matched_in_generation": 0.16539,
+    "manipulated_post_hoc": 0.19838,
+    "real_post_hoc": 0.26802,
+    "synthetic_post_hoc": 0.19353
+   },
+   "heatmap_order": 15,
+   "paper_table_order": 15
+  },
+  {
+   "id": "gblur:7",
+   "attack_type": "gblur",
+   "severity": "7",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "Gaussian blur",
+   "name": "Gaussian blur 7",
+   "short_label": "blur 7",
+   "parameter": "kernel size",
+   "value": "7",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.276,
+    "in_generation_synthetic_matched": 0.229,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.27639,
+    "synthetic_matched_in_generation": 0.22928,
+    "manipulated_post_hoc": 0.28714,
+    "real_post_hoc": 0.36137,
+    "synthetic_post_hoc": 0.26875
+   },
+   "heatmap_order": 16,
+   "paper_table_order": 16
+  },
+  {
+   "id": "gblur:9",
+   "attack_type": "gblur",
+   "severity": "9",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "Gaussian blur",
+   "name": "Gaussian blur 9",
+   "short_label": "blur 9",
+   "parameter": "kernel size",
+   "value": "9",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.321,
+    "in_generation_synthetic_matched": 0.267,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.32065,
+    "synthetic_matched_in_generation": 0.26692,
+    "manipulated_post_hoc": 0.34265,
+    "real_post_hoc": 0.41481,
+    "synthetic_post_hoc": 0.31318
+   },
+   "heatmap_order": 17,
+   "paper_table_order": 17
+  },
+  {
+   "id": "resize:0.3",
+   "attack_type": "resize",
+   "severity": "0.3",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "resize",
+   "name": "resize 0.3",
+   "short_label": "resize 0.3",
+   "parameter": "scale factor",
+   "value": "0.3",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.272,
+    "in_generation_synthetic_matched": 0.229,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.27224,
+    "synthetic_matched_in_generation": 0.22924,
+    "manipulated_post_hoc": 0.27436,
+    "real_post_hoc": 0.35448,
+    "synthetic_post_hoc": 0.26222
+   },
+   "heatmap_order": 18,
+   "paper_table_order": 20
+  },
+  {
+   "id": "resize:0.5",
+   "attack_type": "resize",
+   "severity": "0.5",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "resize",
+   "name": "resize 0.5",
+   "short_label": "resize 0.5",
+   "parameter": "scale factor",
+   "value": "0.5",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.168,
+    "in_generation_synthetic_matched": 0.142,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.16821,
+    "synthetic_matched_in_generation": 0.14212,
+    "manipulated_post_hoc": 0.16242,
+    "real_post_hoc": 0.21873,
+    "synthetic_post_hoc": 0.16171
+   },
+   "heatmap_order": 19,
+   "paper_table_order": 19
+  },
+  {
+   "id": "resize:0.7",
+   "attack_type": "resize",
+   "severity": "0.7",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "resize",
+   "name": "resize 0.7",
+   "short_label": "resize 0.7",
+   "parameter": "scale factor",
+   "value": "0.7",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.084,
+    "in_generation_synthetic_matched": 0.071,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.0839,
+    "synthetic_matched_in_generation": 0.07148,
+    "manipulated_post_hoc": 0.08283,
+    "real_post_hoc": 0.11609,
+    "synthetic_post_hoc": 0.08064
+   },
+   "heatmap_order": 20,
+   "paper_table_order": 18
+  },
+  {
+   "id": "jpeg:30",
+   "attack_type": "jpeg",
+   "severity": "30",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "JPEG",
+   "name": "JPEG 30",
+   "short_label": "JPEG 30",
+   "parameter": "quality",
+   "value": "30",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.117,
+    "in_generation_synthetic_matched": 0.14,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.11651,
+    "synthetic_matched_in_generation": 0.14016,
+    "manipulated_post_hoc": 0.07125,
+    "real_post_hoc": 0.0945,
+    "synthetic_post_hoc": 0.10912
+   },
+   "heatmap_order": 21,
+   "paper_table_order": 23
+  },
+  {
+   "id": "jpeg:50",
+   "attack_type": "jpeg",
+   "severity": "50",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "JPEG",
+   "name": "JPEG 50",
+   "short_label": "JPEG 50",
+   "parameter": "quality",
+   "value": "50",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.067,
+    "in_generation_synthetic_matched": 0.08,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.06666,
+    "synthetic_matched_in_generation": 0.07997,
+    "manipulated_post_hoc": 0.05019,
+    "real_post_hoc": 0.06051,
+    "synthetic_post_hoc": 0.06155
+   },
+   "heatmap_order": 22,
+   "paper_table_order": 22
+  },
+  {
+   "id": "jpeg:70",
+   "attack_type": "jpeg",
+   "severity": "70",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "JPEG",
+   "name": "JPEG 70",
+   "short_label": "JPEG 70",
+   "parameter": "quality",
+   "value": "70",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.039,
+    "in_generation_synthetic_matched": 0.047,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.03892,
+    "synthetic_matched_in_generation": 0.04705,
+    "manipulated_post_hoc": 0.01777,
+    "real_post_hoc": 0.0285,
+    "synthetic_post_hoc": 0.03548
+   },
+   "heatmap_order": 23,
+   "paper_table_order": 21
+  },
+  {
+   "id": "crop:0.5",
+   "attack_type": "crop",
+   "severity": "0.5",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "crop",
+   "name": "crop 0.5",
+   "short_label": "crop 0.5",
+   "parameter": "kept fraction of each side",
+   "value": "0.5",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.68,
+    "in_generation_synthetic_matched": 0.716,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.67989,
+    "synthetic_matched_in_generation": 0.71602,
+    "manipulated_post_hoc": 0.69248,
+    "real_post_hoc": 0.6981,
+    "synthetic_post_hoc": 0.68055
+   },
+   "heatmap_order": 24,
+   "paper_table_order": 26
+  },
+  {
+   "id": "crop:0.7",
+   "attack_type": "crop",
+   "severity": "0.7",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "crop",
+   "name": "crop 0.7",
+   "short_label": "crop 0.7",
+   "parameter": "kept fraction of each side",
+   "value": "0.7",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.549,
+    "in_generation_synthetic_matched": 0.604,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.54921,
+    "synthetic_matched_in_generation": 0.60423,
+    "manipulated_post_hoc": 0.56607,
+    "real_post_hoc": 0.56671,
+    "synthetic_post_hoc": 0.55397
+   },
+   "heatmap_order": 25,
+   "paper_table_order": 25
+  },
+  {
+   "id": "crop:0.8",
+   "attack_type": "crop",
+   "severity": "0.8",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "crop",
+   "name": "crop 0.8",
+   "short_label": "crop 0.8",
+   "parameter": "kept fraction of each side",
+   "value": "0.8",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.458,
+    "in_generation_synthetic_matched": 0.524,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.45813,
+    "synthetic_matched_in_generation": 0.5241,
+    "manipulated_post_hoc": 0.48025,
+    "real_post_hoc": 0.4784,
+    "synthetic_post_hoc": 0.46549
+   },
+   "heatmap_order": 26,
+   "paper_table_order": 24
+  },
+  {
+   "id": "rotation:5",
+   "attack_type": "rotation",
+   "severity": "5",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "rotation",
+   "name": "rotation 5",
+   "short_label": "rotate 5",
+   "parameter": "angle (degrees)",
+   "value": "5",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.267,
+    "in_generation_synthetic_matched": 0.328,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.2671,
+    "synthetic_matched_in_generation": 0.3276,
+    "manipulated_post_hoc": 0.29651,
+    "real_post_hoc": 0.28343,
+    "synthetic_post_hoc": 0.27765
+   },
+   "heatmap_order": 27,
+   "paper_table_order": 27
+  },
+  {
+   "id": "rotation:10",
+   "attack_type": "rotation",
+   "severity": "10",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "rotation",
+   "name": "rotation 10",
+   "short_label": "rotate 10",
+   "parameter": "angle (degrees)",
+   "value": "10",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.399,
+    "in_generation_synthetic_matched": 0.465,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.39919,
+    "synthetic_matched_in_generation": 0.46455,
+    "manipulated_post_hoc": 0.42356,
+    "real_post_hoc": 0.41806,
+    "synthetic_post_hoc": 0.40855
+   },
+   "heatmap_order": 28,
+   "paper_table_order": 28
+  },
+  {
+   "id": "rotation:15",
+   "attack_type": "rotation",
+   "severity": "15",
+   "category": "C1",
+   "category_name": "Single perturbation",
+   "type_name": "rotation",
+   "name": "rotation 15",
+   "short_label": "rotate 15",
+   "parameter": "angle (degrees)",
+   "value": "15",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.477,
+    "in_generation_synthetic_matched": 0.535,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.47666,
+    "synthetic_matched_in_generation": 0.53527,
+    "manipulated_post_hoc": 0.49415,
+    "real_post_hoc": 0.49307,
+    "synthetic_post_hoc": 0.48435
+   },
+   "heatmap_order": 29,
+   "paper_table_order": 29
+  },
+  {
+   "id": "edit:flux2_klein_fast",
+   "attack_type": "edit",
+   "severity": "flux2_klein_fast",
+   "category": "C2",
+   "category_name": "Off-the-shelf model-based editing and removal",
+   "type_name": "prompt-based edit",
+   "name": "prompt-based edit (FLUX.2-klein)",
+   "short_label": "edit F",
+   "parameter": "editor",
+   "value": "FLUX.2-klein",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.237,
+    "in_generation_synthetic_matched": 0.287,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.2372,
+    "synthetic_matched_in_generation": 0.28743,
+    "manipulated_post_hoc": 0.1965,
+    "real_post_hoc": 0.19484,
+    "synthetic_post_hoc": 0.22961
+   },
+   "heatmap_order": 30,
+   "paper_table_order": 36
+  },
+  {
+   "id": "edit:qwen_image_edit_fast",
+   "attack_type": "edit",
+   "severity": "qwen_image_edit_fast",
+   "category": "C2",
+   "category_name": "Off-the-shelf model-based editing and removal",
+   "type_name": "prompt-based edit",
+   "name": "prompt-based edit (Qwen-Image-Edit)",
+   "short_label": "edit Q",
+   "parameter": "editor",
+   "value": "Qwen-Image-Edit",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.216,
+    "in_generation_synthetic_matched": 0.265,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.21648,
+    "synthetic_matched_in_generation": 0.26468,
+    "manipulated_post_hoc": 0.17949,
+    "real_post_hoc": 0.18017,
+    "synthetic_post_hoc": 0.20563
+   },
+   "heatmap_order": 31,
+   "paper_table_order": 35
+  },
+  {
+   "id": "vae:q1",
+   "attack_type": "vae",
+   "severity": "q1",
+   "category": "C2",
+   "category_name": "Off-the-shelf model-based editing and removal",
+   "type_name": "VAE regeneration",
+   "name": "VAE regeneration, quality factor 1",
+   "short_label": "VAE q1",
+   "parameter": "quality factor",
+   "value": "1",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.248,
+    "in_generation_synthetic_matched": 0.329,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.24836,
+    "synthetic_matched_in_generation": 0.32886,
+    "manipulated_post_hoc": 0.26132,
+    "real_post_hoc": 0.27798,
+    "synthetic_post_hoc": 0.24149
+   },
+   "heatmap_order": 32,
+   "paper_table_order": 31
+  },
+  {
+   "id": "vae:q3",
+   "attack_type": "vae",
+   "severity": "q3",
+   "category": "C2",
+   "category_name": "Off-the-shelf model-based editing and removal",
+   "type_name": "VAE regeneration",
+   "name": "VAE regeneration, quality factor 3",
+   "short_label": "VAE q3",
+   "parameter": "quality factor",
+   "value": "3",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.185,
+    "in_generation_synthetic_matched": 0.258,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.18465,
+    "synthetic_matched_in_generation": 0.25768,
+    "manipulated_post_hoc": 0.18714,
+    "real_post_hoc": 0.19643,
+    "synthetic_post_hoc": 0.17822
+   },
+   "heatmap_order": 33,
+   "paper_table_order": 30
+  },
+  {
+   "id": "diffusion_modern:str0_1",
+   "attack_type": "diffusion_modern",
+   "severity": "str0_1",
+   "category": "C2",
+   "category_name": "Off-the-shelf model-based editing and removal",
+   "type_name": "diffusion regeneration",
+   "name": "diffusion regeneration, strength 0.1",
+   "short_label": "diffusion 0.1",
+   "parameter": "strength",
+   "value": "0.1",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.149,
+    "in_generation_synthetic_matched": 0.112,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.14904,
+    "synthetic_matched_in_generation": 0.11178,
+    "manipulated_post_hoc": 0.16384,
+    "real_post_hoc": 0.18613,
+    "synthetic_post_hoc": 0.14741
+   },
+   "heatmap_order": 34,
+   "paper_table_order": 32
+  },
+  {
+   "id": "diffusion_modern:str0_2",
+   "attack_type": "diffusion_modern",
+   "severity": "str0_2",
+   "category": "C2",
+   "category_name": "Off-the-shelf model-based editing and removal",
+   "type_name": "diffusion regeneration",
+   "name": "diffusion regeneration, strength 0.2",
+   "short_label": "diffusion 0.2",
+   "parameter": "strength",
+   "value": "0.2",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.229,
+    "in_generation_synthetic_matched": 0.154,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.22909,
+    "synthetic_matched_in_generation": 0.15436,
+    "manipulated_post_hoc": 0.24284,
+    "real_post_hoc": 0.26937,
+    "synthetic_post_hoc": 0.22685
+   },
+   "heatmap_order": 35,
+   "paper_table_order": 33
+  },
+  {
+   "id": "diffusion_modern:str0_3",
+   "attack_type": "diffusion_modern",
+   "severity": "str0_3",
+   "category": "C2",
+   "category_name": "Off-the-shelf model-based editing and removal",
+   "type_name": "diffusion regeneration",
+   "name": "diffusion regeneration, strength 0.3",
+   "short_label": "diffusion 0.3",
+   "parameter": "strength",
+   "value": "0.3",
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.303,
+    "in_generation_synthetic_matched": 0.2,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.30269,
+    "synthetic_matched_in_generation": 0.19964,
+    "manipulated_post_hoc": 0.31713,
+    "real_post_hoc": 0.34907,
+    "synthetic_post_hoc": 0.29993
+   },
+   "heatmap_order": 36,
+   "paper_table_order": 34
+  },
+  {
+   "id": "unmarker:default",
+   "attack_type": "unmarker",
+   "severity": "default",
+   "category": "C2",
+   "category_name": "Off-the-shelf model-based editing and removal",
+   "type_name": "UnMarker",
+   "name": "UnMarker",
+   "short_label": "UnMarker",
+   "parameter": "default",
+   "value": null,
+   "is_chain": false,
+   "chain_name": null,
+   "steps": null,
+   "stages_text": null,
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.361,
+    "in_generation_synthetic_matched": 0.433,
+    "source": "paper:tables/tab_attackgrid.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.36061,
+    "synthetic_matched_in_generation": 0.43284,
+    "manipulated_post_hoc": 0.38152,
+    "real_post_hoc": 0.34133,
+    "synthetic_post_hoc": 0.36198
+   },
+   "heatmap_order": 37,
+   "paper_table_order": 37
+  },
+  {
+   "id": "brightness_contrast_filter:chain",
+   "attack_type": "brightness_contrast_filter",
+   "severity": "chain",
+   "category": "C3",
+   "category_name": "Multiple perturbations",
+   "type_name": "filter",
+   "name": "filter",
+   "short_label": "filter",
+   "parameter": null,
+   "value": null,
+   "is_chain": true,
+   "chain_name": "filter",
+   "steps": [
+    "brightness 1.2",
+    "contrast 1.2"
+   ],
+   "stages_text": "brightness 1.2 → contrast 1.2",
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.059,
+    "in_generation_synthetic_matched": 0.066,
+    "source": "paper:tables/tab_chains.tex",
+    "post_hoc_manipulated": 0.065,
+    "post_hoc_manipulated_source": "paper:tables/tab_synergy.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.05873,
+    "synthetic_matched_in_generation": 0.06561,
+    "manipulated_post_hoc": 0.0651,
+    "real_post_hoc": 0.05812,
+    "synthetic_post_hoc": 0.06212
+   },
+   "heatmap_order": 38,
+   "paper_table_order": 39
+  },
+  {
+   "id": "resize_jpeg_messenger:chain",
+   "attack_type": "resize_jpeg_messenger",
+   "severity": "chain",
+   "category": "C3",
+   "category_name": "Multiple perturbations",
+   "type_name": "messenger",
+   "name": "messenger",
+   "short_label": "messenger",
+   "parameter": null,
+   "value": null,
+   "is_chain": true,
+   "chain_name": "messenger",
+   "steps": [
+    "resize 0.7",
+    "JPEG 70"
+   ],
+   "stages_text": "resize 0.7 → JPEG 70",
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.123,
+    "in_generation_synthetic_matched": 0.115,
+    "source": "paper:tables/tab_chains.tex",
+    "post_hoc_manipulated": 0.099,
+    "post_hoc_manipulated_source": "paper:tables/tab_synergy.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.1227,
+    "synthetic_matched_in_generation": 0.11489,
+    "manipulated_post_hoc": 0.09854,
+    "real_post_hoc": 0.14614,
+    "synthetic_post_hoc": 0.11627
+   },
+   "heatmap_order": 39,
+   "paper_table_order": 38
+  },
+  {
+   "id": "brightness_saturation_sharpen_jpeg_filterpost:chain",
+   "attack_type": "brightness_saturation_sharpen_jpeg_filterpost",
+   "severity": "chain",
+   "category": "C3",
+   "category_name": "Multiple perturbations",
+   "type_name": "filterpost",
+   "name": "filterpost",
+   "short_label": "filterpost",
+   "parameter": null,
+   "value": null,
+   "is_chain": true,
+   "chain_name": "filterpost",
+   "steps": [
+    "brightness 1.2",
+    "saturation 1.2",
+    "sharpen 1.5",
+    "JPEG 70"
+   ],
+   "stages_text": "brightness 1.2 → saturation 1.2 → sharpen 1.5 → JPEG 70",
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.171,
+    "in_generation_synthetic_matched": 0.182,
+    "source": "paper:tables/tab_chains.tex",
+    "post_hoc_manipulated": 0.168,
+    "post_hoc_manipulated_source": "paper:tables/tab_synergy.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.17097,
+    "synthetic_matched_in_generation": 0.1825,
+    "manipulated_post_hoc": 0.16758,
+    "real_post_hoc": 0.16933,
+    "synthetic_post_hoc": 0.16854
+   },
+   "heatmap_order": 40,
+   "paper_table_order": 43
+  },
+  {
+   "id": "resize_jpeg_resize_jpeg_reshare:chain",
+   "attack_type": "resize_jpeg_resize_jpeg_reshare",
+   "severity": "chain",
+   "category": "C3",
+   "category_name": "Multiple perturbations",
+   "type_name": "reshare",
+   "name": "reshare",
+   "short_label": "reshare",
+   "parameter": null,
+   "value": null,
+   "is_chain": true,
+   "chain_name": "reshare",
+   "steps": [
+    "resize 0.7",
+    "JPEG 70",
+    "resize 0.9",
+    "JPEG 50"
+   ],
+   "stages_text": "resize 0.7 → JPEG 70 → resize 0.9 → JPEG 50",
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.218,
+    "in_generation_synthetic_matched": 0.202,
+    "source": "paper:tables/tab_chains.tex",
+    "post_hoc_manipulated": 0.191,
+    "post_hoc_manipulated_source": "paper:tables/tab_synergy.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.21831,
+    "synthetic_matched_in_generation": 0.20238,
+    "manipulated_post_hoc": 0.1905,
+    "real_post_hoc": 0.26016,
+    "synthetic_post_hoc": 0.20998
+   },
+   "heatmap_order": 41,
+   "paper_table_order": 41
+  },
+  {
+   "id": "gnoise_gblur_jpeg_noisedenoise:chain",
+   "attack_type": "gnoise_gblur_jpeg_noisedenoise",
+   "severity": "chain",
+   "category": "C3",
+   "category_name": "Multiple perturbations",
+   "type_name": "noisedenoise",
+   "name": "noisedenoise",
+   "short_label": "noisedenoise",
+   "parameter": null,
+   "value": null,
+   "is_chain": true,
+   "chain_name": "noisedenoise",
+   "steps": [
+    "noise 5",
+    "blur 5",
+    "JPEG 70"
+   ],
+   "stages_text": "noise 5 → blur 5 → JPEG 70",
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.218,
+    "in_generation_synthetic_matched": 0.192,
+    "source": "paper:tables/tab_chains.tex",
+    "post_hoc_manipulated": 0.198,
+    "post_hoc_manipulated_source": "paper:tables/tab_synergy.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.21835,
+    "synthetic_matched_in_generation": 0.1915,
+    "manipulated_post_hoc": 0.19796,
+    "real_post_hoc": 0.27219,
+    "synthetic_post_hoc": 0.21075
+   },
+   "heatmap_order": 42,
+   "paper_table_order": 44
+  },
+  {
+   "id": "overlay_resize_jpeg_meme:chain",
+   "attack_type": "overlay_resize_jpeg_meme",
+   "severity": "chain",
+   "category": "C3",
+   "category_name": "Multiple perturbations",
+   "type_name": "meme",
+   "name": "meme",
+   "short_label": "meme",
+   "parameter": null,
+   "value": null,
+   "is_chain": true,
+   "chain_name": "meme",
+   "steps": [
+    "overlay 0.1",
+    "resize 0.7",
+    "JPEG 70"
+   ],
+   "stages_text": "overlay 0.1 → resize 0.7 → JPEG 70",
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.249,
+    "in_generation_synthetic_matched": 0.235,
+    "source": "paper:tables/tab_chains.tex",
+    "post_hoc_manipulated": 0.222,
+    "post_hoc_manipulated_source": "paper:tables/tab_synergy.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.24889,
+    "synthetic_matched_in_generation": 0.23545,
+    "manipulated_post_hoc": 0.2219,
+    "real_post_hoc": 0.2649,
+    "synthetic_post_hoc": 0.2403
+   },
+   "heatmap_order": 43,
+   "paper_table_order": 45
+  },
+  {
+   "id": "crop_resize_jpeg_social:chain",
+   "attack_type": "crop_resize_jpeg_social",
+   "severity": "chain",
+   "category": "C3",
+   "category_name": "Multiple perturbations",
+   "type_name": "social",
+   "name": "social",
+   "short_label": "social",
+   "parameter": null,
+   "value": null,
+   "is_chain": true,
+   "chain_name": "social",
+   "steps": [
+    "crop 0.9",
+    "resize 0.7",
+    "JPEG 70"
+   ],
+   "stages_text": "crop 0.9 → resize 0.7 → JPEG 70",
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.4,
+    "in_generation_synthetic_matched": 0.445,
+    "source": "paper:tables/tab_chains.tex",
+    "post_hoc_manipulated": 0.415,
+    "post_hoc_manipulated_source": "paper:tables/tab_synergy.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.39999,
+    "synthetic_matched_in_generation": 0.44539,
+    "manipulated_post_hoc": 0.41467,
+    "real_post_hoc": 0.43599,
+    "synthetic_post_hoc": 0.40561
+   },
+   "heatmap_order": 44,
+   "paper_table_order": 40
+  },
+  {
+   "id": "rotation_crop_resize_jpeg_straighten:chain",
+   "attack_type": "rotation_crop_resize_jpeg_straighten",
+   "severity": "chain",
+   "category": "C3",
+   "category_name": "Multiple perturbations",
+   "type_name": "straighten",
+   "name": "straighten",
+   "short_label": "straighten",
+   "parameter": null,
+   "value": null,
+   "is_chain": true,
+   "chain_name": "straighten",
+   "steps": [
+    "rotation 5",
+    "crop 0.9",
+    "resize 0.7",
+    "JPEG 70"
+   ],
+   "stages_text": "rotation 5 → crop 0.9 → resize 0.7 → JPEG 70",
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.457,
+    "in_generation_synthetic_matched": 0.497,
+    "source": "paper:tables/tab_chains.tex",
+    "post_hoc_manipulated": 0.471,
+    "post_hoc_manipulated_source": "paper:tables/tab_synergy.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.45654,
+    "synthetic_matched_in_generation": 0.49695,
+    "manipulated_post_hoc": 0.47052,
+    "real_post_hoc": 0.49728,
+    "synthetic_post_hoc": 0.46162
+   },
+   "heatmap_order": 45,
+   "paper_table_order": 42
+  },
+  {
+   "id": "edit_resize_jpeg_editshare_flux2:chain",
+   "attack_type": "edit_resize_jpeg_editshare_flux2",
+   "severity": "chain",
+   "category": "C4",
+   "category_name": "Model-based attack followed by multiple perturbations",
+   "type_name": "editshare-flux2",
+   "name": "editshare-flux2",
+   "short_label": "editshare-F",
+   "parameter": null,
+   "value": null,
+   "is_chain": true,
+   "chain_name": "editshare-flux2",
+   "steps": [
+    "edit (FLUX.2-klein)",
+    "resize 0.7",
+    "JPEG 70"
+   ],
+   "stages_text": "edit (FLUX.2-klein) → resize 0.7 → JPEG 70",
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.299,
+    "in_generation_synthetic_matched": 0.336,
+    "source": "paper:tables/tab_chains.tex",
+    "post_hoc_manipulated": 0.251,
+    "post_hoc_manipulated_source": "paper:tables/tab_synergy.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.29936,
+    "synthetic_matched_in_generation": 0.33588,
+    "manipulated_post_hoc": 0.25148,
+    "real_post_hoc": 0.28444,
+    "synthetic_post_hoc": 0.28741
+   },
+   "heatmap_order": 46,
+   "paper_table_order": 46
+  },
+  {
+   "id": "edit_resize_jpeg_editshare_qwen:chain",
+   "attack_type": "edit_resize_jpeg_editshare_qwen",
+   "severity": "chain",
+   "category": "C4",
+   "category_name": "Model-based attack followed by multiple perturbations",
+   "type_name": "editshare-qwen",
+   "name": "editshare-qwen",
+   "short_label": "editshare-Q",
+   "parameter": null,
+   "value": null,
+   "is_chain": true,
+   "chain_name": "editshare-qwen",
+   "steps": [
+    "edit (Qwen-Image-Edit)",
+    "resize 0.7",
+    "JPEG 70"
+   ],
+   "stages_text": "edit (Qwen-Image-Edit) → resize 0.7 → JPEG 70",
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.285,
+    "in_generation_synthetic_matched": 0.317,
+    "source": "paper:tables/tab_chains.tex",
+    "post_hoc_manipulated": 0.241,
+    "post_hoc_manipulated_source": "paper:tables/tab_synergy.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.28546,
+    "synthetic_matched_in_generation": 0.31733,
+    "manipulated_post_hoc": 0.24139,
+    "real_post_hoc": 0.27653,
+    "synthetic_post_hoc": 0.27231
+   },
+   "heatmap_order": 47,
+   "paper_table_order": 47
+  },
+  {
+   "id": "vae_jpeg_vaeregen:chain",
+   "attack_type": "vae_jpeg_vaeregen",
+   "severity": "chain",
+   "category": "C4",
+   "category_name": "Model-based attack followed by multiple perturbations",
+   "type_name": "vaeregen",
+   "name": "vaeregen",
+   "short_label": "vaeregen",
+   "parameter": null,
+   "value": null,
+   "is_chain": true,
+   "chain_name": "vaeregen",
+   "steps": [
+    "VAE regen.",
+    "JPEG 70"
+   ],
+   "stages_text": "VAE regen. → JPEG 70",
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.195,
+    "in_generation_synthetic_matched": 0.277,
+    "source": "paper:tables/tab_chains.tex",
+    "post_hoc_manipulated": 0.183,
+    "post_hoc_manipulated_source": "paper:tables/tab_synergy.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.19475,
+    "synthetic_matched_in_generation": 0.2774,
+    "manipulated_post_hoc": 0.18258,
+    "real_post_hoc": 0.19793,
+    "synthetic_post_hoc": 0.19045
+   },
+   "heatmap_order": 48,
+   "paper_table_order": 48
+  },
+  {
+   "id": "diffusion_gnoise_gblur_sharpen_jpeg_scrub:chain",
+   "attack_type": "diffusion_gnoise_gblur_sharpen_jpeg_scrub",
+   "severity": "chain",
+   "category": "C4",
+   "category_name": "Model-based attack followed by multiple perturbations",
+   "type_name": "scrub",
+   "name": "scrub",
+   "short_label": "scrub",
+   "parameter": null,
+   "value": null,
+   "is_chain": true,
+   "chain_name": "scrub",
+   "steps": [
+    "diffusion regen.",
+    "noise 2",
+    "blur 3",
+    "sharpen 1.0",
+    "JPEG 70"
+   ],
+   "stages_text": "diffusion regen. → noise 2 → blur 3 → sharpen 1.0 → JPEG 70",
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.332,
+    "in_generation_synthetic_matched": 0.275,
+    "source": "paper:tables/tab_chains.tex",
+    "post_hoc_manipulated": 0.32,
+    "post_hoc_manipulated_source": "paper:tables/tab_synergy.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.33216,
+    "synthetic_matched_in_generation": 0.27547,
+    "manipulated_post_hoc": 0.32048,
+    "real_post_hoc": 0.36981,
+    "synthetic_post_hoc": 0.32437
+   },
+   "heatmap_order": 49,
+   "paper_table_order": 50
+  },
+  {
+   "id": "diffusion_crop_jpeg_regenshare:chain",
+   "attack_type": "diffusion_crop_jpeg_regenshare",
+   "severity": "chain",
+   "category": "C4",
+   "category_name": "Model-based attack followed by multiple perturbations",
+   "type_name": "regenshare",
+   "name": "regenshare",
+   "short_label": "regenshare",
+   "parameter": null,
+   "value": null,
+   "is_chain": true,
+   "chain_name": "regenshare",
+   "steps": [
+    "diffusion regen.",
+    "crop 0.9",
+    "JPEG 70"
+   ],
+   "stages_text": "diffusion regen. → crop 0.9 → JPEG 70",
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.45,
+    "in_generation_synthetic_matched": 0.441,
+    "source": "paper:tables/tab_chains.tex",
+    "post_hoc_manipulated": 0.465,
+    "post_hoc_manipulated_source": "paper:tables/tab_synergy.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.4495,
+    "synthetic_matched_in_generation": 0.44087,
+    "manipulated_post_hoc": 0.46479,
+    "real_post_hoc": 0.47799,
+    "synthetic_post_hoc": 0.45361
+   },
+   "heatmap_order": 50,
+   "paper_table_order": 49
+  },
+  {
+   "id": "unmarker_resize_jpeg_unmarkshare:chain",
+   "attack_type": "unmarker_resize_jpeg_unmarkshare",
+   "severity": "chain",
+   "category": "C4",
+   "category_name": "Model-based attack followed by multiple perturbations",
+   "type_name": "unmarkshare",
+   "name": "unmarkshare",
+   "short_label": "unmarkshare",
+   "parameter": null,
+   "value": null,
+   "is_chain": true,
+   "chain_name": "unmarkshare",
+   "steps": [
+    "UnMarker",
+    "resize 0.7",
+    "JPEG 70"
+   ],
+   "stages_text": "UnMarker → resize 0.7 → JPEG 70",
+   "mean_asi": {
+    "post_hoc_synthetic_matched": 0.423,
+    "in_generation_synthetic_matched": 0.477,
+    "source": "paper:tables/tab_chains.tex",
+    "post_hoc_manipulated": 0.44,
+    "post_hoc_manipulated_source": "paper:tables/tab_synergy.tex"
+   },
+   "mean_asi_computed": {
+    "synthetic_matched_post_hoc": 0.42255,
+    "synthetic_matched_in_generation": 0.47671,
+    "manipulated_post_hoc": 0.44028,
+    "real_post_hoc": 0.43315,
+    "synthetic_post_hoc": 0.43012
+   },
+   "heatmap_order": 51,
+   "paper_table_order": 51
+  }
+ ]
+}

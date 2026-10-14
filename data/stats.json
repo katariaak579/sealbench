@@ -1,0 +1,473 @@
+{
+ "_meta": {
+  "generated_utc": "2026-10-14T12:10:40Z",
+  "generator": "tools/build_data.py",
+  "paper": {
+   "commit": "a0d8e315a7ad62a2279e3f3896e7255d83aa370e",
+   "date": "2026-10-14T11:14:48Z"
+  },
+  "research_repo": {
+   "commit": "9620e81f33952225cb997b60dfedadab7ca58dfd",
+   "date": "2026-09-26T20:51:33+10:00",
+   "note": "metric CSVs are untracked run outputs; the commit identifies the scripts"
+  },
+  "sources": [
+   "paper:iclr2027_conference.tex"
+  ]
+ },
+ "note": "paper_lines are line numbers in the paper's main tex file (iclr2027_conference.tex) at the commit in _meta; comment lines are excluded from the search.",
+ "items": [
+  {
+   "key": "images.real",
+   "value": 25864,
+   "text": "25,864 real images (MultiFakeVerse; sources EMOTIC, PIC 2.0, PIPA, PISC)",
+   "paper_lines": [
+    56,
+    197,
+    201
+   ]
+  },
+  {
+   "key": "images.manipulated",
+   "value": 15000,
+   "text": "15,000 manipulated images (MultiFakeVerse)",
+   "paper_lines": [
+    56,
+    197,
+    201
+   ]
+  },
+  {
+   "key": "images.synthetic",
+   "value": 12665,
+   "text": "12,665 synthetic images from 6 generators",
+   "paper_lines": [
+    56,
+    199,
+    201
+   ]
+  },
+  {
+   "key": "images.unwatermarked_total",
+   "value": 53529,
+   "text": "53,529 unwatermarked images",
+   "paper_lines": [
+    230
+   ]
+  },
+  {
+   "key": "images.watermarked_total",
+   "value": 739818,
+   "text": "739,818 watermarked images",
+   "paper_lines": [
+    230
+   ]
+  },
+  {
+   "key": "evaluation.real",
+   "value": 1600,
+   "text": "1,600 real evaluation images",
+   "paper_lines": [
+    230,
+    355,
+    793
+   ]
+  },
+  {
+   "key": "evaluation.manipulated",
+   "value": 1600,
+   "text": "1,600 manipulated evaluation images",
+   "paper_lines": [
+    230,
+    355,
+    794
+   ]
+  },
+  {
+   "key": "evaluation.synthetic",
+   "value": 1593,
+   "text": "1,593 synthetic evaluation images",
+   "paper_lines": [
+    230,
+    355,
+    794,
+    2289
+   ]
+  },
+  {
+   "key": "evaluation.unwatermarked",
+   "value": 4793,
+   "text": "4,793 unwatermarked evaluation images",
+   "paper_lines": [
+    230
+   ]
+  },
+  {
+   "key": "evaluation.watermarked",
+   "value": 91046,
+   "text": "91,046 watermarked evaluation images",
+   "paper_lines": [
+    230
+   ]
+  },
+  {
+   "key": "evaluation.attacked_watermarked",
+   "value": 4555449,
+   "text": "4,555,449 attacked-watermarked images",
+   "paper_lines": [
+    230
+   ]
+  },
+  {
+   "key": "evaluation.attacked_unwatermarked",
+   "value": 241826,
+   "text": "241,826 attacked-unwatermarked images",
+   "paper_lines": [
+    230
+   ]
+  },
+  {
+   "key": "evaluation.matched_cohort",
+   "value": 1193,
+   "text": "1,193-image synthetic cohort matched by generator, prompt and seed",
+   "paper_lines": [
+    354,
+    581,
+    1688,
+    1693,
+    1695,
+    2312,
+    2330,
+    2357
+   ]
+  },
+  {
+   "key": "evaluation.unmarker_per_subclass",
+   "value": 50,
+   "text": "UnMarker runs on a nested subset of 50 images per subclass",
+   "paper_lines": [
+    1690
+   ]
+  },
+  {
+   "key": "evaluation.images_per_subclass",
+   "value": 200,
+   "text": "evaluation subsets are content-stratified with 200 images per subclass and category",
+   "paper_lines": [
+    1687
+   ]
+  },
+  {
+   "key": "methods.post_hoc",
+   "value": 11,
+   "text": "11 post-hoc methods",
+   "paper_lines": [
+    56,
+    96,
+    128,
+    205,
+    581,
+    603,
+    776,
+    2052
+   ]
+  },
+  {
+   "key": "methods.in_generation",
+   "value": 4,
+   "text": "4 in-generation methods",
+   "paper_lines": [
+    56,
+    96,
+    128,
+    205,
+    776,
+    2123
+   ]
+  },
+  {
+   "key": "methods.generator_method_pairs",
+   "value": 12,
+   "text": "12 in-generation generator-method pairs",
+   "paper_lines": [
+    253
+   ]
+  },
+  {
+   "key": "attacks.conditions",
+   "value": 52,
+   "text": "52 attack conditions",
+   "paper_lines": [
+    104,
+    212,
+    777
+   ]
+  },
+  {
+   "key": "attacks.categories",
+   "value": 4,
+   "text": "four attack categories",
+   "paper_lines": [
+    56,
+    134,
+    212,
+    2089,
+    2107,
+    2236,
+    2289,
+    2467
+   ]
+  },
+  {
+   "key": "attacks.c1_perturbations",
+   "value": 10,
+   "text": "C1: 10 perturbations x 3 settings",
+   "paper_lines": [
+    215
+   ]
+  },
+  {
+   "key": "attacks.c3_sequences",
+   "value": 8,
+   "text": "C3: 8 predefined sequences",
+   "paper_lines": [
+    221
+   ]
+  },
+  {
+   "key": "attacks.c4_sequences",
+   "value": 6,
+   "text": "C4: 6 predefined sequences",
+   "paper_lines": [
+    223
+   ]
+  },
+  {
+   "key": "metrics.fpr_target",
+   "value": 0.01,
+   "text": "TPR at 1% FPR, thresholds calibrated on unwatermarked and attacked-unwatermarked negatives",
+   "paper_lines": [
+    107,
+    112,
+    117,
+    134,
+    330,
+    337,
+    350,
+    354
+   ]
+  },
+  {
+   "key": "metrics.asi_budget",
+   "value": 0.2,
+   "text": "AURSC over ASI [0, 0.2]; Observed Min@0.2",
+   "paper_lines": [
+    350,
+    713,
+    1281,
+    1446,
+    2024,
+    2152,
+    2203,
+    2289
+   ]
+  },
+  {
+   "key": "metrics.identity_codebook",
+   "value": 100,
+   "text": "open-set attribution over 100 candidate identities",
+   "paper_lines": [
+    328,
+    581,
+    1761
+   ]
+  },
+  {
+   "key": "metrics.ringid_keys",
+   "value": 1024,
+   "text": "RingID attribution over its 1,024 native keys",
+   "paper_lines": [
+    581,
+    591,
+    2233
+   ]
+  },
+  {
+   "key": "metrics.readers",
+   "value": 5,
+   "text": "QSR reader sensitivity over five frozen language models",
+   "paper_lines": [
+    749,
+    1295,
+    2357,
+    2372,
+    2424
+   ]
+  },
+  {
+   "key": "metrics.primary_reader",
+   "value": "Qwen2.5-7B-Instruct",
+   "text": "primary QSR reader",
+   "paper_lines": [
+    343,
+    2375
+   ]
+  },
+  {
+   "key": "metrics.question_instances",
+   "value": "7.24 million",
+   "text": "question instances scored by each reader",
+   "paper_lines": [
+    2354,
+    2375
+   ]
+  },
+  {
+   "key": "metrics.reader_method_attack_pairs",
+   "value": 2385,
+   "text": "method-attack pairs in the reader agreement analysis",
+   "paper_lines": [
+    2347,
+    2375
+   ]
+  },
+  {
+   "key": "corpus.messages",
+   "value": 240,
+   "text": "240 messages, 120 per length class",
+   "paper_lines": [
+    1602
+   ]
+  },
+  {
+   "key": "corpus.calibration_negatives_matched",
+   "value": 61077,
+   "text": "pooled calibration negatives per method on the matched cohort",
+   "paper_lines": [
+    1695
+   ]
+  },
+  {
+   "key": "generation.resolution",
+   "value": "SD2.1 512 px, others 1024 px",
+   "text": "generation settings",
+   "paper_lines": [
+    1675
+   ]
+  }
+ ],
+ "lists": {
+  "generators": {
+   "value": [
+    "SD2.1",
+    "SDXL",
+    "FLUX.1-dev",
+    "Qwen-Image",
+    "HiDream-I1",
+    "HunyuanImage-3.0 (distilled)"
+   ],
+   "paper_lines": [
+    199
+   ]
+  },
+  "in_generation_generators": {
+   "value": [
+    "SD2.1",
+    "SDXL",
+    "FLUX.1-dev"
+   ],
+   "paper_lines": [
+    253
+   ]
+  },
+  "subclasses": {
+   "value": [
+    "single person's portrait",
+    "group of people",
+    "sports scene",
+    "indoor scene",
+    "food and drink",
+    "vehicle",
+    "landscape",
+    "object"
+   ],
+   "paper_lines": [
+    199
+   ]
+  },
+  "real_sources": {
+   "value": [
+    "EMOTIC",
+    "PIC 2.0",
+    "PIPA",
+    "PISC"
+   ],
+   "paper_lines": [
+    197
+   ]
+  },
+  "image_states": {
+   "value": [
+    "unwatermarked",
+    "watermarked",
+    "attacked-watermarked",
+    "attacked-unwatermarked"
+   ],
+   "paper_lines": [
+    107
+   ]
+  },
+  "readers": {
+   "value": [
+    "Qwen2.5-7B-Instruct (primary)",
+    "Qwen3.5-9B",
+    "Ministral-8B-Instruct-2410",
+    "Gemma-3-12B-IT",
+    "Llama-3.1-8B-Instruct"
+   ],
+   "paper_lines": [
+    343,
+    2354
+   ]
+  },
+  "editors": {
+   "value": [
+    "Qwen-Image-Edit",
+    "FLUX.2-klein"
+   ],
+   "paper_lines": [
+    218
+   ]
+  }
+ },
+ "derived": [
+  {
+   "key": "attacks.per_category",
+   "value": {
+    "C1": 30,
+    "C2": 8,
+    "C3": 8,
+    "C4": 6
+   },
+   "text": "conditions per attack category (from attacks.json)",
+   "derived_from": "data/attacks.json"
+  },
+  {
+   "key": "attacks.types_for_aursc",
+   "value": 28,
+   "text": "attack types averaged in AURSC: 14 single attack types (tab:attackgrid) + 14 chains (tab:chains)",
+   "derived_from": "paper Appendix 'AURSC' paragraph; the number 28 is not printed in the paper"
+  },
+  {
+   "key": "evaluation.images_total",
+   "value": 4793,
+   "text": "post-hoc evaluation images (1,600 + 1,600 + 1,593); equals the 4,793 unwatermarked evaluation images",
+   "derived_from": "sum"
+  }
+ ],
+ "method_counts_from_methods_json": {
+  "post_hoc": 11,
+  "in_generation": 4,
+  "generator_method_pairs": 12
+ }
+}

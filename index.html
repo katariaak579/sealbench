@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SEALBench</title>
+<meta name="description" content="SEALBench is an image watermarking benchmark that evaluates 4 in-generation and 11 post-hoc methods on real, manipulated and synthetic images under 52 attack conditions, with ASI for attack strength and QSR for message recovery.">
+<meta property="og:title" content="SEALBench: A Comprehensive Benchmark for Image Watermark Detection, Robustness, and Recovery">
+<meta property="og:description" content="4 in-generation and 11 post-hoc watermarking methods, 52 attack conditions in four attack categories, detection at 1% FPR, and message recovery measured with QSR.">
+<meta property="og:image" content="assets/img/og-card.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/site.css">
+<script>
+  /* apply a saved theme before first paint */
+  try { var t = localStorage.getItem("sealbench-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+</script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="wordmark" href="#top" aria-label="SEALBench, back to top">
+      <svg width="22" height="26" viewBox="0 0 22 26" aria-hidden="true" id="seal-mark"></svg>
+      SEALBENCH
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#results">Results</a>
+      <a href="#explorer">Attack explorer</a>
+      <a href="#benchmark">Benchmark</a>
+      <a href="#methods">Methods</a>
+      <a href="#attacks">Attacks</a>
+      <a href="#metrics">Metrics</a>
+      <a href="#submit">Submit</a>
+      <a href="#cite">Cite</a>
+    </nav>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="Colour theme: system">Theme: system</button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<div class="wrap hero">
+  <div class="hero-grid">
+    <div>
+      <p class="label kicker">Image watermarking benchmark &middot; ICLR 2027 submission, under review</p>
+      <h1><span class="sc">SEALBench</span>: A Comprehensive Benchmark for Image Watermark Detection, Robustness, and Recovery</h1>
+      <p class="lede">SEALBench evaluates 4 in-generation and 11 post-hoc watermarking methods on real, manipulated and synthetic images under 52 attack conditions. Every attacked image is placed on one distortion axis, the attack-strength index (ASI), and every decoded message is tested on whether it still answers questions about its content (QSR).</p>
+      <div class="byline">
+        <div>
+          <div class="label">Authors</div>
+          <!-- TODO: replace with the author list after the review period -->
+          <div class="v">Anonymous authors</div>
+        </div>
+        <div>
+          <div class="label">Venue</div>
+          <div class="v">Under review, ICLR 2027</div>
+        </div>
+        <div>
+          <div class="label">Links</div>
+          <div class="v links">
+            <!-- TODO: paper (OpenReview / arXiv), code repository and dataset URLs -->
+            <a href="#" data-todo="paper">Paper</a>
+            <a href="#" data-todo="code">Code</a>
+            <a href="#" data-todo="dataset">Dataset</a>
+            <a href="#cite">BibTeX</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="plate-payload" aria-label="Sentence payload example">
+      <p class="label">The payload is a sentence</p>
+      <svg class="bitgrid" id="hero-bits" role="img" aria-label="The message image made by ana on friday encoded as 5-bit characters; three bits are flipped"></svg>
+      <dl class="payload-lines">
+        <dt>embedded</dt><dd id="hero-emb">image made by ana on friday</dd>
+        <dt>decoded</dt><dd id="hero-dec">image made by ava on fridey</dd>
+      </dl>
+      <div class="plate-stats">
+        <span><b id="hero-bitacc">97.8%</b>bits correct</span>
+        <span><b id="hero-qsr">2 of 4</b>answers exactly right</span>
+      </div>
+      <p class="plate-note">Each character is 5 bits over a 32-symbol alphabet; columns are characters, rows are bits. Red cells are flipped bits, as in the JPEG column of Figure 1. Click any cell to flip it.</p>
+    </aside>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="ledger" aria-label="Benchmark size">
+    <div><span class="n num">53,529</span><span class="t">unwatermarked source images</span></div>
+    <div><span class="n num">739,818</span><span class="t">watermarked images</span></div>
+    <div><span class="n num">11 <small>+</small> 4</span><span class="t">post-hoc and in-generation methods</span></div>
+    <div><span class="n num">52</span><span class="t">attack conditions in attack categories C1&ndash;C4</span></div>
+    <div><span class="n num">4,555,449</span><span class="t">attacked-watermarked images evaluated</span></div>
+  </div>
+</div>
+
+<!-- ================= FIGURE 1 ================= -->
+<section class="block wrap" aria-labelledby="fig1-cap">
+  <figure>
+    <div class="fig-plate">
+      <picture>
+        <source type="image/webp" srcset="assets/fig/protocol-1600.webp 1600w, assets/fig/protocol-2400.webp 2400w" sizes="(max-width: 1120px) 100vw, 1080px">
+        <img src="assets/fig/protocol-1600.png" width="1600" height="1075" alt="The SEALBench protocol for one image. Step 1: the sentence image made by ana on friday is embedded in a base image. Step 2: three of the 52 attacks (overlay boxes, JPEG compression, Gaussian noise) with visible damage 0.37, 0.19 and 0.38. Step 3: the watermark is found in all three images, but the decoded message loses words as damage grows.">
+      </picture>
+    </div>
+    <figcaption id="fig1-cap"><b>Figure 1.</b> The SEALBench protocol for one image. <b>Step 1:</b> an English sentence is embedded as a watermark. <b>Step 2:</b> the watermarked image undergoes an attack; three of the 52 conditions are shown. ASI measures the LPIPS distance between the attacked and pre-attack images. <b>Step 3:</b> we evaluate watermark detection at a threshold calibrated using unwatermarked and attacked-unwatermarked images, and message recovery using questions answered from the decoded text. Detection succeeds in all three examples, but message recovery decreases, showing that detecting a watermark does not ensure recovery of its embedded information.</figcaption>
+  </figure>
+</section>
+
+<!-- ================= ABSTRACT + FINDINGS ================= -->
+<section class="block wrap" id="abstract" aria-labelledby="abs-h">
+  <div class="sec-head t-plain">
+    <p class="label">Abstract</p>
+    <h2 id="abs-h" class="visually-hidden">Abstract</h2>
+  </div>
+  <p class="abstract">As concerns over the misuse of Generative AI models continue to grow, watermarking has emerged as a promising solution, embedding a detectable signal into generated or existing images. Existing image watermarking benchmarks have three limitations: 1) inconsistency across data for comparing in-generation and post-hoc watermarking methods, 2) uneven attack settings for image/watermark distortion, and 3) bit accuracy that does not measure whether the decoded message retains its meaning. To this end, we present SEALBench, an image watermarking benchmark that evaluates 4 in-generation and 11 post-hoc watermarking methods on 25,864 real, 15,000 manipulated, and 12,665 synthetic images. We further evaluate image-level watermarking attacks in four attack categories, from single image transformations to editing or watermark removal followed by additional processing, and propose the <i>attack-strength index (ASI)</i> to unify all image-level watermarking attacks on a single damage axis. We evaluate and propose <i>Question Success Rate (QSR)</i>, i.e. embedded message recovery, by testing whether a frozen language model can accurately answer questions using the extracted text. Our evaluation of state-of-the-art methods on SEALBench reveals interesting findings: a) both in-generation and post-hoc methods remain vulnerable to attacks, although their robustness varies significantly across attack types, b) attacks that produce similar image distortion can have different effects on watermark detection and c) high bit accuracy does not necessarily imply complete message recovery or preservation of the message&rsquo;s meaning. We believe SEALBench will support more consistent evaluation of image watermark robustness and encourage research on methods that preserve both watermark detection and message recovery under different attack settings.</p>
+
+  <div class="subhead" id="findings"><h3>Three findings</h3><span class="src">From the introduction and Section 5 of the paper</span></div>
+  <ol class="findings">
+    <li>
+      <span class="big num">99.8% <span class="vs">vs</span> 24.7%</span>
+      <p>Attacks with similar mean ASI produce different detection rates. On manipulated images, Gaussian noise (&sigma;&nbsp;=&nbsp;10, mean ASI 0.233) and diffusion regeneration at strength 0.2 (mean ASI 0.243) give mean post-hoc TPR@1%FPR of 99.8% and 24.7%. In-generation methods show the same pattern: 98.5% and 74.7% at mean ASI 0.161 and 0.154.</p>
+      <span class="src">Section 5.2</span>
+    </li>
+    <li>
+      <span class="big num">68.4% <span class="vs">vs</span> 53.3%</span>
+      <p>Neither family performs better under every attack. On the matched synthetic cohort, in-generation methods reach 68.4% mean TPR@1%FPR under category C2 model-based attacks, against 53.3% for post-hoc methods, but fall to 0&ndash;3% under strong cropping or rotation.</p>
+      <span class="src">Section 5.3, Table 3</span>
+    </li>
+    <li>
+      <span class="big num">0.83 <span class="vs">vs</span> 0.44</span>
+      <p>High bit accuracy does not ensure message recovery. After attack, post-hoc methods on manipulated images have mean bit accuracy 0.83, complete-message recovery 0.39 and QSR 0.44. On the matched cohort, 42 of 364 post-hoc method-condition pairs have bit accuracy &ge; 0.9 but QSR &le; 0.5.</p>
+      <span class="src">Section 5.5, Figure 2</span>
+    </li>
+  </ol>
+</section>
+
+<!-- ================= LEADERBOARD ================= -->
+<section class="block wrap" id="leaderboard" aria-labelledby="lb-h">
+  <div class="sec-head t-eval">
+    <p class="label">Leaderboard</p>
+    <h2 id="lb-h">Results by method</h2>
+    <p class="intro">All numbers are copied from the paper's tables. Detection is TPR at 1% FPR, with thresholds calibrated on unwatermarked and attacked-unwatermarked images. C1&ndash;C4 are the four attack categories and All is the mean over every attacked condition. Click a column header to sort.</p>
+  </div>
+  <div class="tabs" role="tablist" aria-label="Leaderboard views" id="lb-tabs"></div>
+  <div id="lb-body"></div>
+</section>
+
+<!-- ================= RESULTS: CHARTS ================= -->
+<section class="block wrap" id="results" aria-labelledby="res-h">
+  <div class="sec-head t-eval">
+    <p class="label">Results</p>
+    <h2 id="res-h">Detection under each attack condition</h2>
+    <p class="intro">The heat map shows TPR@1%FPR for every method and all 52 attack conditions. The curves place each condition at its mean ASI, so attacks can be compared at similar image distortion. Hover over a cell or line for exact values.</p>
+  </div>
+
+  <div class="ctrl-row">
+    <div class="ctrl"><span class="seg-label">Images</span><div class="seg" id="hm-cat"></div></div>
+    <div class="scale" aria-hidden="true"><span>0%</span><span class="ramp" id="hm-ramp"></span><span>100% TPR@1%FPR</span><span>&middot; dot: below 50%</span></div>
+  </div>
+  <div class="chart hm-scroll" id="heatmap"></div>
+  <p class="prov" id="hm-prov"></p>
+
+  <div class="subhead"><h3>TPR@1%FPR against ASI, per attack type</h3><span class="src" id="cv-src"></span></div>
+  <div class="ctrl-row">
+    <div class="ctrl"><span class="seg-label">Set</span><div class="seg" id="cv-set"></div></div>
+  </div>
+  <div class="chart" id="curves"></div>
+  <div class="legend" id="cv-legend"></div>
+  <p class="prov">The shaded band marks the AURSC window, ASI &le; 0.2; AURSC is the normalized area under each curve inside it, averaged over all attack types. Each curve starts at the unattacked TPR at ASI&nbsp;0. Line style follows payload class: dotted for identity-only methods, dashed for short sentences, solid for long sentences, and thick with square markers for in-generation methods.</p>
+
+  <div class="subhead"><h3>Bit accuracy against QSR</h3><span class="src" id="sc-src"></span></div>
+  <div class="chart" id="scatter"></div>
+  <div class="legend" id="sc-legend"></div>
+  <p class="prov" id="sc-prov"></p>
+</section>
+
+<!-- ================= EXPLORER ================= -->
+<section class="block wrap" id="explorer" aria-labelledby="ex-h">
+  <div class="sec-head t-attack">
+    <p class="label">Attack explorer</p>
+    <h2 id="ex-h">One image, sixteen attacks</h2>
+    <p class="intro">Two FLUX.1-dev prompts from the matched synthetic cohort, each watermarked once by an in-generation method and once by VideoSeal, with a different sentence in each image. For every attack, the values are the benchmark's per-image records: the image's ASI, the detection decision at the calibrated threshold, bit accuracy, the decoded sentence, and the reader's answer to each stored question.</p>
+  </div>
+  <div class="ctrl-row">
+    <div class="ctrl"><span class="seg-label">Image</span><div class="seg" id="ex-entry"></div></div>
+  </div>
+  <div class="demo" id="ex-main"></div>
+  <div class="gal-strip" id="ex-strip" role="group" aria-label="Attack conditions"></div>
+</section>
+
+<!-- ================= BENCHMARK ================= -->
+<section class="block wrap" id="benchmark" aria-labelledby="bm-h">
+  <div class="sec-head t-mark">
+    <p class="label">Benchmark</p>
+    <h2 id="bm-h">Images, image states and evaluation subsets</h2>
+  </div>
+  <div class="cols">
+    <div>
+      <h3 class="sub">Source images</h3>
+      <dl class="dl">
+        <dt>Real</dt><dd><span class="num">25,864</span> images from MultiFakeVerse, originally from EMOTIC, PIC 2.0, PIPA and PISC</dd>
+        <dt>Manipulated</dt><dd><span class="num">15,000</span> images from MultiFakeVerse with person-, object- or scene-level edits</dd>
+        <dt>Synthetic</dt><dd><span class="num">12,665</span> images generated from text prompts by six generators</dd>
+        <dt>Unwatermarked</dt><dd><span class="num">53,529</span> images in total</dd>
+        <dt>Watermarked</dt><dd><span class="num">739,818</span> images in total</dd>
+      </dl>
+      <h3 class="sub" style="margin-top:28px">Generators</h3>
+      <ul class="gens">
+        <li><span>Stable Diffusion 2.1</span><span>512 px &middot; post-hoc and in-generation</span></li>
+        <li><span>SDXL</span><span>1024 px &middot; post-hoc and in-generation</span></li>
+        <li><span>FLUX.1-dev</span><span>1024 px &middot; post-hoc and in-generation</span></li>
+        <li><span>Qwen-Image</span><span>1024 px &middot; post-hoc</span></li>
+        <li><span>HiDream-I1</span><span>1024 px &middot; post-hoc</span></li>
+        <li><span>HunyuanImage-3.0 (distilled)</span><span>1024 px &middot; post-hoc</span></li>
+      </ul>
+      <p class="tnote">Prompts cover eight sub-classes:</p>
+      <div class="chips">
+        <span class="chip">single person's portrait</span><span class="chip">group of people</span><span class="chip">sports scene</span><span class="chip">indoor scene</span><span class="chip">food and drink</span><span class="chip">vehicle</span><span class="chip">landscape</span><span class="chip">object</span>
+      </div>
+    </div>
+    <div>
+      <h3 class="sub">Four image states</h3>
+      <div class="states-wrap">
+        <div class="col-axis"><span>Not attacked</span><span>Attacked</span></div>
+                <div class="states">
+          <div><div class="s-name">Watermarked</div><div class="s-note">Carries an identity or a sentence payload. Positives before any attack.</div></div>
+          <div><div class="s-name">Attacked-watermarked</div><div class="s-note"><span class="num">4,555,449</span> images, one per watermarked image and attack condition.</div></div>
+          <div><div class="s-name">Unwatermarked</div><div class="s-note">The clean image. Negatives for calibration.</div></div>
+          <div><div class="s-name">Attacked-unwatermarked</div><div class="s-note"><span class="num">241,826</span> images, the same attack applied to the clean image. Negatives for calibration under attack.</div></div>
+        </div>
+      </div>
+      <h3 class="sub" style="margin-top:28px">Evaluation subsets</h3>
+      <dl class="dl">
+        <dt>Post-hoc</dt><dd><span class="num">1,600</span> real, <span class="num">1,600</span> manipulated and <span class="num">1,593</span> synthetic images</dd>
+        <dt>Matched cohort</dt><dd><span class="num">1,193</span> synthetic images matched by generator, prompt and seed, used to compare post-hoc and in-generation methods</dd>
+        <dt>Evaluation set</dt><dd><span class="num">4,793</span> unwatermarked and <span class="num">91,046</span> watermarked images</dd>
+      </dl>
+      <p class="tnote">Post-hoc and in-generation methods on the matched cohort watermark images from the same prompts and seeds and carry sentences from the same message corpus.</p>
+    </div>
+  </div>
+
+  <div class="subhead"><h3>Comparison with prior benchmarks</h3><span class="src">Paper Table 1</span></div>
+  <div class="tscroll" id="cmp-table"></div>
+</section>
+
+<!-- ================= METHODS ================= -->
+<section class="block wrap" id="methods" aria-labelledby="me-h">
+  <div class="sec-head t-mark">
+    <p class="label">Methods</p>
+    <h2 id="me-h">Eleven post-hoc and four in-generation methods</h2>
+    <p class="intro">Post-hoc methods watermark an existing image. In-generation methods embed the watermark while the image is generated, here on SD2.1, SDXL and FLUX.1-dev (12 generator-method pairs). Methods with at least 64 payload bits also carry a sentence: an 11-character short message (55 bits) or a 28-character long message (140 bits).</p>
+  </div>
+  <div class="tscroll" id="methods-table"></div>
+</section>
+
+<!-- ================= ATTACKS ================= -->
+<section class="block wrap" id="attacks" aria-labelledby="at-h">
+  <div class="sec-head t-attack">
+    <p class="label">Attack suite</p>
+    <h2 id="at-h">52 attack conditions in four attack categories</h2>
+    <p class="intro">Each condition is applied to the watermarked image and, with the same settings, to its unwatermarked counterpart. The number beside each condition is its mean ASI on synthetic images for post-hoc methods (paper Tables 5 and 6); for C1 and C2 the values follow the listed settings in order.</p>
+  </div>
+  <div class="cat-grid" id="cat-grid"></div>
+</section>
+
+<!-- ================= METRICS ================= -->
+<section class="block wrap" id="metrics" aria-labelledby="mt-h">
+  <div class="sec-head t-eval">
+    <p class="label">Metrics</p>
+    <h2 id="mt-h">How detection, robustness and recovery are measured</h2>
+  </div>
+  <div class="cols">
+    <dl class="dl">
+      <dt>TPR@1%FPR</dt><dd>Detection rate on watermarked images at the threshold that admits 1% false positives. One threshold per method and evaluation subset, calibrated on unwatermarked and attacked-unwatermarked images.</dd>
+      <dt>Attribution</dt><dd>Open-set attribution accuracy at 1% FPR: the share of watermarked images that are detected and assigned to the correct identity in a 100-identity codebook. RingID is attributed over its 1,024 native keys.</dd>
+      <dt>ASI</dt><dd>Attack-strength index. The LPIPS distance between an attacked image and the same image before the attack, computed per image.</dd>
+      <dt>AURSC</dt><dd>Normalized area under the TPR@1%FPR-versus-ASI curve over ASI in [0,&nbsp;0.2], computed per attack type and averaged over all attack types.</dd>
+      <dt>Obs. Min@0.2</dt><dd>The lowest TPR@1%FPR observed among attack conditions whose mean ASI is at most 0.2.</dd>
+    </dl>
+    <dl class="dl">
+      <dt>Bit accuracy</dt><dd>The fraction of embedded payload bits decoded correctly.</dd>
+      <dt>Msg. Rec.</dt><dd>Complete-message recovery: the share of decoded sentences that match the embedded sentence exactly.</dd>
+      <dt>QSR</dt><dd>Question Success Rate. A frozen Qwen2.5-7B-Instruct reader receives only the decoded text and answers stored questions about the original message (who, did what, which colour, which object, which day). QSR is the fraction answered correctly. Four further readers (Qwen3.5-9B, Ministral-8B, Gemma-3-12B, Llama-3.1-8B) are used for sensitivity analysis.</dd>
+      <dt>sem-AURSC</dt><dd>The AURSC calculation with QSR on the y-axis.</dd>
+      <dt>bit-AURSC</dt><dd>The AURSC calculation with bit accuracy on the y-axis.</dd>
+    </dl>
+  </div>
+  <p class="tnote">Messages are encoded at 5 bits per character over a 32-symbol alphabet (a&ndash;z, space and <span class="mono">. , ' - ?</span>), padded with spaces to the class length and zero-padded to the method's capacity. A bit error changes one character and never shifts the rest, so a damaged payload decodes to damaged text that the reader sees.</p>
+</section>
+
+<!-- ================= SUBMIT ================= -->
+<section class="block wrap" id="submit" aria-labelledby="sb-h">
+  <div class="sec-head t-attack">
+    <p class="label">Submit a method</p>
+    <h2 id="sb-h">Send your watermark for testing</h2>
+    <p class="intro">We evaluate new post-hoc and in-generation watermarking methods under the same protocol as the methods above and add the results to the leaderboard. Submissions are made through a GitHub issue.</p>
+  </div>
+  <div class="cols">
+    <ol class="steps">
+      <li>
+        <div>
+          <h3>Open a submission issue</h3>
+          <!-- TODO: point this link at the repository's issue form, e.g. https://github.com/OWNER/REPO/issues/new?template=submit-watermark.yml -->
+          <p>Use the <a href="#" data-todo="issue-form">watermark submission form</a> on the code repository. Give the method name, the paper or preprint, the family (post-hoc or in-generation) and the payload capacity in bits.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Provide code that embeds and decodes</h3>
+          <p>A public repository or archive with model weights and a licence that permits evaluation. The interface we call is shown on the right. In-generation methods provide a generation function for at least one of SD2.1, SDXL and FLUX.1-dev.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>We run the full protocol</h3>
+          <ul>
+            <li>Embedding on the evaluation subsets: 1,600 real, 1,600 manipulated and 1,593 synthetic images, or the matched cohort's prompts and seeds for in-generation methods.</li>
+            <li>An identity payload from the 100-identity codebook, plus a sentence payload if the capacity is at least 64 bits.</li>
+            <li>All 52 attack conditions, with thresholds calibrated at 1% FPR on unwatermarked and attacked-unwatermarked images.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>You receive the results</h3>
+          <p>Per-condition TPR@1%FPR, attribution accuracy, AURSC, Obs. Min@0.2, and, for sentence payloads, bit accuracy, complete-message recovery, QSR and sem-AURSC. The method is added to the leaderboard after you confirm the numbers.</p>
+        </div>
+      </li>
+    </ol>
+    <div>
+      <pre class="code" aria-label="Submission interface"><span class="c"># post-hoc methods</span>
+def embed(image: Image, bits: np.ndarray) -&gt; Image:
+    <span class="c"># bits has the method's native length</span>
+
+def decode(image: Image) -&gt; np.ndarray:
+    <span class="c"># recovered bits (0/1) or per-bit scores in [0, 1]</span>
+
+<span class="c"># in-generation methods</span>
+def generate(prompt: str, seed: int, bits: np.ndarray,
+             generator: str) -&gt; Image:
+    <span class="c"># generator: "sd21", "sdxl" or "flux1"</span>
+
+def decode(image: Image) -&gt; np.ndarray: ...
+
+<span class="c"># Image = PIL.Image.Image</span></pre>
+      <div class="callout" style="margin-top:16px">
+        <b>What the benchmark controls.</b> Payloads, images, attacks, calibration and the QSR reader are fixed by SEALBench, so a submitted method is compared on exactly the inputs the other 15 methods received. The method only supplies embedding and decoding.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RELEASE ================= -->
+<section class="block wrap" id="release" aria-labelledby="rl-h">
+  <div class="sec-head t-plain">
+    <p class="label">Release</p>
+    <h2 id="rl-h">What is released</h2>
+  </div>
+  <div class="cols">
+    <div class="prose">
+      <p>The benchmark releases the prompt corpus, the embedded message files, per-image metadata, unwatermarked and watermarked images, the frozen chain specification, the evaluation subsets, and the calibration thresholds with their per-stratum false-positive rates. Scripts generate the corresponding attacked-unwatermarked and attacked-watermarked images.</p>
+      <p>The released per-image records and metric files are sufficient to reproduce every table and figure in the paper; a single script generates them. All generation, attack and evaluation procedures are seeded.</p>
+    </div>
+    <div class="prose">
+      <p>Re-running watermark embedding and decoding also requires the method keys and identity codebooks. These are not part of the public release and are provided to researchers on request for benchmark use.</p>
+      <p>Images derived from MultiFakeVerse are released only as far as its licence permits. The synthetic images, embedded messages, attack specifications, evaluation records and code are independent of that licence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CITE ================= -->
+<section class="block wrap" id="cite" aria-labelledby="ct-h">
+  <div class="sec-head t-plain">
+    <p class="label">Citation</p>
+    <h2 id="ct-h">BibTeX</h2>
+  </div>
+  <div class="cite-box">
+    <!-- TODO: replace author and venue after the review period -->
+    <pre class="code" id="bibtex">@misc{sealbench2026,
+  title  = {{SEALBench}: A Comprehensive Benchmark for Image Watermark
+            Detection, Robustness, and Recovery},
+  author = {Anonymous},
+  year   = {2026},
+  note   = {Under review at ICLR 2027}
+}</pre>
+    <button class="btn" type="button" id="copy-bib">Copy</button>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <p><b>SEALBench</b>. Results on this page are taken from the paper's tables and per-image records; the paper commit is shown under each chart.</p>
+      <p>Real and manipulated images come from MultiFakeVerse and remain subject to their original licences. Images shown on this site are synthetic.</p>
+    </div>
+    <div>
+      <p>The watermark-removal experiments assess the limits of existing methods and support the development of more robust watermarking.</p>
+      <p id="build-note"></p>
+    </div>
+  </div>
+</footer>
+
+<noscript><p class="wrap tnote">The leaderboard, charts and attack explorer need JavaScript. All numbers are also in the paper.</p></noscript>
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

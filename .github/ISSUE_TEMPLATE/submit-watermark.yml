@@ -1,0 +1,71 @@
+name: Submit a watermarking method
+description: Ask for a watermarking method to be evaluated on SEALBench and added to the leaderboard.
+title: "[Submission] <method name>"
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We evaluate the method under the full SEALBench protocol: the evaluation subsets, an identity payload and (for at least 64 bits) a sentence payload, all 52 attack conditions, thresholds calibrated at 1% FPR on unwatermarked and attacked-unwatermarked images, and QSR with the Qwen2.5-7B-Instruct reader.
+  - type: input
+    id: method
+    attributes:
+      label: Method name
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Paper or preprint URL
+    validations:
+      required: true
+  - type: dropdown
+    id: family
+    attributes:
+      label: Family
+      options:
+        - Post-hoc (watermarks an existing image)
+        - In-generation (embeds during generation)
+    validations:
+      required: true
+  - type: input
+    id: capacity
+    attributes:
+      label: Payload capacity (bits)
+      placeholder: "e.g. 48, 100, 256"
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: Code and weights
+      description: Repository or archive that provides embed() and decode() (post-hoc) or generate() and decode() (in-generation), with download links for the weights.
+    validations:
+      required: true
+  - type: checkboxes
+    id: generators
+    attributes:
+      label: Supported generators (in-generation methods only)
+      options:
+        - label: Stable Diffusion 2.1
+        - label: SDXL
+        - label: FLUX.1-dev
+  - type: input
+    id: licence
+    attributes:
+      label: Licence
+      description: The licence must permit evaluation and publication of the results.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: GPU memory and runtime per image, input resolution, anything we need to know to run the method.
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Leaderboard
+      options:
+        - label: The results may be published on the SEALBench leaderboard after I have confirmed them.
+          required: true

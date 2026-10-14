@@ -1,0 +1,478 @@
+{
+ "_meta": {
+  "generated_utc": "2026-10-14T12:10:40Z",
+  "generator": "tools/build_data.py",
+  "paper": {
+   "commit": "a0d8e315a7ad62a2279e3f3896e7255d83aa370e",
+   "date": "2026-10-14T11:14:48Z"
+  },
+  "research_repo": {
+   "commit": "9620e81f33952225cb997b60dfedadab7ca58dfd",
+   "date": "2026-09-26T20:51:33+10:00",
+   "note": "metric CSVs are untracked run outputs; the commit identifies the scripts"
+  },
+  "sources": [
+   "paper:iclr2027_conference.tex (table tab:methods)",
+   "paper:iclr2027_conference.bib",
+   "paper:tables/tab_tier3_main.tex"
+  ]
+ },
+ "message_encoding": {
+  "alphabet": "abcdefghijklmnopqrstuvwxyz .,'-?",
+  "bits_per_char": 5,
+  "short": {
+   "chars": 11,
+   "bits": 55,
+   "questions_per_message": 3
+  },
+  "long": {
+   "chars": 28,
+   "bits": 140,
+   "questions_per_message": 4
+  },
+  "note": "Messages are padded with spaces to the class length, encoded at 5 bits per character, then zero-padded to the method's capacity. Methods with fewer than 64 bits carry identity codewords only."
+ },
+ "counts": {
+  "post_hoc": 11,
+  "in_generation": 4,
+  "generator_method_pairs": 12
+ },
+ "links_note": "Paper and code URLs are filled in by another step; citation fields come from the paper's bib.",
+ "methods": [
+  {
+   "key": "cin",
+   "name": "CIN",
+   "short_name": "CIN",
+   "family": "post-hoc",
+   "payload_bits": 30,
+   "payload_text": "30 bits",
+   "message_type": "identity only",
+   "message_class": null,
+   "sentence_evaluation": false,
+   "generators": null,
+   "evaluation_settings": [
+    "identity attribution: open-set, 100-identity codebook"
+   ],
+   "figure_style": {
+    "color": "#2a78d6",
+    "line": "dotted"
+   },
+   "citation": {
+    "bib_key": "ma2022cin",
+    "title": "Towards Blind Watermarking: Combining Invertible and Non-Invertible Mechanisms",
+    "venue": "ACM International Conference on Multimedia (ACM MM)",
+    "year": "2022",
+    "author": "Rui Ma and Mengxi Guo and Yi Hou and Fan Yang and Yuan Li and Huizhu Jia and Xiaodong Xie"
+   },
+   "order": 0
+  },
+  {
+   "key": "pimog",
+   "name": "PIMoG",
+   "short_name": "PIMoG",
+   "family": "post-hoc",
+   "payload_bits": 30,
+   "payload_text": "30 bits",
+   "message_type": "identity only",
+   "message_class": null,
+   "sentence_evaluation": false,
+   "generators": null,
+   "evaluation_settings": [
+    "identity attribution: open-set, 100-identity codebook"
+   ],
+   "figure_style": {
+    "color": "#eb6834",
+    "line": "dotted"
+   },
+   "citation": {
+    "bib_key": "fang2022pimog",
+    "title": "PIMoG: An Effective Screen-Shooting Noise-Layer Simulation for Deep-Learning-Based Watermarking Network",
+    "venue": "ACM International Conference on Multimedia (ACM MM)",
+    "year": "2022",
+    "author": "Han Fang and Zhaoyang Jia and Zehua Ma and Ee-Chien Chang and Weiming Zhang"
+   },
+   "order": 1
+  },
+  {
+   "key": "wam",
+   "name": "WAM",
+   "short_name": "WAM",
+   "family": "post-hoc",
+   "payload_bits": 32,
+   "payload_text": "32 bits",
+   "message_type": "identity only",
+   "message_class": null,
+   "sentence_evaluation": false,
+   "generators": null,
+   "evaluation_settings": [
+    "identity attribution: open-set, 100-identity codebook"
+   ],
+   "figure_style": {
+    "color": "#1baf7a",
+    "line": "dotted"
+   },
+   "citation": {
+    "bib_key": "sander2025wam",
+    "title": "Watermark Anything with Localized Messages",
+    "venue": "International Conference on Learning Representations (ICLR)",
+    "year": "2025",
+    "author": "Tom Sander and Pierre Fernandez and Alain Durmus and Teddy Furon and Matthijs Douze"
+   },
+   "order": 2
+  },
+  {
+   "key": "trustmark",
+   "name": "TrustMark",
+   "short_name": "TrustMark",
+   "family": "post-hoc",
+   "payload_bits": 48,
+   "payload_text": "48 bits",
+   "message_type": "identity only",
+   "message_class": null,
+   "sentence_evaluation": false,
+   "generators": null,
+   "evaluation_settings": [
+    "identity attribution: open-set, 100-identity codebook"
+   ],
+   "figure_style": {
+    "color": "#eda100",
+    "line": "dotted"
+   },
+   "codebook_note": "identity codewords are random alphanumeric strings encoded with the native encoder; 6 of 48 bit positions are fixed",
+   "citation": {
+    "bib_key": "bui2023trustmark",
+    "title": "TrustMark: Universal Watermarking for Arbitrary Resolution Images",
+    "venue": "arXiv preprint arXiv:2311.18297",
+    "year": "2023",
+    "author": "Tu Bui and Shruti Agarwal and John Collomosse"
+   },
+   "order": 3
+  },
+  {
+   "key": "editguard",
+   "name": "EditGuard",
+   "short_name": "EditGuard",
+   "family": "post-hoc",
+   "payload_bits": 64,
+   "payload_text": "64 bits",
+   "message_type": "short sentence",
+   "message_class": "short",
+   "sentence_evaluation": true,
+   "generators": null,
+   "evaluation_settings": [
+    "identity attribution: open-set, 100-identity codebook",
+    "message recovery: bit agreement with the embedded sentence"
+   ],
+   "figure_style": {
+    "color": "#e87ba4",
+    "line": "dashed"
+   },
+   "message_chars": 11,
+   "message_encoded_bits": 55,
+   "citation": {
+    "bib_key": "zhang2024editguard",
+    "title": "EditGuard: Versatile Image Watermarking for Tamper Localization and Copyright Protection",
+    "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "year": "2024",
+    "author": "Xuanyu Zhang and Runyi Li and Jiwen Yu and Youmin Xu and Weiqi Li and Jian Zhang"
+   },
+   "order": 4
+  },
+  {
+   "key": "vine",
+   "name": "VINE",
+   "short_name": "VINE",
+   "family": "post-hoc",
+   "payload_bits": 100,
+   "payload_text": "100 bits",
+   "message_type": "short sentence",
+   "message_class": "short",
+   "sentence_evaluation": true,
+   "generators": null,
+   "evaluation_settings": [
+    "identity attribution: open-set, 100-identity codebook",
+    "message recovery: bit agreement with the embedded sentence"
+   ],
+   "figure_style": {
+    "color": "#008300",
+    "line": "dashed"
+   },
+   "codebook_note": "identity codewords are random alphanumeric strings encoded with the native encoder; 16 of 100 bit positions are fixed",
+   "message_chars": 11,
+   "message_encoded_bits": 55,
+   "citation": {
+    "bib_key": "lu2025vine",
+    "title": "Robust Watermarking Using Generative Priors Against Image Editing: From Benchmarking to Advances",
+    "venue": "International Conference on Learning Representations (ICLR)",
+    "year": "2025",
+    "author": "Shilin Lu and Zihan Zhou and Jiayou Lu and Yuanzhi Zhu and Adams Wai-Kin Kong"
+   },
+   "order": 5
+  },
+  {
+   "key": "invismark",
+   "name": "InvisMark",
+   "short_name": "InvisMark",
+   "family": "post-hoc",
+   "payload_bits": 100,
+   "payload_text": "100 bits",
+   "message_type": "short sentence",
+   "message_class": "short",
+   "sentence_evaluation": true,
+   "generators": null,
+   "evaluation_settings": [
+    "identity attribution: open-set, 100-identity codebook",
+    "message recovery: bit agreement with the embedded sentence"
+   ],
+   "figure_style": {
+    "color": "#4a3aa7",
+    "line": "dashed"
+   },
+   "message_chars": 11,
+   "message_encoded_bits": 55,
+   "citation": {
+    "bib_key": "xu2024invismark",
+    "title": "InvisMark: Invisible and Robust Watermarking for AI-Generated Image Provenance",
+    "venue": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+    "year": "2025",
+    "author": "Rui Xu and Mengya Hu and Deren Lei and Yaxi Li and David Lowe and Alex Gorevski and Mingyu Wang and Emily Ching and Alex Deng"
+   },
+   "order": 6
+  },
+  {
+   "key": "omniguard",
+   "name": "OmniGuard",
+   "short_name": "OmniGuard",
+   "family": "post-hoc",
+   "payload_bits": 100,
+   "payload_text": "100 bits",
+   "message_type": "short sentence",
+   "message_class": "short",
+   "sentence_evaluation": true,
+   "generators": null,
+   "evaluation_settings": [
+    "identity attribution: open-set, 100-identity codebook",
+    "message recovery: bit agreement with the embedded sentence"
+   ],
+   "figure_style": {
+    "color": "#e34948",
+    "line": "dashed"
+   },
+   "message_chars": 11,
+   "message_encoded_bits": 55,
+   "citation": {
+    "bib_key": "zhang2025omniguard",
+    "title": "OmniGuard: Hybrid Manipulation Localization via Augmented Versatile Deep Image Watermarking",
+    "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "year": "2025",
+    "author": "Xuanyu Zhang and Zecheng Tang and Zhipei Xu and Runyi Li and Youmin Xu and Bin Chen and Feng Gao and Jian Zhang"
+   },
+   "order": 7
+  },
+  {
+   "key": "mbrs",
+   "name": "MBRS",
+   "short_name": "MBRS",
+   "family": "post-hoc",
+   "payload_bits": 256,
+   "payload_text": "256 bits",
+   "message_type": "long sentence",
+   "message_class": "long",
+   "sentence_evaluation": true,
+   "generators": null,
+   "evaluation_settings": [
+    "identity attribution: open-set, 100-identity codebook",
+    "message recovery: bit agreement with the embedded sentence"
+   ],
+   "figure_style": {
+    "color": "#0891b2",
+    "line": "solid"
+   },
+   "message_chars": 28,
+   "message_encoded_bits": 140,
+   "citation": {
+    "bib_key": "jia2021mbrs",
+    "title": "MBRS: Enhancing Robustness of DNN-based Watermarking by Mini-Batch of Real and Simulated JPEG Compression",
+    "venue": "ACM International Conference on Multimedia (ACM MM)",
+    "year": "2021",
+    "author": "Zhaoyang Jia and Han Fang and Weiming Zhang"
+   },
+   "order": 8
+  },
+  {
+   "key": "videoseal",
+   "name": "VideoSeal",
+   "short_name": "VideoSeal",
+   "family": "post-hoc",
+   "payload_bits": 256,
+   "payload_text": "256 bits",
+   "message_type": "long sentence",
+   "message_class": "long",
+   "sentence_evaluation": true,
+   "generators": null,
+   "evaluation_settings": [
+    "identity attribution: open-set, 100-identity codebook",
+    "message recovery: bit agreement with the embedded sentence"
+   ],
+   "figure_style": {
+    "color": "#7c3aed",
+    "line": "solid"
+   },
+   "message_chars": 28,
+   "message_encoded_bits": 140,
+   "citation": {
+    "bib_key": "fernandez2024videoseal",
+    "title": "Video Seal: Open and Efficient Video Watermarking",
+    "venue": "arXiv preprint arXiv:2412.09492",
+    "year": "2024",
+    "author": "Pierre Fernandez and Hady Elsahar and I. Zeki Yalniz and Alexandre Mourachko"
+   },
+   "order": 9
+  },
+  {
+   "key": "pixelseal",
+   "name": "PixelSeal",
+   "short_name": "PixelSeal",
+   "family": "post-hoc",
+   "payload_bits": 256,
+   "payload_text": "256 bits",
+   "message_type": "long sentence",
+   "message_class": "long",
+   "sentence_evaluation": true,
+   "generators": null,
+   "evaluation_settings": [
+    "identity attribution: open-set, 100-identity codebook",
+    "message recovery: bit agreement with the embedded sentence"
+   ],
+   "figure_style": {
+    "color": "#a16207",
+    "line": "solid"
+   },
+   "message_chars": 28,
+   "message_encoded_bits": 140,
+   "citation": {
+    "bib_key": "soucek2025pixelseal",
+    "title": "Pixel Seal: Adversarial-Only Training for Invisible Image and Video Watermarking",
+    "venue": "arXiv preprint arXiv:2512.16874",
+    "year": "2025",
+    "author": "Tom\\'a\\v s Sou\\v cek and Pierre Fernandez and Hady Elsahar and Sylvestre-Alvise Rebuffi and Valeriu Lacatusu and Tuan Tran and Tom Sander and Alexandre Mourachko"
+   },
+   "order": 10
+  },
+  {
+   "key": "ring_id",
+   "name": "RingID",
+   "short_name": "RingID",
+   "family": "in-generation",
+   "payload_bits": null,
+   "payload_text": "identity",
+   "message_type": "ring key (one of 1,024 native keys)",
+   "message_class": null,
+   "sentence_evaluation": false,
+   "generators": [
+    "SD2.1",
+    "SDXL",
+    "FLUX.1-dev"
+   ],
+   "evaluation_settings": [
+    "identity attribution: its 1,024 native ring keys"
+   ],
+   "citation": {
+    "bib_key": "ci2024ringid",
+    "title": "RingID: Rethinking Tree-Ring Watermarking for Enhanced Multi-Key Identification",
+    "venue": "European Conference on Computer Vision (ECCV)",
+    "year": "2024",
+    "author": "Hai Ci and Pei Yang and Yiren Song and Mike Zheng Shou"
+   },
+   "order": 11
+  },
+  {
+   "key": "gaussian_shading",
+   "name": "Gaussian Shading",
+   "short_name": "Gauss. Shading",
+   "family": "in-generation",
+   "payload_bits": 256,
+   "payload_text": "256 bits",
+   "message_type": "long sentence",
+   "message_class": "long",
+   "sentence_evaluation": true,
+   "generators": [
+    "SD2.1",
+    "SDXL",
+    "FLUX.1-dev"
+   ],
+   "evaluation_settings": [
+    "message recovery: bit agreement with the embedded sentence"
+   ],
+   "message_chars": 28,
+   "message_encoded_bits": 140,
+   "citation": {
+    "bib_key": "yang2024gaussianshading",
+    "title": "Gaussian Shading: Provable Performance-Lossless Image Watermarking for Diffusion Models",
+    "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "year": "2024",
+    "author": "Zijin Yang and Kai Zeng and Kejiang Chen and Han Fang and Weiming Zhang and Nenghai Yu"
+   },
+   "order": 12
+  },
+  {
+   "key": "t2smark",
+   "name": "T2SMark",
+   "short_name": "T2SMark",
+   "family": "in-generation",
+   "payload_bits": 256,
+   "payload_text": "256 bits",
+   "message_type": "long sentence",
+   "message_class": "long",
+   "sentence_evaluation": true,
+   "generators": [
+    "SD2.1",
+    "SDXL",
+    "FLUX.1-dev"
+   ],
+   "evaluation_settings": [
+    "message recovery: bit agreement with the embedded sentence"
+   ],
+   "message_chars": 28,
+   "message_encoded_bits": 140,
+   "citation": {
+    "bib_key": "yang2025t2smark",
+    "title": "T2SMark: Balancing Robustness and Diversity in Noise-as-Watermark for Diffusion Models",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": "2025",
+    "author": "Jindong Yang and Han Fang and Weiming Zhang and Nenghai Yu and Kejiang Chen"
+   },
+   "order": 13
+  },
+  {
+   "key": "prc",
+   "name": "PRC",
+   "short_name": "PRC",
+   "family": "in-generation",
+   "payload_bits": 256,
+   "payload_text": "256 of 512",
+   "message_type": "long sentence",
+   "message_class": "long",
+   "sentence_evaluation": true,
+   "generators": [
+    "SD2.1",
+    "SDXL",
+    "FLUX.1-dev"
+   ],
+   "evaluation_settings": [
+    "message recovery: bit agreement with the embedded sentence"
+   ],
+   "payload_note": "256 of its 512 payload bits carry the message",
+   "message_chars": 28,
+   "message_encoded_bits": 140,
+   "citation": {
+    "bib_key": "gunn2025undetectable",
+    "title": "An Undetectable Watermark for Generative Image Models",
+    "venue": "International Conference on Learning Representations (ICLR)",
+    "year": "2025",
+    "author": "Sam Gunn and Xuandong Zhao and Dawn Song"
+   },
+   "order": 14
+  }
+ ]
+}

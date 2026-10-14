@@ -1,0 +1,3872 @@
+{
+ "note": "Synthetic images only. In-generation attacked images are the evaluated files; post-hoc C1/C3 attacked images are re-rendered with the benchmark's seeded attack code (bit-identical check passed); post-hoc C2/C4 images are not on disk (file null) but their per-image metrics are real. Unwatermarked = same prompt and seed without a watermark; for in-generation methods it is a different sample, so no residual is given.",
+ "width": 640,
+ "images": [
+  {
+   "image_id": "flux1_scenery_0616_gs",
+   "cohort_id": "flux1_scenery_0616",
+   "family": "in-generation",
+   "method": "gaussian_shading",
+   "method_label": "Gaussian Shading",
+   "generator": "FLUX.1-dev",
+   "subclass": "landscape",
+   "prompt": "a lavender field in bloom, a tumbledown stone cottage, at golden hour, wind-driven spray off the whitecaps, ultra-sharp landscape photograph, photorealistic, sharp focus",
+   "seed": 615,
+   "payload_text": "wes made a chair on saturday",
+   "msg_id": "long_103",
+   "payload_bits": 256,
+   "unwatermarked": "flux1_scenery_0616_gs_unwatermarked.webp",
+   "watermarked": "flux1_scenery_0616_gs_watermarked.webp",
+   "source_paths": {
+    "unwatermarked": "<RESEARCH_REPO>/runs/2026-07-18_ingen-flux1-scenery/combined/clean/scenery_0616.png",
+    "watermarked": "<RESEARCH_REPO>/runs/2026-07-18_ingen-flux1-scenery/combined/gaussian_shading/scenery_0616.png"
+   },
+   "residual": null,
+   "watermarked_metrics": {
+    "asi": null,
+    "score": 1.0,
+    "tau": 0.589844,
+    "detected": true,
+    "bit_acc": 1.0,
+    "decoded_text": "wes made a chair on saturday",
+    "qsr": {
+     "qsr_corrected": 1.0,
+     "n_questions": 4,
+     "answers": [
+      {
+       "qid": "q_person",
+       "type": "entity",
+       "question": "who is the person mentioned in the message?",
+       "gold": "wes",
+       "pred": "wes",
+       "correct": true
+      },
+      {
+       "qid": "q_action",
+       "type": "relation",
+       "question": "what did the person in the message do?",
+       "gold": "made",
+       "pred": "made a chair",
+       "correct": true
+      },
+      {
+       "qid": "q_object",
+       "type": "entity",
+       "question": "what object or item is mentioned in the message?",
+       "gold": "chair",
+       "pred": "chair",
+       "correct": true
+      },
+      {
+       "qid": "q_day",
+       "type": "temporal",
+       "question": "which day of the week is mentioned in the message?",
+       "gold": "saturday",
+       "pred": "Saturday",
+       "correct": true
+      }
+     ]
+    }
+   },
+   "conditions": [
+    {
+     "id": "jpeg_50",
+     "category": "C1",
+     "label": "JPEG, quality 50",
+     "file": "flux1_scenery_0616_gs_jpeg50.webp",
+     "asi": 0.05682,
+     "score": 1.0,
+     "tau": 0.589844,
+     "detected": true,
+     "bit_acc": 1.0,
+     "decoded_text": "wes made a chair on saturday",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "wes",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "made a chair",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "chair",
+        "correct": true
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "Saturday",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/jpeg_50/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     }
+    },
+    {
+     "id": "crop_0.7",
+     "category": "C1",
+     "label": "Crop, 0.7 of each side kept",
+     "file": "flux1_scenery_0616_gs_crop07.webp",
+     "asi": 0.60463,
+     "score": 0.4609375,
+     "tau": 0.589844,
+     "detected": false,
+     "bit_acc": 0.4844,
+     "decoded_text": "wshf?,yq,epw 'txa,xvp',idmoh",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/crop_0.7/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     }
+    },
+    {
+     "id": "rotation_10",
+     "category": "C1",
+     "label": "Rotation, 10 degrees",
+     "file": "flux1_scenery_0616_gs_rot10.webp",
+     "asi": 0.53036,
+     "score": 0.45703125,
+     "tau": 0.589844,
+     "detected": false,
+     "bit_acc": 0.4531,
+     "decoded_text": "np'?jaetewsgix lusmwjgagpagi",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/rotation_10/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     }
+    },
+    {
+     "id": "gnoise_10",
+     "category": "C1",
+     "label": "Gaussian noise, sigma 10",
+     "file": "flux1_scenery_0616_gs_noise10.webp",
+     "asi": 0.33544,
+     "score": 1.0,
+     "tau": 0.589844,
+     "detected": true,
+     "bit_acc": 1.0,
+     "decoded_text": "wes made a chair on saturday",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "wes",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "made a chair",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "chair",
+        "correct": true
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "Saturday",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/gnoise_10/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     }
+    },
+    {
+     "id": "overlay_0.2",
+     "category": "C1",
+     "label": "Overlay boxes, 0.2",
+     "file": "flux1_scenery_0616_gs_overlay02.webp",
+     "asi": 0.20783,
+     "score": 1.0,
+     "tau": 0.589844,
+     "detected": true,
+     "bit_acc": 1.0,
+     "decoded_text": "wes made a chair on saturday",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "wes",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "made a chair",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "chair",
+        "correct": true
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "Saturday",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/overlay_0.2/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     }
+    },
+    {
+     "id": "gblur_7",
+     "category": "C1",
+     "label": "Gaussian blur, kernel 7",
+     "file": "flux1_scenery_0616_gs_blur7.webp",
+     "asi": 0.24861,
+     "score": 1.0,
+     "tau": 0.589844,
+     "detected": true,
+     "bit_acc": 1.0,
+     "decoded_text": "wes made a chair on saturday",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "wes",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "made a chair",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "chair",
+        "correct": true
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "Saturday",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/gblur_7/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     }
+    },
+    {
+     "id": "edit_qwen",
+     "category": "C2",
+     "label": "Prompt-based edit (Qwen-Image-Edit)",
+     "file": "flux1_scenery_0616_gs_edit-qwen.webp",
+     "asi": 0.47957,
+     "score": 0.96875,
+     "tau": 0.589844,
+     "detected": true,
+     "bit_acc": 0.9688,
+     "decoded_text": "wes mbdm ayghair on saturtay",
+     "qsr": {
+      "qsr_corrected": 0.25,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "Wes",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "saturtay",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/edit_qwen/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     },
+     "edit_instruction": {
+      "op": "replace",
+      "entity": "lavender field in foreground",
+      "prompt": "Swap the lavender field for a field of golden wheat, maintaining the same shape and position, keeping the cottage, ocean, and sky unchanged",
+      "vlm": "Qwen/Qwen3-VL-8B-Instruct",
+      "editor": "Qwen/Qwen-Image-Edit-2511"
+     }
+    },
+    {
+     "id": "vae_q1",
+     "category": "C2",
+     "label": "VAE regeneration, quality 1",
+     "file": "flux1_scenery_0616_gs_vae-q1.webp",
+     "asi": 0.46623,
+     "score": 0.69921875,
+     "tau": 0.589844,
+     "detected": true,
+     "bit_acc": 0.6914,
+     "decoded_text": "-bl-matpzeemdajyqnvdqa ,bgmi",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/vae_q1/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     }
+    },
+    {
+     "id": "diffusion_str0_2",
+     "category": "C2",
+     "label": "Diffusion regeneration, strength 0.2",
+     "file": "flux1_scenery_0616_gs_diff02.webp",
+     "asi": 0.17491,
+     "score": 0.87109375,
+     "tau": 0.589844,
+     "detected": true,
+     "bit_acc": 0.875,
+     "decoded_text": "wes gade c-khakr.gn sahwvuqi",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/diffusion_str0_2/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     }
+    },
+    {
+     "id": "unmarker",
+     "category": "C2",
+     "label": "UnMarker",
+     "file": "flux1_scenery_0616_gs_unmarker.webp",
+     "asi": 0.50212,
+     "score": 0.515625,
+     "tau": 0.589844,
+     "detected": false,
+     "bit_acc": 0.5195,
+     "decoded_text": "aqdeiam,selz,z'lnqed jegsd.b",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/unmarker/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     }
+    },
+    {
+     "id": "resize_jpeg_messenger",
+     "category": "C3",
+     "label": "messenger: resize 0.7, JPEG 70",
+     "file": "flux1_scenery_0616_gs_messenger.webp",
+     "asi": 0.11014,
+     "score": 1.0,
+     "tau": 0.589844,
+     "detected": true,
+     "bit_acc": 1.0,
+     "decoded_text": "wes made a chair on saturday",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "wes",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "made a chair",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "chair",
+        "correct": true
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "Saturday",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level2/resize_jpeg_messenger/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     }
+    },
+    {
+     "id": "crop_resize_jpeg_social",
+     "category": "C3",
+     "label": "social: crop 0.9, resize 0.7, JPEG 70",
+     "file": "flux1_scenery_0616_gs_social.webp",
+     "asi": 0.46711,
+     "score": 0.51953125,
+     "tau": 0.589844,
+     "detected": false,
+     "bit_acc": 0.5117,
+     "decoded_text": "'c.iwutngd'z.yhfbag?.?orjjc,",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level2/crop_resize_jpeg_social/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     }
+    },
+    {
+     "id": "overlay_resize_jpeg_meme",
+     "category": "C3",
+     "label": "meme: overlay 0.1, resize 0.7, JPEG 70",
+     "file": "flux1_scenery_0616_gs_meme.webp",
+     "asi": 0.27588,
+     "score": 1.0,
+     "tau": 0.589844,
+     "detected": true,
+     "bit_acc": 1.0,
+     "decoded_text": "wes made a chair on saturday",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "wes",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "made a chair",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "chair",
+        "correct": true
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "Saturday",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level2/overlay_resize_jpeg_meme/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     }
+    },
+    {
+     "id": "edit_resize_jpeg_editshare_qwen",
+     "category": "C4",
+     "label": "editshare-qwen: edit (Qwen-Image-Edit), resize 0.7, JPEG 70",
+     "file": "flux1_scenery_0616_gs_editshare-qwen.webp",
+     "asi": 0.50634,
+     "score": 0.875,
+     "tau": 0.589844,
+     "detected": true,
+     "bit_acc": 0.8711,
+     "decoded_text": "was kvde a edairkkn qituq.iz",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level3/edit_resize_jpeg_editshare_qwen/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     },
+     "edit_instruction": {
+      "op": "replace",
+      "entity": "lavender field in foreground",
+      "prompt": "Swap the lavender field for a field of golden wheat, maintaining the same shape and position, keeping the cottage, ocean, and sky unchanged",
+      "vlm": "Qwen/Qwen3-VL-8B-Instruct",
+      "editor": "Qwen/Qwen-Image-Edit-2511"
+     }
+    },
+    {
+     "id": "diffusion_crop_jpeg_regenshare",
+     "category": "C4",
+     "label": "regenshare: diffusion regeneration, crop 0.9, JPEG 70",
+     "file": "flux1_scenery_0616_gs_regenshare.webp",
+     "asi": 0.45989,
+     "score": 0.5,
+     "tau": 0.589844,
+     "detected": false,
+     "bit_acc": 0.5,
+     "decoded_text": "jihzjudrgvaufypapspd'ufkikvf",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level3/diffusion_crop_jpeg_regenshare/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     }
+    },
+    {
+     "id": "diffusion_gnoise_gblur_sharpen_jpeg_scrub",
+     "category": "C4",
+     "label": "scrub: diffusion regeneration, noise 2, blur 3, sharpen 1.0, JPEG 70",
+     "file": "flux1_scenery_0616_gs_scrub.webp",
+     "asi": 0.29028,
+     "score": 0.87109375,
+     "tau": 0.589844,
+     "detected": true,
+     "bit_acc": 0.8711,
+     "decoded_text": "wew-mad- jykvair on sarvveqq",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "wes",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "made",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "chair",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_day",
+        "type": "temporal",
+        "question": "which day of the week is mentioned in the message?",
+        "gold": "saturday",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level3/diffusion_gnoise_gblur_sharpen_jpeg_scrub/in_generation/flux1/gaussian_shading/scenery_0616.png"
+     }
+    }
+   ]
+  },
+  {
+   "image_id": "flux1_object_0440_t2smark",
+   "cohort_id": "flux1_object_0440",
+   "family": "in-generation",
+   "method": "t2smark",
+   "method_label": "T2SMark",
+   "generator": "FLUX.1-dev",
+   "subclass": "food and drink",
+   "prompt": "a stack of pancakes with maple syrup on a white marble countertop, warm tungsten glow, crisp micro-contrast, close-up with creamy bokeh background, photorealistic, sharp focus",
+   "seed": 439,
+   "payload_text": "eva drew the violet stool",
+   "msg_id": "long_062",
+   "payload_bits": 256,
+   "unwatermarked": "flux1_object_0440_t2smark_unwatermarked.webp",
+   "watermarked": "flux1_object_0440_t2smark_watermarked.webp",
+   "source_paths": {
+    "unwatermarked": "<RESEARCH_REPO>/runs/2026-07-18_ingen-flux1-object/combined/clean/object_0440.png",
+    "watermarked": "<RESEARCH_REPO>/runs/2026-07-18_ingen-flux1-object/t2smark/t2smark/object_0440.png"
+   },
+   "residual": null,
+   "watermarked_metrics": {
+    "asi": null,
+    "score": 1.0,
+    "tau": 0.574219,
+    "detected": true,
+    "bit_acc": 1.0,
+    "decoded_text": "eva drew the violet stool",
+    "qsr": {
+     "qsr_corrected": 1.0,
+     "n_questions": 4,
+     "answers": [
+      {
+       "qid": "q_person",
+       "type": "entity",
+       "question": "who is the person mentioned in the message?",
+       "gold": "eva",
+       "pred": "eva",
+       "correct": true
+      },
+      {
+       "qid": "q_action",
+       "type": "relation",
+       "question": "what did the person in the message do?",
+       "gold": "drew",
+       "pred": "drew",
+       "correct": true
+      },
+      {
+       "qid": "q_color",
+       "type": "attribute",
+       "question": "what color is mentioned in the message?",
+       "gold": "violet",
+       "pred": "violet",
+       "correct": true
+      },
+      {
+       "qid": "q_object",
+       "type": "entity",
+       "question": "what object or item is mentioned in the message?",
+       "gold": "stool",
+       "pred": "violet stool",
+       "correct": true
+      }
+     ]
+    }
+   },
+   "conditions": [
+    {
+     "id": "jpeg_50",
+     "category": "C1",
+     "label": "JPEG, quality 50",
+     "file": "flux1_object_0440_t2smark_jpeg50.webp",
+     "asi": 0.04575,
+     "score": 1.0,
+     "tau": 0.574219,
+     "detected": true,
+     "bit_acc": 1.0,
+     "decoded_text": "eva drew the violet stool",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "eva",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "drew",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "violet",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "violet stool",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/jpeg_50/in_generation/flux1/t2smark/object_0440.png"
+     }
+    },
+    {
+     "id": "crop_0.7",
+     "category": "C1",
+     "label": "Crop, 0.7 of each side kept",
+     "file": "flux1_object_0440_t2smark_crop07.webp",
+     "asi": 0.62976,
+     "score": 0.49609375,
+     "tau": 0.574219,
+     "detected": false,
+     "bit_acc": 0.4961,
+     "decoded_text": "vhsymjzg?gitbxxnwnt,ny.oftsd",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/crop_0.7/in_generation/flux1/t2smark/object_0440.png"
+     }
+    },
+    {
+     "id": "rotation_10",
+     "category": "C1",
+     "label": "Rotation, 10 degrees",
+     "file": "flux1_object_0440_t2smark_rot10.webp",
+     "asi": 0.52242,
+     "score": 0.5390625,
+     "tau": 0.574219,
+     "detected": false,
+     "bit_acc": 0.5312,
+     "decoded_text": "e-dshix?pgkfdqbsz?imyybid,'x",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/rotation_10/in_generation/flux1/t2smark/object_0440.png"
+     }
+    },
+    {
+     "id": "gnoise_10",
+     "category": "C1",
+     "label": "Gaussian noise, sigma 10",
+     "file": "flux1_object_0440_t2smark_noise10.webp",
+     "asi": 0.49337,
+     "score": 1.0,
+     "tau": 0.574219,
+     "detected": true,
+     "bit_acc": 1.0,
+     "decoded_text": "eva drew the violet stool",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "eva",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "drew",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "violet",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "violet stool",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/gnoise_10/in_generation/flux1/t2smark/object_0440.png"
+     }
+    },
+    {
+     "id": "overlay_0.2",
+     "category": "C1",
+     "label": "Overlay boxes, 0.2",
+     "file": "flux1_object_0440_t2smark_overlay02.webp",
+     "asi": 0.24469,
+     "score": 1.0,
+     "tau": 0.574219,
+     "detected": true,
+     "bit_acc": 1.0,
+     "decoded_text": "eva drew the violet stool",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "eva",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "drew",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "violet",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "violet stool",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/overlay_0.2/in_generation/flux1/t2smark/object_0440.png"
+     }
+    },
+    {
+     "id": "gblur_7",
+     "category": "C1",
+     "label": "Gaussian blur, kernel 7",
+     "file": "flux1_object_0440_t2smark_blur7.webp",
+     "asi": 0.08148,
+     "score": 1.0,
+     "tau": 0.574219,
+     "detected": true,
+     "bit_acc": 1.0,
+     "decoded_text": "eva drew the violet stool",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "eva",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "drew",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "violet",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "violet stool",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/gblur_7/in_generation/flux1/t2smark/object_0440.png"
+     }
+    },
+    {
+     "id": "edit_qwen",
+     "category": "C2",
+     "label": "Prompt-based edit (Qwen-Image-Edit)",
+     "file": "flux1_object_0440_t2smark_edit-qwen.webp",
+     "asi": 0.23026,
+     "score": 1.0,
+     "tau": 0.574219,
+     "detected": true,
+     "bit_acc": 1.0,
+     "decoded_text": "eva drew the violet stool",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "eva",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "drew",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "violet",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "violet stool",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/edit_qwen/in_generation/flux1/t2smark/object_0440.png"
+     },
+     "edit_instruction": {
+      "op": "remove",
+      "entity": "stack of pancakes",
+      "prompt": "Remove the pancakes and fill the space with the same marble countertop texture and lighting, keeping the plate and honey drizzle intact. Keep everything else exactly as it is: white plate, marble countertop, honey drizzle, window background, lighting. Preserve the original composition, framing and lighting.",
+      "vlm": "Qwen/Qwen3-VL-8B-Instruct",
+      "editor": "Qwen/Qwen-Image-Edit-2511"
+     }
+    },
+    {
+     "id": "vae_q1",
+     "category": "C2",
+     "label": "VAE regeneration, quality 1",
+     "file": "flux1_object_0440_t2smark_vae-q1.webp",
+     "asi": 0.17991,
+     "score": 0.5078125,
+     "tau": 0.574219,
+     "detected": false,
+     "bit_acc": 0.4961,
+     "decoded_text": "mwwvbrhch?klrrzpuu? jkzj  hh",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/vae_q1/in_generation/flux1/t2smark/object_0440.png"
+     }
+    },
+    {
+     "id": "diffusion_str0_2",
+     "category": "C2",
+     "label": "Diffusion regeneration, strength 0.2",
+     "file": "flux1_object_0440_t2smark_diff02.webp",
+     "asi": 0.08737,
+     "score": 0.484375,
+     "tau": 0.574219,
+     "detected": false,
+     "bit_acc": 0.4844,
+     "decoded_text": "q.rnj'q-ca.vbjmyw.xx,.lkuy-z",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/diffusion_str0_2/in_generation/flux1/t2smark/object_0440.png"
+     }
+    },
+    {
+     "id": "unmarker",
+     "category": "C2",
+     "label": "UnMarker",
+     "file": "flux1_object_0440_t2smark_unmarker.webp",
+     "asi": 0.44402,
+     "score": 0.4375,
+     "tau": 0.574219,
+     "detected": false,
+     "bit_acc": 0.4375,
+     "decoded_text": "nz.fmnqynobsb ewuvm,?s'jargw",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level1/unmarker/in_generation/flux1/t2smark/object_0440.png"
+     }
+    },
+    {
+     "id": "resize_jpeg_messenger",
+     "category": "C3",
+     "label": "messenger: resize 0.7, JPEG 70",
+     "file": "flux1_object_0440_t2smark_messenger.webp",
+     "asi": 0.04433,
+     "score": 1.0,
+     "tau": 0.574219,
+     "detected": true,
+     "bit_acc": 1.0,
+     "decoded_text": "eva drew the violet stool",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "eva",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "drew",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "violet",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "violet stool",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level2/resize_jpeg_messenger/in_generation/flux1/t2smark/object_0440.png"
+     }
+    },
+    {
+     "id": "crop_resize_jpeg_social",
+     "category": "C3",
+     "label": "social: crop 0.9, resize 0.7, JPEG 70",
+     "file": "flux1_object_0440_t2smark_social.webp",
+     "asi": 0.42201,
+     "score": 0.46484375,
+     "tau": 0.574219,
+     "detected": false,
+     "bit_acc": 0.4648,
+     "decoded_text": "kn'znjslti,sp f,-o,rgvf.pniq",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level2/crop_resize_jpeg_social/in_generation/flux1/t2smark/object_0440.png"
+     }
+    },
+    {
+     "id": "overlay_resize_jpeg_meme",
+     "category": "C3",
+     "label": "meme: overlay 0.1, resize 0.7, JPEG 70",
+     "file": "flux1_object_0440_t2smark_meme.webp",
+     "asi": 0.18337,
+     "score": 1.0,
+     "tau": 0.574219,
+     "detected": true,
+     "bit_acc": 1.0,
+     "decoded_text": "eva drew the violet stool",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "eva",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "drew",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "violet",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "violet stool",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level2/overlay_resize_jpeg_meme/in_generation/flux1/t2smark/object_0440.png"
+     }
+    },
+    {
+     "id": "edit_resize_jpeg_editshare_qwen",
+     "category": "C4",
+     "label": "editshare-qwen: edit (Qwen-Image-Edit), resize 0.7, JPEG 70",
+     "file": "flux1_object_0440_t2smark_editshare-qwen.webp",
+     "asi": 0.24578,
+     "score": 0.47265625,
+     "tau": 0.574219,
+     "detected": false,
+     "bit_acc": 0.4688,
+     "decoded_text": "iwbezlhjzel-kfhyz c.i?qws?zo",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level3/edit_resize_jpeg_editshare_qwen/in_generation/flux1/t2smark/object_0440.png"
+     },
+     "edit_instruction": {
+      "op": "remove",
+      "entity": "stack of pancakes",
+      "prompt": "Remove the pancakes and fill the space with the same marble countertop texture and lighting, keeping the plate and honey drizzle intact. Keep everything else exactly as it is: white plate, marble countertop, honey drizzle, window background, lighting. Preserve the original composition, framing and lighting.",
+      "vlm": "Qwen/Qwen3-VL-8B-Instruct",
+      "editor": "Qwen/Qwen-Image-Edit-2511"
+     }
+    },
+    {
+     "id": "diffusion_crop_jpeg_regenshare",
+     "category": "C4",
+     "label": "regenshare: diffusion regeneration, crop 0.9, JPEG 70",
+     "file": "flux1_object_0440_t2smark_regenshare.webp",
+     "asi": 0.42601,
+     "score": 0.49609375,
+     "tau": 0.574219,
+     "detected": false,
+     "bit_acc": 0.4961,
+     "decoded_text": "pc-kptpi-di-rzfwojawc vxjcev",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level3/diffusion_crop_jpeg_regenshare/in_generation/flux1/t2smark/object_0440.png"
+     }
+    },
+    {
+     "id": "diffusion_gnoise_gblur_sharpen_jpeg_scrub",
+     "category": "C4",
+     "label": "scrub: diffusion regeneration, noise 2, blur 3, sharpen 1.0, JPEG 70",
+     "file": "flux1_object_0440_t2smark_scrub.webp",
+     "asi": 0.17192,
+     "score": 0.453125,
+     "tau": 0.574219,
+     "detected": false,
+     "bit_acc": 0.4453,
+     "decoded_text": "hdz.ixiowi ?qktu-jl'yfu ?,xc",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "eva",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "drew",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "violet",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "stool",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "evaluated file",
+      "path": "<RESEARCH_REPO>/runs/2026-08-17_ingen-l14/attacked_wm/level3/diffusion_gnoise_gblur_sharpen_jpeg_scrub/in_generation/flux1/t2smark/object_0440.png"
+     }
+    }
+   ]
+  },
+  {
+   "image_id": "flux1_scenery_0616_videoseal",
+   "cohort_id": "flux1_scenery_0616",
+   "family": "post-hoc",
+   "method": "videoseal",
+   "method_label": "VideoSeal",
+   "generator": "FLUX.1-dev",
+   "subclass": "landscape",
+   "prompt": "a lavender field in bloom, a tumbledown stone cottage, at golden hour, wind-driven spray off the whitecaps, ultra-sharp landscape photograph, photorealistic, sharp focus",
+   "seed": 615,
+   "payload_text": "zelda sold the maroon wagon",
+   "msg_id": "long_015",
+   "payload_bits": 256,
+   "unwatermarked": "flux1_scenery_0616_videoseal_unwatermarked.webp",
+   "watermarked": "flux1_scenery_0616_videoseal_watermarked.webp",
+   "source_paths": {
+    "unwatermarked": "<RESEARCH_REPO>/runs/2026-07-18_ingen-flux1-scenery/combined/clean/scenery_0616.png",
+    "watermarked": "<RESEARCH_REPO>/runs/2026-07-31_posthoc-semantic/out_img_flux1_eval999/videoseal/scenery_0616.png"
+   },
+   "psnr_db": 44.19,
+   "residual": "flux1_scenery_0616_videoseal_residual.webp",
+   "watermarked_metrics": {
+    "asi": null,
+    "score": 1.0,
+    "tau": 0.609375,
+    "detected": true,
+    "identity_correct": true,
+    "bit_acc": 1.0,
+    "decoded_text": "zelda sold the maroon wagon",
+    "qsr": {
+     "qsr_corrected": 1.0,
+     "n_questions": 4,
+     "answers": [
+      {
+       "qid": "q_person",
+       "type": "entity",
+       "question": "who is the person mentioned in the message?",
+       "gold": "zelda",
+       "pred": "Zelda",
+       "correct": true
+      },
+      {
+       "qid": "q_action",
+       "type": "relation",
+       "question": "what did the person in the message do?",
+       "gold": "sold",
+       "pred": "sold",
+       "correct": true
+      },
+      {
+       "qid": "q_color",
+       "type": "attribute",
+       "question": "what color is mentioned in the message?",
+       "gold": "maroon",
+       "pred": "maroon",
+       "correct": true
+      },
+      {
+       "qid": "q_object",
+       "type": "entity",
+       "question": "what object or item is mentioned in the message?",
+       "gold": "wagon",
+       "pred": "wagon",
+       "correct": true
+      }
+     ]
+    }
+   },
+   "conditions": [
+    {
+     "id": "jpeg_50",
+     "category": "C1",
+     "label": "JPEG, quality 50",
+     "file": "flux1_scenery_0616_videoseal_jpeg50.webp",
+     "asi": 0.06773,
+     "score": 1.0,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 1.0,
+     "decoded_text": "zelda sold the maroon wagon",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "Zelda",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "sold",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "maroon",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "wagon",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "jpeg",
+        50
+       ]
+      ]
+     }
+    },
+    {
+     "id": "crop_0.7",
+     "category": "C1",
+     "label": "Crop, 0.7 of each side kept",
+     "file": "flux1_scenery_0616_videoseal_crop07.webp",
+     "asi": 0.61159,
+     "score": 0.824219,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.8242,
+     "decoded_text": "?anracso.dyt-eymqvewf-ueokpk",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "crop",
+        0.7
+       ]
+      ]
+     }
+    },
+    {
+     "id": "rotation_10",
+     "category": "C1",
+     "label": "Rotation, 10 degrees",
+     "file": "flux1_scenery_0616_videoseal_rot10.webp",
+     "asi": 0.5737,
+     "score": 0.648438,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.6484,
+     "decoded_text": "''jbf slkpfr.,sva?qhb ud -js",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "rotation",
+        10
+       ]
+      ]
+     }
+    },
+    {
+     "id": "gnoise_10",
+     "category": "C1",
+     "label": "Gaussian noise, sigma 10",
+     "file": "flux1_scenery_0616_videoseal_noise10.webp",
+     "asi": 0.33103,
+     "score": 1.0,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 1.0,
+     "decoded_text": "zelda sold the maroon wagon",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "Zelda",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "sold",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "maroon",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "wagon",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "gnoise",
+        10
+       ]
+      ]
+     }
+    },
+    {
+     "id": "overlay_0.2",
+     "category": "C1",
+     "label": "Overlay boxes, 0.2",
+     "file": "flux1_scenery_0616_videoseal_overlay02.webp",
+     "asi": 0.2091,
+     "score": 1.0,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 1.0,
+     "decoded_text": "zelda sold the maroon wagon",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "Zelda",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "sold",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "maroon",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "wagon",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "overlay",
+        0.2
+       ]
+      ]
+     }
+    },
+    {
+     "id": "gblur_7",
+     "category": "C1",
+     "label": "Gaussian blur, kernel 7",
+     "file": "flux1_scenery_0616_videoseal_blur7.webp",
+     "asi": 0.3038,
+     "score": 1.0,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 1.0,
+     "decoded_text": "zelda sold the maroon wagon",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "Zelda",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "sold",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "maroon",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "wagon",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "gblur",
+        7
+       ]
+      ]
+     }
+    },
+    {
+     "id": "edit_qwen",
+     "category": "C2",
+     "label": "Prompt-based edit (Qwen-Image-Edit)",
+     "file": null,
+     "asi": 0.40099,
+     "score": 0.851562,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.8516,
+     "decoded_text": "zejhb s-lf-shb-mabponqwah-,?",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "not on disk (archived); metrics only"
+     },
+     "edit_instruction": {
+      "op": "replace",
+      "entity": "lavender field in foreground",
+      "prompt": "Swap the lavender field for a field of golden wheat, maintaining the same shape and position, keeping the cottage, ocean, and sky unchanged",
+      "vlm": "Qwen/Qwen3-VL-8B-Instruct",
+      "editor": "Qwen/Qwen-Image-Edit-2511"
+     }
+    },
+    {
+     "id": "vae_q1",
+     "category": "C2",
+     "label": "VAE regeneration, quality 1",
+     "file": null,
+     "asi": 0.52654,
+     "score": 0.675781,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.6758,
+     "decoded_text": "ya mag?wdjt.kglnqlk?noujxon.",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "not on disk (archived); metrics only"
+     }
+    },
+    {
+     "id": "diffusion_str0_2",
+     "category": "C2",
+     "label": "Diffusion regeneration, strength 0.2",
+     "file": null,
+     "asi": 0.19266,
+     "score": 0.53125,
+     "tau": 0.609375,
+     "detected": false,
+     "identity_correct": false,
+     "bit_acc": 0.4922,
+     "decoded_text": "e h-hozpsevg sseybktp?edofme",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "not on disk (archived); metrics only"
+     }
+    },
+    {
+     "id": "unmarker",
+     "category": "C2",
+     "label": "UnMarker",
+     "file": null,
+     "asi": null,
+     "score": null,
+     "tau": 0.609375,
+     "detected": null,
+     "bit_acc": null,
+     "decoded_text": null,
+     "qsr": null,
+     "identity_pred": null,
+     "image_origin": {
+      "kind": "not on disk (archived); metrics only"
+     }
+    },
+    {
+     "id": "resize_jpeg_messenger",
+     "category": "C3",
+     "label": "messenger: resize 0.7, JPEG 70",
+     "file": "flux1_scenery_0616_videoseal_messenger.webp",
+     "asi": 0.15053,
+     "score": 1.0,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 1.0,
+     "decoded_text": "zelda sold the maroon wagon",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "Zelda",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "sold",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "maroon",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "wagon",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "resize",
+        0.7
+       ],
+       [
+        "jpeg",
+        70
+       ]
+      ]
+     }
+    },
+    {
+     "id": "crop_resize_jpeg_social",
+     "category": "C3",
+     "label": "social: crop 0.9, resize 0.7, JPEG 70",
+     "file": "flux1_scenery_0616_videoseal_social.webp",
+     "asi": 0.50736,
+     "score": 0.992188,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.9922,
+     "decoded_text": "zeldb sold the maroon wagon",
+     "qsr": {
+      "qsr_corrected": 0.75,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "zeldb",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "sold",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "maroon",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "maroon wagon",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "crop",
+        0.9
+       ],
+       [
+        "resize",
+        0.7
+       ],
+       [
+        "jpeg",
+        70
+       ]
+      ]
+     }
+    },
+    {
+     "id": "overlay_resize_jpeg_meme",
+     "category": "C3",
+     "label": "meme: overlay 0.1, resize 0.7, JPEG 70",
+     "file": "flux1_scenery_0616_videoseal_meme.webp",
+     "asi": 0.30605,
+     "score": 0.992188,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.9922,
+     "decoded_text": "zeldb sold the-maroon wagon",
+     "qsr": {
+      "qsr_corrected": 0.75,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "zeldb",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "sold",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "maroon",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "wagon",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "overlay",
+        0.1
+       ],
+       [
+        "resize",
+        0.7
+       ],
+       [
+        "jpeg",
+        70
+       ]
+      ]
+     }
+    },
+    {
+     "id": "edit_resize_jpeg_editshare_qwen",
+     "category": "C4",
+     "label": "editshare-qwen: edit (Qwen-Image-Edit), resize 0.7, JPEG 70",
+     "file": null,
+     "asi": 0.46406,
+     "score": 0.832031,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.832,
+     "decoded_text": "zelhb s-lf sfb-maboomqwqgo'?",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "not on disk (archived); metrics only"
+     },
+     "edit_instruction": {
+      "op": "replace",
+      "entity": "lavender field in foreground",
+      "prompt": "Swap the lavender field for a field of golden wheat, maintaining the same shape and position, keeping the cottage, ocean, and sky unchanged",
+      "vlm": "Qwen/Qwen3-VL-8B-Instruct",
+      "editor": "Qwen/Qwen-Image-Edit-2511"
+     }
+    },
+    {
+     "id": "diffusion_crop_jpeg_regenshare",
+     "category": "C4",
+     "label": "regenshare: diffusion regeneration, crop 0.9, JPEG 70",
+     "file": null,
+     "asi": 0.48681,
+     "score": 0.566406,
+     "tau": 0.609375,
+     "detected": false,
+     "identity_correct": false,
+     "bit_acc": 0.5508,
+     "decoded_text": "owxihoz, uvpqs.'bl-stzwiapnx",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "not on disk (archived); metrics only"
+     }
+    },
+    {
+     "id": "diffusion_gnoise_gblur_sharpen_jpeg_scrub",
+     "category": "C4",
+     "label": "scrub: diffusion regeneration, noise 2, blur 3, sharpen 1.0, JPEG 70",
+     "file": null,
+     "asi": 0.33432,
+     "score": 0.539062,
+     "tau": 0.609375,
+     "detected": false,
+     "identity_correct": false,
+     "bit_acc": 0.5,
+     "decoded_text": "echkhozpsevgksquyjk.o?atofna",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "zelda",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "sold",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "maroon",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "wagon",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "not on disk (archived); metrics only"
+     }
+    }
+   ]
+  },
+  {
+   "image_id": "flux1_object_0440_videoseal",
+   "cohort_id": "flux1_object_0440",
+   "family": "post-hoc",
+   "method": "videoseal",
+   "method_label": "VideoSeal",
+   "generator": "FLUX.1-dev",
+   "subclass": "food and drink",
+   "prompt": "a stack of pancakes with maple syrup on a white marble countertop, warm tungsten glow, crisp micro-contrast, close-up with creamy bokeh background, photorealistic, sharp focus",
+   "seed": 439,
+   "payload_text": "stefan took the gray kayak",
+   "msg_id": "long_039",
+   "payload_bits": 256,
+   "unwatermarked": "flux1_object_0440_videoseal_unwatermarked.webp",
+   "watermarked": "flux1_object_0440_videoseal_watermarked.webp",
+   "source_paths": {
+    "unwatermarked": "<RESEARCH_REPO>/runs/2026-07-18_ingen-flux1-object/combined/clean/object_0440.png",
+    "watermarked": "<RESEARCH_REPO>/runs/2026-07-31_posthoc-semantic/out_img_flux1_eval999/videoseal/object_0440.png"
+   },
+   "psnr_db": 46.39,
+   "residual": "flux1_object_0440_videoseal_residual.webp",
+   "watermarked_metrics": {
+    "asi": null,
+    "score": 1.0,
+    "tau": 0.609375,
+    "detected": true,
+    "identity_correct": true,
+    "bit_acc": 1.0,
+    "decoded_text": "stefan took the gray kayak",
+    "qsr": {
+     "qsr_corrected": 1.0,
+     "n_questions": 4,
+     "answers": [
+      {
+       "qid": "q_person",
+       "type": "entity",
+       "question": "who is the person mentioned in the message?",
+       "gold": "stefan",
+       "pred": "Stefan",
+       "correct": true
+      },
+      {
+       "qid": "q_action",
+       "type": "relation",
+       "question": "what did the person in the message do?",
+       "gold": "took",
+       "pred": "took",
+       "correct": true
+      },
+      {
+       "qid": "q_color",
+       "type": "attribute",
+       "question": "what color is mentioned in the message?",
+       "gold": "gray",
+       "pred": "gray",
+       "correct": true
+      },
+      {
+       "qid": "q_object",
+       "type": "entity",
+       "question": "what object or item is mentioned in the message?",
+       "gold": "kayak",
+       "pred": "gray kayak",
+       "correct": true
+      }
+     ]
+    }
+   },
+   "conditions": [
+    {
+     "id": "jpeg_50",
+     "category": "C1",
+     "label": "JPEG, quality 50",
+     "file": "flux1_object_0440_videoseal_jpeg50.webp",
+     "asi": 0.05159,
+     "score": 0.996094,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.9961,
+     "decoded_text": "stefan took the gray kayak",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "Stefan",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "took",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "gray",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "gray kayak",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "jpeg",
+        50
+       ]
+      ]
+     }
+    },
+    {
+     "id": "crop_0.7",
+     "category": "C1",
+     "label": "Crop, 0.7 of each side kept",
+     "file": "flux1_object_0440_videoseal_crop07.webp",
+     "asi": 0.56219,
+     "score": 0.980469,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.9805,
+     "decoded_text": "stefanktoo  the gray kayak",
+     "qsr": {
+      "qsr_corrected": 0.75,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "Stefan",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "gray",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "gray kayak",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "crop",
+        0.7
+       ]
+      ]
+     }
+    },
+    {
+     "id": "rotation_10",
+     "category": "C1",
+     "label": "Rotation, 10 degrees",
+     "file": "flux1_object_0440_videoseal_rot10.webp",
+     "asi": 0.46275,
+     "score": 0.90625,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.9062,
+     "decoded_text": "ctqfap tokk-thg.gzayqkayqo..",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "rotation",
+        10
+       ]
+      ]
+     }
+    },
+    {
+     "id": "gnoise_10",
+     "category": "C1",
+     "label": "Gaussian noise, sigma 10",
+     "file": "flux1_object_0440_videoseal_noise10.webp",
+     "asi": 0.51994,
+     "score": 0.976562,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.9766,
+     "decoded_text": "ctefan took thg gray ka,ak s",
+     "qsr": {
+      "qsr_corrected": 0.5,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "ctefan",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "took",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "gray",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "gray ka,ak s",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "gnoise",
+        10
+       ]
+      ]
+     }
+    },
+    {
+     "id": "overlay_0.2",
+     "category": "C1",
+     "label": "Overlay boxes, 0.2",
+     "file": "flux1_object_0440_videoseal_overlay02.webp",
+     "asi": 0.23698,
+     "score": 0.996094,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.9961,
+     "decoded_text": "stefan took the gray kayak",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "Stefan",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "took",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "gray",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "gray kayak",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "overlay",
+        0.2
+       ]
+      ]
+     }
+    },
+    {
+     "id": "gblur_7",
+     "category": "C1",
+     "label": "Gaussian blur, kernel 7",
+     "file": "flux1_object_0440_videoseal_blur7.webp",
+     "asi": 0.07189,
+     "score": 1.0,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 1.0,
+     "decoded_text": "stefan took the gray kayak",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "Stefan",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "took",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "gray",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "gray kayak",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "gblur",
+        7
+       ]
+      ]
+     }
+    },
+    {
+     "id": "edit_qwen",
+     "category": "C2",
+     "label": "Prompt-based edit (Qwen-Image-Edit)",
+     "file": null,
+     "asi": 0.19551,
+     "score": 0.992188,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.9922,
+     "decoded_text": "stefan took the gray kayak",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "Stefan",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "took",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "gray",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "gray kayak",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "not on disk (archived); metrics only"
+     },
+     "edit_instruction": {
+      "op": "remove",
+      "entity": "stack of pancakes",
+      "prompt": "Remove the pancakes and fill the space with the same marble countertop texture and lighting, keeping the plate and honey drizzle intact. Keep everything else exactly as it is: white plate, marble countertop, honey drizzle, window background, lighting. Preserve the original composition, framing and lighting.",
+      "vlm": "Qwen/Qwen3-VL-8B-Instruct",
+      "editor": "Qwen/Qwen-Image-Edit-2511"
+     }
+    },
+    {
+     "id": "vae_q1",
+     "category": "C2",
+     "label": "VAE regeneration, quality 1",
+     "file": null,
+     "asi": 0.16376,
+     "score": 0.617188,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": false,
+     "bit_acc": 0.5898,
+     "decoded_text": "ufc?cx-iou-- xgp.htas?j'ildd",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "not on disk (archived); metrics only"
+     }
+    },
+    {
+     "id": "diffusion_str0_2",
+     "category": "C2",
+     "label": "Diffusion regeneration, strength 0.2",
+     "file": null,
+     "asi": 0.09781,
+     "score": 0.59375,
+     "tau": 0.609375,
+     "detected": false,
+     "identity_correct": true,
+     "bit_acc": 0.5938,
+     "decoded_text": "lfveg'x p'hkjhazd?fyyvalqkgt",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "not on disk (archived); metrics only"
+     }
+    },
+    {
+     "id": "unmarker",
+     "category": "C2",
+     "label": "UnMarker",
+     "file": null,
+     "asi": null,
+     "score": null,
+     "tau": 0.609375,
+     "detected": null,
+     "bit_acc": null,
+     "decoded_text": null,
+     "qsr": null,
+     "identity_pred": null,
+     "image_origin": {
+      "kind": "not on disk (archived); metrics only"
+     }
+    },
+    {
+     "id": "resize_jpeg_messenger",
+     "category": "C3",
+     "label": "messenger: resize 0.7, JPEG 70",
+     "file": "flux1_object_0440_videoseal_messenger.webp",
+     "asi": 0.04097,
+     "score": 1.0,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 1.0,
+     "decoded_text": "stefan took the gray kayak",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "Stefan",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "took",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "gray",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "gray kayak",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "resize",
+        0.7
+       ],
+       [
+        "jpeg",
+        70
+       ]
+      ]
+     }
+    },
+    {
+     "id": "crop_resize_jpeg_social",
+     "category": "C3",
+     "label": "social: crop 0.9, resize 0.7, JPEG 70",
+     "file": "flux1_object_0440_videoseal_social.webp",
+     "asi": 0.36117,
+     "score": 0.992188,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.9922,
+     "decoded_text": "stefan-took the gray kayak",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "Stefan",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "took",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "gray",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "gray kayak",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "crop",
+        0.9
+       ],
+       [
+        "resize",
+        0.7
+       ],
+       [
+        "jpeg",
+        70
+       ]
+      ]
+     }
+    },
+    {
+     "id": "overlay_resize_jpeg_meme",
+     "category": "C3",
+     "label": "meme: overlay 0.1, resize 0.7, JPEG 70",
+     "file": "flux1_object_0440_videoseal_meme.webp",
+     "asi": 0.18997,
+     "score": 1.0,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 1.0,
+     "decoded_text": "stefan took the gray kayak",
+     "qsr": {
+      "qsr_corrected": 1.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "Stefan",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "took",
+        "correct": true
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "gray",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "gray kayak",
+        "correct": true
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "re-rendered with attacks/leveled_attacks.py apply_chain (seeded, bit-identical check)",
+      "chain": [
+       [
+        "overlay",
+        0.1
+       ],
+       [
+        "resize",
+        0.7
+       ],
+       [
+        "jpeg",
+        70
+       ]
+      ]
+     }
+    },
+    {
+     "id": "edit_resize_jpeg_editshare_qwen",
+     "category": "C4",
+     "label": "editshare-qwen: edit (Qwen-Image-Edit), resize 0.7, JPEG 70",
+     "file": null,
+     "asi": 0.22063,
+     "score": 0.972656,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.9727,
+     "decoded_text": "stefan tkok the gray kcyak",
+     "qsr": {
+      "qsr_corrected": 0.5,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "Stefan",
+        "correct": true
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "gray",
+        "correct": true
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "gray kyak",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "not on disk (archived); metrics only"
+     },
+     "edit_instruction": {
+      "op": "remove",
+      "entity": "stack of pancakes",
+      "prompt": "Remove the pancakes and fill the space with the same marble countertop texture and lighting, keeping the plate and honey drizzle intact. Keep everything else exactly as it is: white plate, marble countertop, honey drizzle, window background, lighting. Preserve the original composition, framing and lighting.",
+      "vlm": "Qwen/Qwen3-VL-8B-Instruct",
+      "editor": "Qwen/Qwen-Image-Edit-2511"
+     }
+    },
+    {
+     "id": "diffusion_crop_jpeg_regenshare",
+     "category": "C4",
+     "label": "regenshare: diffusion regeneration, crop 0.9, JPEG 70",
+     "file": null,
+     "asi": 0.37101,
+     "score": 0.609375,
+     "tau": 0.609375,
+     "detected": false,
+     "identity_correct": true,
+     "bit_acc": 0.6094,
+     "decoded_text": "khhmgo.yl'g xeitxge--rckuko?",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "not on disk (archived); metrics only"
+     }
+    },
+    {
+     "id": "diffusion_gnoise_gblur_sharpen_jpeg_scrub",
+     "category": "C4",
+     "label": "scrub: diffusion regeneration, noise 2, blur 3, sharpen 1.0, JPEG 70",
+     "file": null,
+     "asi": 0.17544,
+     "score": 0.621094,
+     "tau": 0.609375,
+     "detected": true,
+     "identity_correct": true,
+     "bit_acc": 0.6211,
+     "decoded_text": "phuegv-sl'g rvk.tqfqyvalqiot",
+     "qsr": {
+      "qsr_corrected": 0.0,
+      "n_questions": 4,
+      "answers": [
+       {
+        "qid": "q_person",
+        "type": "entity",
+        "question": "who is the person mentioned in the message?",
+        "gold": "stefan",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_action",
+        "type": "relation",
+        "question": "what did the person in the message do?",
+        "gold": "took",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_color",
+        "type": "attribute",
+        "question": "what color is mentioned in the message?",
+        "gold": "gray",
+        "pred": "unknown",
+        "correct": false
+       },
+       {
+        "qid": "q_object",
+        "type": "entity",
+        "question": "what object or item is mentioned in the message?",
+        "gold": "kayak",
+        "pred": "unknown",
+        "correct": false
+       }
+      ]
+     },
+     "image_origin": {
+      "kind": "not on disk (archived); metrics only"
+     }
+    }
+   ]
+  }
+ ]
+}
