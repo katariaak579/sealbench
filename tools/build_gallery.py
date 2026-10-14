@@ -39,7 +39,7 @@ import cv2
 from PIL import Image
 
 import os
-R = Path(os.environ.get("SEALBENCH_REPO", "../iclr_dataset"))
+R = Path(os.environ.get("SEALBENCH_REPO", "../research_repo"))
 OUT = Path(__file__).resolve().parent.parent / "assets" / "gallery"
 OUT.mkdir(parents=True, exist_ok=True)
 sys.path.insert(0, str(R / "attacks"))

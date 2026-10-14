@@ -78,6 +78,6 @@ different messages (each entry's `payload_text`), drawn from the same message co
 - `fig/protocol-*.{webp,png}`: resized from `<PAPER_SOURCE>/fig/fig1_protocol.png` (Lanczos).
 - `fig/{curves,heatmap,dissociation}.{png,webp}`: `convert -density 300` of the Overleaf `fig2_curves.pdf`,
   `fig3_heatmap.pdf`, `fig4_dissociation.pdf`, flattened on white, trimmed, 12 px border.
-- `fig/svg/*.svg`: `tools/make_figs_svg.py` (copy of `R/iclr_draft/scripts/make_figs.py`, output dir and
+- `fig/svg/*.svg`: `tools/make_figs_svg.py` (copy of `R/paper/scripts/make_figs.py`, output dir and
   extension changed only). Same data as the paper PDFs (visually checked); fonts differ slightly.
 - `img/og-card.png`: `tools/make_og_card.py`.

@@ -1,5 +1,5 @@
-"""Paper figures from the CURRENT metric CSVs (docs/20 s4). Outputs PDF to iclr_draft/iclr2027/fig/."""
-# ADAPTED COPY of iclr_draft/scripts/make_figs.py for the website: writes SVG into assets/fig/svg (never run the original in place).
+"""Paper figures from the CURRENT metric CSVs (docs/20 s4). Outputs PDF to paper_mirror/fig/."""
+# ADAPTED COPY of paper/scripts/make_figs.py for the website: writes SVG into assets/fig/svg (never run the original in place).
 import csv, os, collections
 import numpy as np
 import matplotlib
@@ -10,7 +10,7 @@ from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
 
 import os
-ROOT = os.environ.get("SEALBENCH_REPO", "../iclr_dataset")
+ROOT = os.environ.get("SEALBENCH_REPO", "../research_repo")
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets/fig/svg")
 os.makedirs(OUT, exist_ok=True)
 

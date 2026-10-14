@@ -12,10 +12,10 @@
    "note": "metric CSVs are untracked run outputs; the commit identifies the scripts"
   },
   "sources": [
-   "paper:iclr2027_conference.tex"
+   "paper:main.tex"
   ]
  },
- "note": "paper_lines are line numbers in the paper's main tex file (iclr2027_conference.tex) at the commit in _meta; comment lines are excluded from the search.",
+ "note": "paper_lines are line numbers in the paper's main tex file (main.tex) at the commit in _meta; comment lines are excluded from the search.",
  "items": [
   {
    "key": "images.real",

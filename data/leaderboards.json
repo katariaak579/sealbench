@@ -12,8 +12,8 @@
    "note": "metric CSVs are untracked run outputs; the commit identifies the scripts"
   },
   "sources": [
-   "paper:iclr2027_conference.tex",
-   "paper:iclr2027_conference.tex",
+   "paper:main.tex",
+   "paper:main.tex",
    "paper:tables/tab_arms.tex",
    "paper:tables/tab_attackgrid.tex",
    "paper:tables/tab_calib.tex",
@@ -116,7 +116,7 @@
     {
      "index": 0,
      "label": null,
-     "source": "paper:iclr2027_conference.tex",
+     "source": "paper:main.tex",
      "unit": null,
      "n_rows": 5
     }
@@ -159,7 +159,7 @@
      ],
      "values": [],
      "bold": [],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -198,7 +198,7 @@
      ],
      "values": [],
      "bold": [],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -237,7 +237,7 @@
      ],
      "values": [],
      "bold": [],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -276,7 +276,7 @@
      ],
      "values": [],
      "bold": [],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -315,15 +315,15 @@
      ],
      "values": [],
      "bold": [],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     }
    ],
    "source": {
     "rows": [
-     "paper:iclr2027_conference.tex"
+     "paper:main.tex"
     ],
     "rows_sha256": {},
-    "environment": "paper:iclr2027_conference.tex#L142-L162",
+    "environment": "paper:main.tex#L142-L162",
     "tabular_spec": "lccccc"
    },
    "parse_notes": [
@@ -421,7 +421,7 @@
     {
      "index": 0,
      "label": null,
-     "source": "paper:iclr2027_conference.tex",
+     "source": "paper:main.tex",
      "unit": null,
      "n_rows": 11
     }
@@ -483,7 +483,7 @@
      "bold": [
       false
      ],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -541,7 +541,7 @@
      "bold": [
       false
      ],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -599,7 +599,7 @@
      "bold": [
       false
      ],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -657,7 +657,7 @@
      "bold": [
       false
      ],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -715,7 +715,7 @@
      "bold": [
       false
      ],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -773,7 +773,7 @@
      "bold": [
       false
      ],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -831,7 +831,7 @@
      "bold": [
       false
      ],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -889,7 +889,7 @@
      "bold": [
       false
      ],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -947,7 +947,7 @@
      "bold": [
       false
      ],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -1005,7 +1005,7 @@
      "bold": [
       false
      ],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -1063,15 +1063,15 @@
      "bold": [
       false
      ],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     }
    ],
    "source": {
     "rows": [
-     "paper:iclr2027_conference.tex"
+     "paper:main.tex"
     ],
     "rows_sha256": {},
-    "environment": "paper:iclr2027_conference.tex#L245-L271",
+    "environment": "paper:main.tex#L245-L271",
     "tabular_spec": "@{}llc@{\\hspace{1em}}llccc@{}"
    },
    "caption_site": "Watermarking methods in SEALBench. Post-hoc methods watermark an existing image; in-generation methods embed the watermark during generation. Methods with fewer than 64 embedded message bits are not included in the sentence-level evaluation."
@@ -1152,7 +1152,7 @@
     {
      "index": 0,
      "label": "Identity attribution (open-set attribution; RingID on its 1,024 keys)",
-     "source": "paper:iclr2027_conference.tex",
+     "source": "paper:main.tex",
      "unit": null,
      "n_rows": 12
     },
@@ -2680,7 +2680,7 @@
     "rows_sha256": {
      "tab_crossfamily": "69d5142e254a75738d9617e2fd1b31b263716535e3406e85a622f35c1eee91ef"
     },
-    "environment": "paper:iclr2027_conference.tex#L580-L595",
+    "environment": "paper:main.tex#L580-L595",
     "tabular_spec": "llrrrrrr"
    },
    "caption_site": "Open-set attribution and watermark detection on the 1,193-image synthetic cohort matched by generator, prompt, and seed. The identity attribution block reports TPR@1%FPR (%) with the open-set identity score, using 100 candidate identities for the 11 post-hoc methods and 1,024 native keys for RingID. The message recovery block reports TPR@1%FPR (%) for seven post-hoc and three in-generation methods, using bit agreement with the known embedded sentence payload as the detection score. Unattacked denotes performance before attack, C1–C4 denote attack categories, and All is the mean over attacked conditions.",
@@ -2799,7 +2799,7 @@
     {
      "index": 0,
      "label": "post-hoc, matched synthetic cohort",
-     "source": "paper:iclr2027_conference.tex",
+     "source": "paper:main.tex",
      "unit": null,
      "n_rows": 7
     },
@@ -3780,7 +3780,7 @@
     "rows_sha256": {
      "tab_tier3_main": "f7e317767737a84ae940effa3ce38d9e2cae2fbf5b20c126eca6f331e675ee55"
     },
-    "environment": "paper:iclr2027_conference.tex#L704-L733",
+    "environment": "paper:main.tex#L704-L733",
     "tabular_spec": "llrrrrrrrrrr"
    },
    "caption_site": "Message recovery on the matched synthetic cohort (Section 4). QSR is reported before attack (Unattacked), for each attack category (C1–C4), and across all attacked conditions (All). Class denotes message length. Msg. Rec. and Bit Acc. report mean complete-message recovery and bit accuracy across attacked conditions. sem-AURSC and bit-AURSC summarize the corresponding QSR and bit-accuracy curves over ASI [0,0.2], averaged across all attack types. Appendix Table 18 reports post-hoc results on real, manipulated, and all 1,593 synthetic images.",
@@ -4706,7 +4706,7 @@
     "rows_sha256": {
      "tab_attackgrid": "f1e5aefa85427b8b8856b9629c3f9313924a4233b1400f273d5180012d8203ff"
     },
-    "environment": "paper:iclr2027_conference.tex#L1565-L1580",
+    "environment": "paper:main.tex#L1565-L1580",
     "tabular_spec": "lllll"
    },
    "caption_site": "Single-attack conditions. Mean ASI is averaged over images and methods on the matched synthetic cohort, separately for post-hoc and in-generation methods."
@@ -5431,7 +5431,7 @@
     "rows_sha256": {
      "tab_chains": "d4951ca36021bab74554c5e6c12d768cedb37be5fd5738fd3d54aa25fed82c6e"
     },
-    "environment": "paper:iclr2027_conference.tex#L1582-L1596",
+    "environment": "paper:main.tex#L1582-L1596",
     "tabular_spec": "lllll"
    },
    "caption_site": "The fixed attack chains of attack categories 3 and 4. Mean ASI is averaged over images and methods on the matched synthetic cohort, separately for post-hoc and in-generation methods."
@@ -5494,14 +5494,14 @@
     {
      "index": 0,
      "label": null,
-     "source": "paper:iclr2027_conference.tex",
+     "source": "paper:main.tex",
      "unit": null,
      "n_rows": 5
     },
     {
      "index": 1,
      "label": null,
-     "source": "paper:iclr2027_conference.tex",
+     "source": "paper:main.tex",
      "unit": null,
      "n_rows": 3
     }
@@ -5544,7 +5544,7 @@
      ],
      "values": [],
      "bold": [],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -5583,7 +5583,7 @@
      ],
      "values": [],
      "bold": [],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -5622,7 +5622,7 @@
      ],
      "values": [],
      "bold": [],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -5661,7 +5661,7 @@
      ],
      "values": [],
      "bold": [],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -5700,7 +5700,7 @@
      ],
      "values": [],
      "bold": [],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 1,
@@ -5739,7 +5739,7 @@
      ],
      "values": [],
      "bold": [],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 1,
@@ -5778,7 +5778,7 @@
      ],
      "values": [],
      "bold": [],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 1,
@@ -5817,15 +5817,15 @@
      ],
      "values": [],
      "bold": [],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     }
    ],
    "source": {
     "rows": [
-     "paper:iclr2027_conference.tex"
+     "paper:main.tex"
     ],
     "rows_sha256": {},
-    "environment": "paper:iclr2027_conference.tex#L1644-L1665",
+    "environment": "paper:main.tex#L1644-L1665",
     "tabular_spec": "llccl"
    },
    "caption_site": "Worked scoring examples for the message “wanda moved the green ladder”."
@@ -5881,7 +5881,7 @@
     {
      "index": 0,
      "label": null,
-     "source": "paper:iclr2027_conference.tex",
+     "source": "paper:main.tex",
      "unit": null,
      "n_rows": 3
     }
@@ -5927,7 +5927,7 @@
       false,
       false
      ],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -5969,7 +5969,7 @@
       false,
       false
      ],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     },
     {
      "group": 0,
@@ -6011,15 +6011,15 @@
       false,
       false
      ],
-     "source": "paper:iclr2027_conference.tex"
+     "source": "paper:main.tex"
     }
    ],
    "source": {
     "rows": [
-     "paper:iclr2027_conference.tex"
+     "paper:main.tex"
     ],
     "rows_sha256": {},
-    "environment": "paper:iclr2027_conference.tex#L1991-L2009",
+    "environment": "paper:main.tex#L1991-L2009",
     "tabular_spec": "lccc"
    },
    "caption_site": "Sensitivity of AURSC method rankings to the ASI reporting budget. Post-hoc columns report Spearman's ρ relative to the ranking at b=0.2. The final column reports whether the in-generation ranking changes relative to b=0.2."
@@ -7668,7 +7668,7 @@
     "rows_sha256": {
      "tab_main3": "b4e0162c3430c6677b3792a0e0922ff11c2956c3dcc986f982db1bfcaa379782"
     },
-    "environment": "paper:iclr2027_conference.tex#L2021-L2050",
+    "environment": "paper:main.tex#L2021-L2050",
     "tabular_spec": "lrrrrrrrrrrrrrrrr"
    },
    "caption_site": "Post-hoc robustness across the three image categories. Unattacked is TPR@1%FPR (%) before attack. AURSC is the normalized area under the TPR@1%FPR-versus-ASI curve over [0,0.2], and Obs. Min@0.2 is the minimum observed TPR@1%FPR within ASI ≤0.2, both over all attacks. Attr. acc. is mean open-set attribution accuracy at 1% FPR over all attacked conditions. Max FPR is the highest realized FPR on attacked-unwatermarked negatives when the threshold is calibrated using unattacked negatives only."
@@ -9242,7 +9242,7 @@
     "rows_sha256": {
      "tab_modes": "51d4e390b496c0b193ebe4c0a723832408704388e387c73433914a7fc2fc3265"
     },
-    "environment": "paper:iclr2027_conference.tex#L2068-L2082",
+    "environment": "paper:main.tex#L2068-L2082",
     "tabular_spec": "llrrrrrrrrr"
    },
    "caption_site": "The seven message-capable post-hoc methods in identity mode and in message mode. Identity mode is the open-set codebook score on the identity-payload images, the basis of the identity-arm block of Table 3 and of the other detection tables in this appendix. Message mode is the bit agreement with the embedded sentence on the sentence-payload images, the basis of the message recovery block of Table 3. For each image category, All is the mean TPR@1%FPR (%) over all attacked conditions, C2 is the mean over the category-2 conditions, and Obs. Min@0.2 is the lowest measured TPR@1%FPR within the ASI budget.",
@@ -9320,7 +9320,7 @@
     {
      "index": 0,
      "label": "TPR@1%FPR (%)",
-     "source": "paper:iclr2027_conference.tex",
+     "source": "paper:main.tex",
      "unit": null,
      "n_rows": 4
     },
@@ -10559,7 +10559,7 @@
     "rows_sha256": {
      "tab_levels": "cc2ddb31165537291da2ab432d89b06ccb4a2674739d08878b5a43019d7e2aac"
     },
-    "environment": "paper:iclr2027_conference.tex#L2088-L2105",
+    "environment": "paper:main.tex#L2088-L2105",
     "tabular_spec": "lrrrrrr"
    },
    "caption_site": "Performance across the four attack categories: single perturbations (C1), editing and removal attacks (C2), processing chains (C3), and removal followed by a chain (C4). TPR@1%FPR is reported for both watermark families, post-hoc methods in identity mode and in-generation methods on their sentence-carrying images; the matched-payload family comparison is Table 3. Open-set attribution accuracy is additionally reported for post-hoc methods. QSR, complete-message recovery (Msg. Rec.), and bit accuracy (Bit Acc.) are computed for methods that carry sentence embedded messages. Unattacked is the result before attack, and All is the mean over all attacked conditions."
@@ -12050,7 +12050,7 @@
     "rows_sha256": {
      "tab_family": "e70f21e7963e89f4da5741837912d8ec511d49d23502af8030d13e45312493b6"
     },
-    "environment": "paper:iclr2027_conference.tex#L2156-L2169",
+    "environment": "paper:main.tex#L2156-L2169",
     "tabular_spec": "lrrrr"
    },
    "caption_site": "AURSC on TPR@1%FPR for each attack type, averaged over post-hoc methods within each image category and over in-generation methods on synthetic images. Post-hoc methods are in identity mode; the matched-payload family comparison is Table 3."
@@ -13020,7 +13020,7 @@
     "rows_sha256": {
      "tab_synergy": "ca3899310978794533e043972cbcf44e81b4fa81ca4b0675f44d2a12f39b448f"
     },
-    "environment": "paper:iclr2027_conference.tex#L2171-L2189",
+    "environment": "paper:main.tex#L2171-L2189",
     "tabular_spec": "llrrrrr"
    },
    "caption_site": "Chain comparison at matched damage. Positive values indicate that the chain is harder than its strongest component at the same measured damage. Post-hoc columns use open-set attribution accuracy at 1% FPR; the in-generation column uses TPR@1%FPR. Mean ASI is measured on the manipulated category."
@@ -13334,7 +13334,7 @@
     "rows_sha256": {
      "tab_ingen": "df105d75b8c178984d4c7880c5da4abb0c333f2eb0fa90f3c06c6f7806b6598b"
     },
-    "environment": "paper:iclr2027_conference.tex#L2201-L2218",
+    "environment": "paper:main.tex#L2201-L2218",
     "tabular_spec": "lrrrrr"
    },
    "caption_site": "In-generation robustness using TPR@1%FPR. AURSC is measured over [0,0.2], and Obs. Min@0.2 is the minimum observed TPR@1%FPR within the same damage budget. The final three columns report mean TPR@1%FPR over all attacked conditions for each generator."
@@ -14262,7 +14262,7 @@
     "rows_sha256": {
      "tab_generator": "b67980740b9e5d6e6499ea0c125ce1c134adccdd7087e748140570745dad6eda"
     },
-    "environment": "paper:iclr2027_conference.tex#L2235-L2247",
+    "environment": "paper:main.tex#L2235-L2247",
     "tabular_spec": "llrrrrrr"
    },
    "caption_site": "In-generation methods by generator: TPR@1%FPR (%) for each attack category. Unattacked is the result before attack, C1-C4 are the four attack categories, and All is the mean over all attacked conditions."
@@ -15707,7 +15707,7 @@
     "rows_sha256": {
      "tab_subclass": "af6ea47af2472de9b7eaea9f03ec203713c1bab0d431d88a5c8df60d36099411"
     },
-    "environment": "paper:iclr2027_conference.tex#L2249-L2263",
+    "environment": "paper:main.tex#L2249-L2263",
     "tabular_spec": "llrrrrrrrr"
    },
    "caption_site": "TPR@1%FPR (%) across the eight content subclasses, pooled over methods within each watermark family (post-hoc methods in identity mode)."
@@ -16414,7 +16414,7 @@
     "rows_sha256": {
      "tab_subclass_spread": "9f9f58cc00f8efd4886f84499433f3d336f07005a0e55cbd121a2100f89cb177"
     },
-    "environment": "paper:iclr2027_conference.tex#L2265-L2278",
+    "environment": "paper:main.tex#L2265-L2278",
     "tabular_spec": "lrrr"
    },
    "caption_site": "Spread of TPR@1%FPR across the eight content subclasses for each method (maximum minus minimum, in percentage points), pooled over attacked conditions (post-hoc methods in identity mode)."
@@ -16532,7 +16532,7 @@
     {
      "index": 0,
      "label": "post-hoc, real category",
-     "source": "paper:iclr2027_conference.tex",
+     "source": "paper:main.tex",
      "unit": null,
      "n_rows": 7
     },
@@ -18576,7 +18576,7 @@
     "rows_sha256": {
      "tab_tier3_rest": "cb6aa5c29f60228ba26cfc6fb255ec5361c37a4b8f442d48843608699ee22aa9"
     },
-    "environment": "paper:iclr2027_conference.tex#L2288-L2304",
+    "environment": "paper:main.tex#L2288-L2304",
     "tabular_spec": "llrrrrrrrrrr"
    },
    "caption_site": "Message-level results on the real and manipulated categories and on all 1,593 synthetic images for post-hoc methods. Class is the message length class. The columns under QSR report Question Success Rate before attack (Unattacked), in the four attack categories (C1-C4), and over all attacked conditions (All). sem-AURSC and bit-AURSC are the normalized areas under the QSR-versus-ASI and bit-accuracy-versus-ASI curves over [0,0.2], computed over all attacks. Msg. Rec. and Bit Acc. are mean complete-message recovery and mean bit accuracy over all attacked conditions."
@@ -18653,7 +18653,7 @@
     {
      "index": 0,
      "label": "QSR",
-     "source": "paper:iclr2027_conference.tex",
+     "source": "paper:main.tex",
      "unit": null,
      "n_rows": 5
     },
@@ -19626,7 +19626,7 @@
     "rows_sha256": {
      "tab_message_agg": "0d8422a0f022d71054705b1ea1633c5f7e4e3bf365756897a1723d7fa0fb8f0b"
     },
-    "environment": "paper:iclr2027_conference.tex#L2311-L2324",
+    "environment": "paper:main.tex#L2311-L2324",
     "tabular_spec": "lrrrrrr"
    },
    "caption_site": "QSR, complete-message recovery (Msg. Rec.), and bit accuracy (Bit Acc.) by attack category (C1-C4; All is the mean over all attacked conditions) for each watermark family and image category, under the primary reader. Values are averaged over the 7 post-hoc or the 3 in-generation methods that carry sentence embedded messages. The three metrics are computed from the same recovered embedded messages. Synthetic (matched) rows use the 1,193-image cohort of Table 4; synthetic (all 1,593) rows use the full synthetic subset."
@@ -19990,7 +19990,7 @@
     "rows_sha256": {
      "tab_partial": "4b902f9acf7d656d2e70bdcd1645698e17d74407e6d3b2de85b5bbeb1512e4fb"
     },
-    "environment": "paper:iclr2027_conference.tex#L2329-L2341",
+    "environment": "paper:main.tex#L2329-L2341",
     "tabular_spec": "lrrrrr"
    },
    "caption_site": "Partial-recovery analysis under the primary reader. The population is every attacked image of the methods that carry sentence embedded messages, over all attacked conditions. For each method, images are pooled over the attacked conditions, the synthetic post-hoc evaluation subsets are combined with image-count weights, and the table reports the mean over methods. Msg. Rec. is complete-message recovery and QSR is computed over all messages. QSR (exact) and QSR (not exact) are computed on messages that were and were not recovered exactly. Share is the percentage of all correct answers that come from messages that were not recovered exactly. The synthetic (matched) row uses the 1,193-image cohort."
@@ -20428,7 +20428,7 @@
     "rows_sha256": {
      "tab_readers_main": "49696edfd1c95459aac0d3dbaa2be27776f625ea71e9db70188023dda4b6b6f9"
     },
-    "environment": "paper:iclr2027_conference.tex#L2356-L2370",
+    "environment": "paper:main.tex#L2356-L2370",
     "tabular_spec": "lrrrrr"
    },
    "caption_site": "Reader sensitivity of QSR. Mean QSR over all attacked conditions under five frozen readers, averaged over the 7 post-hoc and 3 in-generation methods that carry sentence embedded messages. The last row is the difference between the highest and the lowest reader. The matched columns use the 1,193-image cohort of Table 4. Per-attack-category and per-method results are reported in Tables 23 and 24."
@@ -20787,7 +20787,7 @@
     "rows_sha256": {
      "tab_readers_agree": "43b2ee22c22d6fd692d00792eeb57035bd05699491e86e04b73e9a026d658d73"
     },
-    "environment": "paper:iclr2027_conference.tex#L2374-L2388",
+    "environment": "paper:main.tex#L2374-L2388",
     "tabular_spec": "lrrrrrr"
    },
    "caption_site": "Agreement of each additional reader with the primary reader, Qwen2.5-7B-Instruct. Pearson's r, Spearman's ρ, and the mean absolute difference are computed on condition-level QSR over 2,385 method-attack pairs. Agreement is the percentage of the 7.24 million question instances on which both readers are correct or both are incorrect, and κ is Cohen's kappa for the same comparison. The last column is Pearson's r of condition-level ΔNLL."
@@ -20857,7 +20857,7 @@
     {
      "index": 0,
      "label": "post-hoc, manipulated",
-     "source": "paper:iclr2027_conference.tex",
+     "source": "paper:main.tex",
      "unit": null,
      "n_rows": 5
     },
@@ -22299,7 +22299,7 @@
     "rows_sha256": {
      "tab_readers_levels": "d51aef371a5821e3ff67af532a80df0a589409e34aa7f089127d382a2b5e1181"
     },
-    "environment": "paper:iclr2027_conference.tex#L2392-L2405",
+    "environment": "paper:main.tex#L2392-L2405",
     "tabular_spec": "lrrrrr"
    },
    "caption_site": "Mean QSR by attack category under each reader, for each watermark family and image category. Values are averaged over the 7 post-hoc or the 3 in-generation methods that carry sentence embedded messages."
@@ -22369,7 +22369,7 @@
     {
      "index": 0,
      "label": "post-hoc, synthetic (matched)",
-     "source": "paper:iclr2027_conference.tex",
+     "source": "paper:main.tex",
      "unit": null,
      "n_rows": 7
     },
@@ -24147,7 +24147,7 @@
     "rows_sha256": {
      "tab_readers_method": "d11d1a7d8b43de83638de6c133d090de73c279e13ded16445d7eea9d022dfc9a"
     },
-    "environment": "paper:iclr2027_conference.tex#L2409-L2422",
+    "environment": "paper:main.tex#L2409-L2422",
     "tabular_spec": "lrrrrr"
    },
    "caption_site": "QSR of each method under each reader, averaged over all attacked conditions."
@@ -25232,7 +25232,7 @@
     "rows_sha256": {
      "tab_calib": "59927c77ca7f66702f6a653937cac31e2565d7d9969689328747ccf2a6dce68f"
     },
-    "environment": "paper:iclr2027_conference.tex#L2434-L2453",
+    "environment": "paper:main.tex#L2434-L2453",
     "tabular_spec": "lrrlrrlrrl"
    },
    "caption_site": "Calibration gap on the identity-embedded message evaluation subsets. For each method and category, the table reports the false-positive rate (%) of a nominal 1% threshold fitted on unattacked negatives and evaluated on unattacked negatives (unwatermarked), all attacked-unwatermarked negatives (att.), and the condition with the highest realized FPR (max)."
@@ -27316,7 +27316,7 @@
     "rows_sha256": {
      "tab_arms": "70f285e855a27670e435697b11eb3889c67d55547e7aee87c9a907d2a3bbe8c5"
     },
-    "environment": "paper:iclr2027_conference.tex#L2464-L2478",
+    "environment": "paper:main.tex#L2464-L2478",
     "tabular_spec": "llrrrrrrrrr"
    },
    "caption_site": "Synthetic post-hoc evaluation subsets listed separately for identity embedded messages. Open-set attribution accuracy at 1% FPR is reported by attack category, together with AURSC and Obs. Min@0.2 on TPR@1%FPR. Images is the number of images in the subset. Unattacked is the result before attack, C1-C4 are the four attack categories, and All is the mean over all attacked conditions. Category-level synthetic results pool these subsets."
@@ -28369,7 +28369,7 @@
     "rows_sha256": {
      "tab_unmarker": "67374f88b9a18f88a4e7430da3dd5cbe6f8f3cb97d59909b498a55afb0ae3e12"
     },
-    "environment": "paper:iclr2027_conference.tex#L1221-L1237",
+    "environment": "paper:main.tex#L1221-L1237",
     "tabular_spec": "lrrrrrr"
    },
    "caption_original_commented_tex": "UnMarker results: TPR@1\\%FPR (\\%) under the UnMarker single (Level 2) and the UnMarker-then-share chain (Level 4), on the nested 50-per-sub-class cohort, for the 11 post-hoc methods per image category and the 5 in-generation methods on synthetic images.",

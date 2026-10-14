@@ -24,8 +24,8 @@
    "repo:runs/2026-08-17_ingen-l14/metrics/eval_v2/robust_curves.csv",
    "repo:runs/2026-09-18_matched-cohort/metrics_syn_matched_identity/detection.csv",
    "repo:runs/2026-09-18_matched-cohort/metrics_syn_matched_identity/robust_curves.csv",
-   "repo:iclr_draft/scripts/make_figs.py",
-   "repo:iclr_draft/scripts/make_tables.py"
+   "repo:paper/scripts/make_figs.py",
+   "repo:paper/scripts/make_tables.py"
   ]
  },
  "paper_figure": {

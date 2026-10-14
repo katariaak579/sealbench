@@ -1,2 +1,2 @@
-# machine-local source paths for tools/build_data.py (identify the authors during double-blind review)
+# machine-local source paths for tools/build_data.py (machine-local; contain user names)
 tools/local_paths.json

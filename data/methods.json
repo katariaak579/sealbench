@@ -12,8 +12,8 @@
    "note": "metric CSVs are untracked run outputs; the commit identifies the scripts"
   },
   "sources": [
-   "paper:iclr2027_conference.tex (table tab:methods)",
-   "paper:iclr2027_conference.bib",
+   "paper:main.tex (table tab:methods)",
+   "paper:references.bib",
    "paper:tables/tab_tier3_main.tex"
   ]
  },

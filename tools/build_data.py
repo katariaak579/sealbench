@@ -7,8 +7,7 @@ Two read-only sources:
 
 Standard library only. The script writes only to <site>/data/ and <site>/tools/build_checks.json.
 Source roots come from $SEALBENCH_PAPER / $SEALBENCH_REPO or tools/local_paths.json. That file is kept
-out of git because the absolute paths identify the authors while the paper is under double-blind
-review; the JSON output cites sources only as "paper:<relative path>" and "repo:<relative path>".
+out of git because the absolute paths are machine-local; the JSON output cites sources only as "paper:<relative path>" and "repo:<relative path>".
 
 What each output reproduces:
   leaderboards.json  every results table of the paper, parsed from the paper's own table files
@@ -38,12 +37,18 @@ def _roots():
     repo = os.environ.get("SEALBENCH_REPO") or cfg.get("repo")
     if not paper or not repo:
         sys.exit("Set SEALBENCH_PAPER and SEALBENCH_REPO, or write tools/local_paths.json with keys 'paper' and 'repo'.")
-    return paper, repo
+    return paper, repo, cfg
 
 
-PAPER, REPO = _roots()
-MAIN_TEX = "iclr2027_conference.tex"
-BIB = "iclr2027_conference.bib"
+PAPER, REPO, _CFG = _roots()
+# real file names live in the git-ignored tools/local_paths.json; outputs cite them as main.tex / references.bib
+MAIN_TEX = os.environ.get("SEALBENCH_MAIN_TEX") or _CFG.get("main_tex", "main.tex")
+BIB = os.environ.get("SEALBENCH_BIB") or _CFG.get("bib", "references.bib")
+
+
+def _public(text):
+    """Replace machine-local file names with the neutral names used in the published JSON."""
+    return text.replace(MAIN_TEX, "main.tex").replace(BIB, "references.bib")
 
 
 def P(rel):
@@ -88,7 +93,7 @@ def r4(x, nd=4):
 
 
 # ----------------------------------------------------------------------------------------------
-# Constants (copied from iclr_draft/scripts/make_figs.py and make_tables.py in the research repo)
+# Constants (copied from paper/scripts/make_figs.py and make_tables.py in the research repo)
 # ----------------------------------------------------------------------------------------------
 POSTHOC = ["cin", "pimog", "wam", "trustmark", "editguard", "vine", "invismark", "omniguard", "mbrs", "videoseal", "pixelseal"]
 INGEN = ["ring_id", "gaussian_shading", "t2smark", "prc"]
@@ -931,7 +936,7 @@ def build_heatmap(arms, refs):
     out = {
         "_meta": meta([f"repo:{T4}", f"repo:{DIR_FAKE_ID}/robust_curves.csv", f"repo:{DIR_REAL_ID}/robust_curves.csv",
                        f"repo:{DIR_SYN_ID}/robust_curves.csv", f"repo:{DIR_SYN_NG}/robust_curves.csv", f"repo:{DIR_INGEN}/robust_curves.csv",
-                       "repo:iclr_draft/scripts/make_figs.py"]),
+                       "repo:paper/scripts/make_figs.py"]),
         "paper_figure": {"label": "fig:heatmap", "number": int(refs["fig:heatmap"]), "file": "fig/fig3_heatmap.pdf",
                          "reproduces": "grids.synthetic.post_hoc + grids.synthetic.in_generation, conditions in this order"},
         "metric": "TPR@1%FPR (%), column tpr_far01 of T4_full_grid.csv times 100, for both families (post-hoc methods in identity mode)",
@@ -1070,7 +1075,7 @@ def build_curves(arms, refs, lb):
     check("curves", "per-attack-type AURSC averaged over methods equals tab_family (28 types x 4 columns)", not bad,
           f"mismatches: {bad}" if bad else "112 values equal")
     out = {
-        "_meta": meta(sorted({p for s in sets for p in s["sources"]}) + ["repo:iclr_draft/scripts/make_figs.py", "repo:iclr_draft/scripts/make_tables.py"]),
+        "_meta": meta(sorted({p for s in sets for p in s["sources"]}) + ["repo:paper/scripts/make_figs.py", "repo:paper/scripts/make_tables.py"]),
         "paper_figure": {"label": "fig:curves", "number": fig_n, "file": "fig/fig2_curves.pdf", "reproduces": "sets[0] (manipulated_post_hoc), curves only"},
         "x": "mean ASI of the condition (robust_curves.csv column x); the first point of every curve is the unattacked result at ASI 0",
         "y": "TPR@1%FPR (%) from detection.csv (far = 0.01; post-hoc rows with n_eval = 100, the 100-identity open-set score)",
@@ -1155,7 +1160,7 @@ def build_scatter(refs, lb):
     check("scatter", "QSR (Unattacked, C1-C4, All), sem-AURSC, bit-AURSC and Bit Acc. recomputed from the scatter source rows equal tab_tier3_main (10 methods)",
           not bad, f"mismatches: {bad}" if bad else "90 values equal at 3 decimals")
     out = {
-        "_meta": meta([f"repo:{SEM_MATCHED}", f"repo:{SEM_INGEN}", "repo:iclr_draft/scripts/make_figs.py"]),
+        "_meta": meta([f"repo:{SEM_MATCHED}", f"repo:{SEM_INGEN}", "repo:paper/scripts/make_figs.py"]),
         "paper_figure": {"label": "fig:dissociation", "number": int(refs["fig:dissociation"]), "file": "fig/fig4_dissociation.pdf"},
         "x": "bit accuracy (fraction of embedded payload bits decoded correctly, mean over the condition's images)",
         "y": "QSR under the primary reader Qwen2.5-7B-Instruct (column qsr_corrected)",
@@ -1419,7 +1424,7 @@ def build_stats(text_lines, attacks, methods):
     check("stats", "1,600 + 1,600 + 1,593 = 4,793 unwatermarked evaluation images", 1600 + 1600 + 1593 == 4793, "")
     out = {
         "_meta": meta([f"paper:{MAIN_TEX}"]),
-        "note": "paper_lines are line numbers in the paper's main tex file (iclr2027_conference.tex) at the commit in _meta; comment lines are excluded from the search.",
+        "note": "paper_lines are line numbers in the paper's main tex file (main.tex) at the commit in _meta; comment lines are excluded from the search.",
         "items": items,
         "lists": {
             "generators": {"value": ["SD2.1", "SDXL", "FLUX.1-dev", "Qwen-Image", "HiDream-I1", "HunyuanImage-3.0 (distilled)"], "paper_lines": gen_line},
@@ -1704,11 +1709,11 @@ def main():
     for name, obj in [("leaderboards", leaderboards), ("heatmap", heat), ("curves", curves), ("scatter", scatter),
                       ("attacks", attacks), ("methods", methods), ("stats", stats)]:
         with open(os.path.join(OUT, f"{name}.json"), "w", encoding="utf-8") as fh:
-            json.dump(obj, fh, ensure_ascii=False, indent=1, allow_nan=False)
+            fh.write(_public(json.dumps(obj, ensure_ascii=False, indent=1, allow_nan=False)))
             fh.write("\n")
     with open(os.path.join(TOOLS, "build_checks.json"), "w", encoding="utf-8") as fh:
-        json.dump({"generated_utc": GENERATED, "paper": PAPER_HEAD, "n_checks": len(CHECKS), "n_failed": sum(not c["ok"] for c in CHECKS),
-                   "checks": CHECKS}, fh, ensure_ascii=False, indent=1)
+        fh.write(_public(json.dumps({"generated_utc": GENERATED, "paper": PAPER_HEAD, "n_checks": len(CHECKS), "n_failed": sum(not c["ok"] for c in CHECKS),
+                   "checks": CHECKS}, ensure_ascii=False, indent=1)))
         fh.write("\n")
     for c in CHECKS:
         print(("PASS " if c["ok"] else "FAIL ") + f"[{c['group']}] {c['check']} :: {c['detail']}")

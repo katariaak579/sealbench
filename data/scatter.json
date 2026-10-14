@@ -14,7 +14,7 @@
   "sources": [
    "repo:runs/2026-09-18_matched-cohort/semantic/semantic_conditions.csv",
    "repo:runs/2026-08-17_ingen-l14/metrics/semantic/semantic_conditions.csv",
-   "repo:iclr_draft/scripts/make_figs.py"
+   "repo:paper/scripts/make_figs.py"
   ]
  },
  "paper_figure": {

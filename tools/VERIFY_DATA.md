@@ -2,10 +2,10 @@
 
 `tools/build_data.py` writes the seven JSON files in `data/`. It uses only the Python standard library and reads two sources without modifying them:
 
-- `<PAPER>`: the Overleaf checkout of the paper (`iclr2027_conference.tex`, the generated `tables/*.tex`, `iclr2027_conference.bib`). Build of record: commit `a0d8e31` (2026-10-14).
-- `<REPO>`: the research repository. The metric CSVs are untracked run outputs. `docs/20_RESULTS_INVENTORY.md` §4 marks them CURRENT, and the paper's own scripts `iclr_draft/scripts/make_figs.py` and `make_tables.py` read the same files. The scripts are at commit `9620e81`.
+- `<PAPER>`: the Overleaf checkout of the paper (`main.tex`, the generated `tables/*.tex`, `references.bib`). Build of record: commit `a0d8e31` (2026-10-14).
+- `<REPO>`: the research repository. The metric CSVs are untracked run outputs. `docs/20_RESULTS_INVENTORY.md` §4 marks them CURRENT, and the paper's own scripts `paper/scripts/make_figs.py` and `make_tables.py` read the same files. The scripts are at commit `9620e81`.
 
-To rebuild, run `python3 tools/build_data.py`. The script finds the two roots in `$SEALBENCH_PAPER`/`$SEALBENCH_REPO` or in `tools/local_paths.json`. That file is listed in `.gitignore` because the absolute paths identify the authors while the paper is under double-blind review. In the JSON, sources appear only as `paper:<relative path>` and `repo:<relative path>`, and every file has a `_meta` block with the generation time, both commits and the source list.
+To rebuild, run `python3 tools/build_data.py`. The script finds the two roots in `$SEALBENCH_PAPER`/`$SEALBENCH_REPO` or in `tools/local_paths.json`. That file is listed in `.gitignore` because the absolute paths identify the authors . In the JSON, sources appear only as `paper:<relative path>` and `repo:<relative path>`, and every file has a `_meta` block with the generation time, both commits and the source list.
 
 On every run the script also re-checks the data. The results go to `tools/build_checks.json` and to stdout. **Current result: 172 of 172 checks pass.** Two of the passing checks record problems in the paper's captions (see "Discrepancies" below): they pass because the data is correct, but the caption text is wrong.
 
@@ -87,7 +87,7 @@ The script computes these numbers by counting captions in source order and store
 
 ## stats.json
 
-Each count from the brief is stored with the lines of `iclr2027_conference.tex` (comment lines excluded) where the paper states it. All 34 patterns were found. Lists (generators, subclasses, readers, editors, image states) and derived values are separate: the 28 attack types used in AURSC are not printed as a number in the paper, and 1,600 + 1,600 + 1,593 = 4,793.
+Each count from the brief is stored with the lines of `main.tex` (comment lines excluded) where the paper states it. All 34 patterns were found. Lists (generators, subclasses, readers, editors, image states) and derived values are separate: the 28 attack types used in AURSC are not printed as a number in the paper, and 1,600 + 1,600 + 1,593 = 4,793.
 
 ## Discrepancies and points for the authors
 
@@ -95,7 +95,7 @@ Each count from the brief is stored with the lines of `iclr2027_conference.tex` 
 2. **tab_modes caption (Table 10) lacks the definition of message mode.** It reads "…the basis of the identity-arm block of Table 3 and of the other detection tables in this appendix, the basis of the semantic-arm block of Table 3." `caption_site` restores the missing definition from the comment in `make_tables.py`. The wording should be confirmed by the authors.
 3. **tab_tier3_main caption (Table 4) ends with a stray "Table~\ref{tab:tier3rest}."** This comes after a hard-coded "Appendix Table 18". The hard-coded number is correct at the current numbering (tab:tier3rest is Table 18), but it is not a `\ref`. `caption_site` drops the stray reference.
 4. **tab_levels caption.** The caption says in-generation TPR is "on their sentence-carrying images", but the in-generation TPR row is the mean over all 4 in-generation methods, RingID included (mean of 4 = 75.25, which prints as 75.3; the mean of the 3 sentence carriers is 73.63). This is informational; the caption is not changed.
-5. **Overleaf tables differ from the repo mirror** (`iclr_draft/iclr2027/tables`) in two files. tab_crossfamily's second group label is "Message Recovery" (mirror: "Semantic arm …"). tab_modes uses the mode label "message" (mirror: "sentence", which is what the current `make_tables.py` writes). All numbers are identical. The site follows the paper.
+5. **Overleaf tables differ from the repo mirror** (`paper_mirror/tables`) in two files. tab_crossfamily's second group label is "Message Recovery" (mirror: "Semantic arm …"). tab_modes uses the mode label "message" (mirror: "sentence", which is what the current `make_tables.py` writes). All numbers are identical. The site follows the paper.
 6. **tab_unmarker is not in the paper.** Its table environment is commented out, but `tables/tab_unmarker.tex` is still generated. The commented caption says "5 in-generation methods" and "Level 2/Level 4", whereas the rows file has the 4 current in-generation methods. The entry has `in_paper: false` and a corrected caption, and the original is kept in `caption_original_commented_tex`.
 7. **tab:comparison** declares 6 columns in its tabular spec but uses 5. The empty column is dropped; this has no effect on the PDF.
 8. **Missing data that the site must handle.** There are 14 null heat-map cells (real UnMarker/unmarkshare, 7 methods). The real-category curves have no UnMarker curve for those 7 methods. The in-generation scatter has no complete-message recovery per point, because its source CSV has no `exact_acc` column; the in-generation Msg. Rec. values are in the leaderboards.

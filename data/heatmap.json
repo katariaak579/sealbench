@@ -18,7 +18,7 @@
    "repo:runs/2026-08-02_leveled-eval/metrics_syn_identity/robust_curves.csv",
    "repo:runs/2026-08-02_leveled-eval/metrics_syn_newgen_identity/robust_curves.csv",
    "repo:runs/2026-08-17_ingen-l14/metrics/eval_v2/robust_curves.csv",
-   "repo:iclr_draft/scripts/make_figs.py"
+   "repo:paper/scripts/make_figs.py"
   ]
  },
  "paper_figure": {
